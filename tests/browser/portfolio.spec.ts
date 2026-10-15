@@ -12,7 +12,7 @@ test('main journey, filters, flagship demo, architecture and source',async({page
  await page.getByRole('textbox',{name:'Search projects'}).fill('SourceLens');await expect(page.locator('.project-card')).toHaveCount(1);
  await page.getByRole('link',{name:/SourceLens/}).last().click();await expect(page.getByRole('heading',{level:1})).toHaveText('SourceLens');
  await page.getByRole('button',{name:'Inspect recorded answer'}).click();await expect(page.locator('blockquote')).toContainText('24 days');
- await page.getByRole('link',{name:'Architecture',exact:true}).click();await page.getByRole('button',{name:/FAISS retrieval/}).click();await expect(page.locator('.architecture-readout h3')).toHaveText('FAISS retrieval');
+ await page.getByRole('link',{name:'Architecture',exact:true}).click();await page.locator('.architecture').getByRole('button',{name:/FAISS retrieval/}).click();await expect(page.locator('.architecture-readout h3')).toHaveText('FAISS retrieval');
  await expect(page.getByRole('link',{name:'Source code'})).toHaveAttribute('href',/github.com\/sakshamaveragecodes-lab\/sourcelens-rag-chatbot/);
  await page.getByRole('link',{name:'Resume',exact:true}).click();await expect(page.getByRole('link',{name:'Download official PDF'})).toBeVisible();
  await page.getByRole('link',{name:/Let’s connect/}).first().click();await expect(page.getByRole('link',{name:/Find me on GitHub/})).toHaveAttribute('href','https://github.com/sakshamaveragecodes-lab');

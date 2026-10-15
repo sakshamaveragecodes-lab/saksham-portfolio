@@ -1,0 +1,58 @@
+{
+  "scope": "Local GitHub Pages export, including official PDF viewer/download, education, credentials and email",
+  "stats": {
+    "startTime": "2026-10-15T20:29:59.064Z",
+    "duration": 32020.912,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "name": "main journey, filters, flagship demo, architecture and source",
+      "passed": true
+    },
+    {
+      "name": "CareerLens component updates scores and FORM computes real replay reps",
+      "passed": true
+    },
+    {
+      "name": "all routes, assets, anchors and metadata are valid",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 390px",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 768px",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 1440px",
+      "passed": true
+    },
+    {
+      "name": "keyboard navigation, reduced motion and accessibility scans",
+      "passed": true
+    },
+    {
+      "name": "search empty state and category/technology filters work",
+      "passed": true
+    },
+    {
+      "name": "initial static HTML exposes content without JavaScript",
+      "passed": true
+    },
+    {
+      "name": "guided pipelines, stored metrics, refusal cases and actual video work",
+      "passed": true
+    },
+    {
+      "name": "official PDF download, education, credentials and email are backed by the supplied resume",
+      "passed": true
+    }
+  ],
+  "pdfSHA256": "7b6219b010f443301b7a75756ebcf531b1f227300d897d9b4e1fb6e10f82a130"
+}

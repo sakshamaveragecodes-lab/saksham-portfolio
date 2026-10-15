@@ -1,6 +1,9 @@
 import {test,expect} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import {projects} from '../../src/lib/projects';
+import {profile} from '../../src/lib/profile';
+import {createHash} from 'node:crypto';
+import {readFile} from 'node:fs/promises';
 const prefix=new URL(process.env.TEST_BASE_URL||'http://127.0.0.1:3000').pathname.replace(/\/$/,'');
 test('main journey, filters, flagship demo, architecture and source',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
@@ -11,7 +14,7 @@ test('main journey, filters, flagship demo, architecture and source',async({page
  await page.getByRole('button',{name:'Inspect recorded answer'}).click();await expect(page.locator('blockquote')).toContainText('24 days');
  await page.getByRole('link',{name:'Architecture',exact:true}).click();await page.getByRole('button',{name:/FAISS retrieval/}).click();await expect(page.locator('.architecture-readout h3')).toHaveText('FAISS retrieval');
  await expect(page.getByRole('link',{name:'Source code'})).toHaveAttribute('href',/github.com\/sakshamaveragecodes-lab\/sourcelens-rag-chatbot/);
- await page.getByRole('link',{name:'Resume',exact:true}).click();await expect(page.getByRole('heading',{name:'Official PDF awaiting publication.'})).toBeVisible();
+ await page.getByRole('link',{name:'Resume',exact:true}).click();await expect(page.getByRole('link',{name:'Download official PDF'})).toBeVisible();
  await page.getByRole('link',{name:/Let’s connect/}).first().click();await expect(page.getByRole('link',{name:/Find me on GitHub/})).toHaveAttribute('href','https://github.com/sakshamaveragecodes-lab');
  expect(errors).toEqual([]);
 });
@@ -32,12 +35,12 @@ test('all routes, assets, anchors and metadata are valid',async({page,request})=
 });
 for(const width of [390,768,1440]){test(`responsive layouts and visual evidence ${width}px`,async({page})=>{
  await page.setViewportSize({width,height:950});await page.emulateMedia({reducedMotion:'reduce'});
- for(const path of ['/','/projects/','/projects/careerlens/','/projects/form/','/about/','/contact/']){await page.goto(prefix+path);await page.waitForTimeout(150);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),path).toBeTruthy();await page.screenshot({path:`test-results/screenshots/${width}-${path.replaceAll('/','_')||'home'}.png`,fullPage:true});}
+ for(const path of ['/','/projects/','/projects/careerlens/','/projects/form/','/about/','/contact/','/resume/','/experience/','/certifications/']){await page.goto(prefix+path);await page.waitForTimeout(150);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),path).toBeTruthy();await page.screenshot({path:`test-results/screenshots/${width}-${path.replaceAll('/','_')||'home'}.png`,fullPage:true});}
  if(width===390){await page.goto(prefix+'/');await page.getByRole('button',{name:'Open navigation'}).click();await page.getByRole('link',{name:'Project lab',exact:true}).click();await expect(page).toHaveURL(/\/projects\//);await expect(page.getByRole('button',{name:'Open navigation'})).toHaveAttribute('aria-expanded','false');}
 });}
 test('keyboard navigation, reduced motion and accessibility scans',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});await page.goto(prefix+'/');await page.keyboard.press('Tab');await expect(page.getByRole('link',{name:'Skip to content'})).toBeFocused();await page.keyboard.press('Enter');await expect(page.locator('.canvas-wrap')).toHaveCount(0);
- for(const path of ['/','/projects/','/projects/careerlens/','/projects/form/','/contact/','/resume/']){await page.goto(prefix+path);const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();expect(result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),path).toEqual([])}
+ for(const path of ['/','/projects/','/projects/careerlens/','/projects/form/','/contact/','/resume/','/experience/','/certifications/','/about/']){await page.goto(prefix+path);const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();expect(result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),path).toEqual([])}
 });
 test('search empty state and category/technology filters work',async({page})=>{await page.goto(prefix+'/projects/');await page.getByRole('button',{name:'Machine Learning',exact:true}).click();await expect(page.locator('.project-card')).toHaveCount(3);await page.getByRole('combobox',{name:'Filter by technology'}).selectOption('React');await expect(page.getByRole('heading',{name:'No matching projects.'})).toBeVisible();await page.getByRole('button',{name:'Reset filters'}).click();await expect(page.locator('.project-card')).toHaveCount(8);await page.getByRole('button',{name:'Depth view'}).click();await expect(page.getByRole('button',{name:'Grid view'})).toHaveAttribute('aria-pressed','true')});
 test('initial static HTML exposes content without JavaScript',async({browser})=>{const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto(`${process.env.TEST_BASE_URL||'http://127.0.0.1:3000'}/`);await expect(page.getByRole('heading',{name:'Intelligence, engineered.'})).toBeVisible();await expect(page.getByRole('heading',{name:'Ideas, brought into focus.'})).toBeVisible();await context.close()});
@@ -46,4 +49,20 @@ test('guided pipelines, stored metrics, refusal cases and actual video work',asy
  for(const slug of ['studybuddy','pymentor']){await page.goto(`${prefix}/projects/${slug}/`);const before=await page.locator('.demo-output pre').textContent();await page.getByRole('button',{name:'Next stage'}).click();await expect(page.locator('.demo-output pre')).not.toHaveText(before!);}
  for(const slug of ['airbnb','logistic-diabetes','random-forest-diabetes']){await page.goto(`${prefix}/projects/${slug}/`);const choice=page.locator('.metric-choices button').nth(1);await choice.click();await expect(choice).toHaveAttribute('aria-pressed','true');await expect(page.locator('.demo-output')).toContainText('STORED RESULT');}
  await page.goto(prefix+'/projects/careerlens/');await page.locator('video').evaluate(async(video:HTMLVideoElement)=>{video.muted=true;await video.play()});await expect.poll(()=>page.locator('video').evaluate((video:HTMLVideoElement)=>video.currentTime)).toBeGreaterThan(0);await page.locator('video').evaluate((video:HTMLVideoElement)=>video.pause());
+});
+
+test('official PDF download, education, credentials and email are backed by the supplied resume',async({page,request})=>{
+ const failedPdf:string[]=[];page.on('requestfailed',r=>{if(r.url().includes(profile.resume.url))failedPdf.push(r.failure()?.errorText||'PDF load failed')});
+ await page.goto(prefix+'/resume/');
+ expect(failedPdf).toEqual([]);expect(page.frames().map(f=>f.url())).not.toContain('chrome-error://chromewebdata/');
+ const href=await page.getByRole('link',{name:'Download official PDF'}).getAttribute('href');
+ expect(href).toBe(prefix+profile.resume.url);
+ const pdf=await request.get(href!);expect(pdf.status()).toBe(200);expect(pdf.headers()['content-type']).toContain('application/pdf');
+ const bytes=await pdf.body();expect(bytes.subarray(0,5).toString()).toBe('%PDF-');expect(createHash('sha256').update(bytes).digest('hex')).toBe(profile.resume.sha256);
+ await expect(page.getByTitle('Official resume of Saksham Pradeep Jadhav')).toHaveAttribute('src',`${href}#view=FitH&navpanes=0`);
+ const downloadEvent=page.waitForEvent('download');await page.getByRole('link',{name:'Download official PDF'}).click();const download=await downloadEvent;expect(download.suggestedFilename()).toBe(profile.resume.filename);
+ expect(createHash('sha256').update(await readFile((await download.path())!)).digest('hex')).toBe(profile.resume.sha256);
+ await page.goto(prefix+'/experience/');await expect(page.getByRole('heading',{name:'Bachelor of Computer Applications (BCA)'})).toBeVisible();await expect(page.locator('.education-date').first()).toContainText('expected');await expect(page.locator('.program-panel')).toContainText('UNLOX Academy Premier Services');
+ await page.goto(prefix+'/certifications/');await expect(page.locator('.credential-card')).toHaveCount(2);for(const c of profile.certifications){await expect(page.getByText(c.id,{exact:true})).toBeVisible()}await expect(page.locator('.source-note')).toContainText('does not claim independent issuer authentication');
+ await page.goto(prefix+'/contact/');await expect(page.getByRole('link',{name:/Email Saksham/})).toHaveAttribute('href',`mailto:${profile.email}`);
 });

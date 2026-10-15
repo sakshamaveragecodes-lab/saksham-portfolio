@@ -66,7 +66,7 @@ Production HTML applies a CSP meta policy. GitHub Pages cannot apply arbitrary c
 
 ## Remaining content limitations
 
-1. **The latest official resume PDF was not supplied to this workspace.** Its actual download/viewer and document-backed education, internship, certification and professional email details remain unavailable. The site states this limitation. The PDF viewer/download implementation is ready for the real approved document through `src/lib/profile.ts`; tests verify the current honest missing-file state, not a functioning download.
+1. The official resume is now supplied and published unchanged. Its education, program, credential and professional email details are transcribed into the site. Credential details are resume-sourced; separate certificates and public issuer verification links were not supplied, so independent issuer authentication is not claimed.
 2. CivicMerge source was not accessible, and its supplied endpoint returned a proxy denial. Its capabilities remain unpublished. Python Fundamentals is empty. Additional professional evaluation work was found in authorized history, but its sanitized source archive was unavailable; private transcripts were not published.
 3. Field INP, physical-device testing and large-scale accessibility/performance testing remain unmeasured.
 
@@ -87,3 +87,9 @@ npm audit
 ```
 
 Cloud Chromium must trust the environment's platform CA, just as its system HTTP client does. If required, import the supplied `/usr/local/share/ca-certificates/environment-proxy-ca.crt` into the Chromium NSS trust database in the browser-test execution context using supported permissions. Do not disable TLS verification. `scripts/verify-webgl.mjs` additionally checks the live 3D scene using software WebGL.
+
+## Official resume update
+
+Source received 16 October 2026: one-page owner-supplied official PDF. Published SHA-256: `7b6219b010f443301b7a75756ebcf531b1f227300d897d9b4e1fb6e10f82a130` (original bytes preserved). PDF structure inspection identified a standard initial-view destination and a content-credentials attachment, rather than an executable initial action. Professional contact information is present; no residential address or government identifier was identified. The phone number remains only in the official PDF.
+
+The resume viewer, download and professional email action are implemented. BCA education is explicitly in progress with an expected June 2027 completion. UNLOX is presented as an internship and project-based learning program; Trivion is the partner named by the resume, not an asserted employer. Two credentials are labelled resume-sourced without implying independent issuer verification. Updated verification results are recorded in `qa/resume-update-local.json` and `qa/resume-update-production.json` after execution.

@@ -35,11 +35,13 @@ Run the build before browser tests. Cloud browser tests use `/usr/bin/chromium`;
 
 Original application records are historical evidence, not test results rerun by the portfolio. No skill proficiency percentages, employment claims or general model accuracy are inferred.
 
-## Official resume & credentials — unresolved
+## Official resume & professional profile
 
-The latest official resume was **not available** in the workspace. The authorized conversation interface reports an attachment but does not expose its file. Education, internships, credential details, professional email and the actual PDF download cannot be verified yet.
+The owner supplied the official resume PDF. `public/documents/Saksham_Jadhav_AI_Engineer_Resume.pdf` preserves the original bytes (SHA-256 `7b6219b010f443301b7a75756ebcf531b1f227300d897d9b4e1fb6e10f82a130`). The resume route provides an embedded viewer, a new-tab fallback and a tested download.
 
-When supplied, inspect the real PDF for unnecessary sensitive information before publishing it. Put the approved file under `public/documents/`, then populate `profile.resume` with its URL, filename and document-verification date. The resume page already supports an embedded viewer, new-tab fallback and download. Populate the email only from a verified source. Add education and certification content only after document verification; do not infer it from project code.
+`src/lib/profile.ts` records the document-backed education, UNLOX AI internship/project-based learning program, two resume-listed credentials and professional email. The BCA end date is explicitly expected. Trivion Technology is identified only as the credential's partner organization, not as an employer. Certificate issuers have not been independently authenticated; the credential page states this scope.
+
+The original PDF includes professional contact details; the website does not repeat its phone number in HTML. No residential address or government identifier was present. The resume and document directory are excluded from crawler indexing directives, which do not make public documents private. Future resume replacements require source review and updates to the checksum and download tests.
 
 CivicMerge source was not accessible under the supplied account, and its supplied deployment endpoint could not be reached through this environment's egress policy. Python Fundamentals is empty. Neither has been turned into invented portfolio content.
 

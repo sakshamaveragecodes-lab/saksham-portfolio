@@ -5,7 +5,7 @@ Production published and verified: https://sakshamaveragecodes-lab.github.io/sak
 
 Application commit 33d5bebc3249e2d6847cabfd40809ae5d6b50c99 deployed successfully by run 38799584642; verify run 38799584095 also passed. All ten browser tests passed against the actual public site with normal TLS verification and supported cloud CA/proxy configuration. Real production WebGL and pause control passed. Production Lighthouse 13.5.0 mobile lab run: 100/100/100/100, LCP 1.3 s, CLS 0, TBT 60 ms. This is a single lab run through the cloud proxy, not field INP or a performance guarantee.
 
-Only required content still blocked: official latest resume PDF and its document-backed education, internships, certifications and professional email. No resume file or attachment ID is available here. Ask for the actual PDF; do not invent content. Resume viewer/download code is ready behind profile.resume, which remains null. CivicMerge and additional professional evaluation work also lack accessible sanitized sources. See docs/VERIFICATION.md for final evidence; the historical notes below explain earlier states and must not be treated as current blockers.
+Official resume update in progress (16 October 2026): user supplied the PDF via sediment attachment. Original bytes copied to public/documents/Saksham_Jadhav_AI_Engineer_Resume.pdf (SHA256 7b6219b010f443301b7a75756ebcf531b1f227300d897d9b4e1fb6e10f82a130). Profile, About, Experience/Education, Certifications and Contact updated from it. BCA dates marked expected; UNLOX described as a learning program, Trivion only as credential partner. Credential cards are resume-sourced, not issuer-authenticated. Contact email available; phone not repeated in HTML. No further resume upload request is needed. Validate PDF viewer/download/checksum and profile pages, then commit, push and verify public deployment.
 
 User authorizes application creation, commits, pushes and free deployment. This supersedes earlier setup-only file restrictions. The Pages setting is already enabled: do not ask for it again.
 
@@ -58,3 +58,9 @@ Latest official resume required for education, certifications, official PDF down
 - The owner enabled Pages with workflow source; GET /repos/.../pages now returns the intended HTTPS URL. No duplicate repository or Vercel project was created.
 - Run 38799584642 built, linted and tested commit 33d5beb successfully and is publishing the Pages artifact. Await deployment status, then run all browser journeys against the public URL.
 - Environment draft now records the real committed repository snapshot and complete tested setup/start instructions. It is saved, not published.
+
+## Resume update local verification
+- Build, lint, strict TypeScript, seven algorithm tests and all eleven browser tests passed.
+- Browser PDF download and HTTP body match the original uploaded file SHA-256 exactly. Embedded PDF is rendered with fit-width navigation; a visual check caught the original global anti-framing header. PDF responses now permit same-origin framing while the app retains its deny policy. Regression test checks failed PDF requests/error frames.
+- Nine routes received axe scans. Responsive screenshots for resume, experience and credentials were captured at 390/768/1440px, inspected and showed no document overflow.
+- Ready to push, deploy and repeat browser checks on the actual public release.

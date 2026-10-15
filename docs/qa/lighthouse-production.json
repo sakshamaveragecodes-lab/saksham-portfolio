@@ -1,0 +1,31 @@
+{
+  "scope": "Single production-URL mobile simulation through the cloud egress proxy; not field data or a cross-device guarantee",
+  "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+  "tool": "Lighthouse 13.5.0",
+  "executed": "2026-10-15T20:15:51.438Z",
+  "scores": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "largest-contentful-paint": {
+      "value": 1285.0335,
+      "display": "1.3 s"
+    },
+    "cumulative-layout-shift": {
+      "value": 0,
+      "display": "0"
+    },
+    "total-blocking-time": {
+      "value": 58,
+      "display": "60 ms"
+    },
+    "first-contentful-paint": {
+      "value": 985.0335,
+      "display": "1.0 s"
+    }
+  },
+  "fieldINP": "Not measured"
+}

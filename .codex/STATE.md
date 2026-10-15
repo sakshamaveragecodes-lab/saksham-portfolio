@@ -1,7 +1,13 @@
 # Project Saksham
 
 ## Current milestone
-Release integration. User authorizes application creation, commit, push and free deployment. This supersedes earlier setup-only file restrictions.
+Production published and verified: https://sakshamaveragecodes-lab.github.io/saksham-portfolio/
+
+Application commit 33d5bebc3249e2d6847cabfd40809ae5d6b50c99 deployed successfully by run 38799584642; verify run 38799584095 also passed. All ten browser tests passed against the actual public site with normal TLS verification and supported cloud CA/proxy configuration. Real production WebGL and pause control passed. Production Lighthouse 13.5.0 mobile lab run: 100/100/100/100, LCP 1.3 s, CLS 0, TBT 60 ms. This is a single lab run through the cloud proxy, not field INP or a performance guarantee.
+
+Only required content still blocked: official latest resume PDF and its document-backed education, internships, certifications and professional email. No resume file or attachment ID is available here. Ask for the actual PDF; do not invent content. Resume viewer/download code is ready behind profile.resume, which remains null. CivicMerge and additional professional evaluation work also lack accessible sanitized sources. See docs/VERIFICATION.md for final evidence; the historical notes below explain earlier states and must not be treated as current blockers.
+
+User authorizes application creation, commits, pushes and free deployment. This supersedes earlier setup-only file restrictions. The Pages setting is already enabled: do not ask for it again.
 
 ## Evidence
 - Portfolio checkout is empty, unborn `work` branch; origin is correct.
@@ -47,3 +53,8 @@ Latest official resume required for education, certifications, official PDF down
 - Final project-path local Lighthouse 13.5.0: Performance 99, Accessibility 100, Best Practices 100, SEO 100; LCP 1.8 s, CLS 0, TBT 120 ms. Production/field metrics unmeasured.
 - Public-repo Pages eligibility verified against official github/docs source; actual site is still disabled. Publish workflow failure is isolated to configure-pages, with remaining build/deploy steps skipped.
 - Latest source dimensions come from actual media metadata to reserve accurate layout space. No source application or credential was modified.
+
+## Publishing resumed
+- The owner enabled Pages with workflow source; GET /repos/.../pages now returns the intended HTTPS URL. No duplicate repository or Vercel project was created.
+- Run 38799584642 built, linted and tested commit 33d5beb successfully and is publishing the Pages artifact. Await deployment status, then run all browser journeys against the public URL.
+- Environment draft now records the real committed repository snapshot and complete tested setup/start instructions. It is saved, not published.

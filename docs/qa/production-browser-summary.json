@@ -1,0 +1,56 @@
+{
+  "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+  "commit": "33d5bebc3249e2d6847cabfd40809ae5d6b50c99",
+  "stats": {
+    "startTime": "2026-10-15T20:14:54.638Z",
+    "duration": 34717.368,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "name": "main journey, filters, flagship demo, architecture and source",
+      "passed": true
+    },
+    {
+      "name": "CareerLens component updates scores and FORM computes real replay reps",
+      "passed": true
+    },
+    {
+      "name": "all routes, assets, anchors and metadata are valid",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 390px",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 768px",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 1440px",
+      "passed": true
+    },
+    {
+      "name": "keyboard navigation, reduced motion and accessibility scans",
+      "passed": true
+    },
+    {
+      "name": "search empty state and category/technology filters work",
+      "passed": true
+    },
+    {
+      "name": "initial static HTML exposes content without JavaScript",
+      "passed": true
+    },
+    {
+      "name": "guided pipelines, stored metrics, refusal cases and actual video work",
+      "passed": true
+    }
+  ],
+  "tls": "Normal verification with platform-provided CA trusted in test execution context",
+  "network": "Supported environment HTTPS proxy used for browser and API asset requests"
+}

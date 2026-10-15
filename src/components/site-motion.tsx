@@ -16,7 +16,7 @@ export function SiteMotion(){
   let observer:IntersectionObserver|undefined;
   if(!reduced.matches&&typeof IntersectionObserver!=='undefined'){
    observer=new IntersectionObserver(entries=>{
-    for(const entry of entries){if(!entry.isIntersecting)continue;const el=entry.target as HTMLElement;observer?.unobserve(el);observed.delete(el);el.animate([{opacity:.56,transform:'translate3d(0,20px,0)'},{opacity:1,transform:'translate3d(0,0,0)'}],{duration:680,easing:'cubic-bezier(.2,.7,.25,1)',fill:'none'});}
+    for(const entry of entries){if(!entry.isIntersecting)continue;const el=entry.target as HTMLElement;observer?.unobserve(el);observed.delete(el);el.animate([{transform:'translate3d(0,20px,0)'},{transform:'translate3d(0,0,0)'}],{duration:680,easing:'cubic-bezier(.2,.7,.25,1)',fill:'none'});}
    },{threshold:.08,rootMargin:'0px 0px -30px 0px'});
    for(const el of elements){if(el.getBoundingClientRect().top>window.innerHeight*.82){observer.observe(el);observed.add(el)}}
   }

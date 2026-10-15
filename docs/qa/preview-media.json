@@ -1,0 +1,154 @@
+[
+  {
+    "project": "sourcelens",
+    "asset": "/media/previews/sourcelens-ready.webp",
+    "source": "assets/app-ready.png",
+    "width": 1440,
+    "height": 1080,
+    "sha256": "e29bc5df2f0ae6561b67aebc3332828c9b942ec0323e7edeb967c9679c2b9940"
+  },
+  {
+    "project": "sourcelens",
+    "asset": "/media/sourcelens.webp",
+    "source": "assets/app-answer.png",
+    "width": 1440,
+    "height": 1080,
+    "sha256": "e3570ca4c5f4cacc8359e2a0a5ec1560c60037d3241c874d6e9359f209bce5fd"
+  },
+  {
+    "project": "sourcelens",
+    "asset": "/media/sourcelens-refusal.webp",
+    "source": "assets/app-refusal.png",
+    "width": 1440,
+    "height": 1080,
+    "sha256": "e3004557e3491d83a844b990b4876227131c3b005fb4d5e3cbb23482471a4d38"
+  },
+  {
+    "project": "sourcelens",
+    "asset": "/media/previews/sourcelens-mobile.webp",
+    "source": "assets/app-mobile.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "19609a3ed89a2242e5d10b192850e892581aeaf41223a72307d7da6cd896ec8c"
+  },
+  {
+    "project": "careerlens",
+    "asset": "/media/careerlens.webp",
+    "source": "docs/screenshots/02_overview.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "37805897c6eafcdb93da98a15e598c89c08ad86a8af1d30a38dbd7fd823b5e75"
+  },
+  {
+    "project": "careerlens",
+    "asset": "/media/previews/careerlens-skills.webp",
+    "source": "docs/screenshots/03_skills.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "531d1a86339de812f52e29d5fbb4f02eabdb04769018cd6df1e70c315d0ac28b"
+  },
+  {
+    "project": "careerlens",
+    "asset": "/media/previews/careerlens-report.webp",
+    "source": "docs/screenshots/06_report.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "a672963e0997e4571192a275d5fd8f262140df365bc98bbd569fa27d7b563106"
+  },
+  {
+    "project": "careerlens",
+    "asset": "/media/previews/careerlens-mobile.webp",
+    "source": "docs/screenshots/09_mobile_analysis.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "f6a706f8b6d54f8f8f1858032ce61ce984d9c54be9aca86dc1044ef3a541d3ec"
+  },
+  {
+    "project": "form",
+    "asset": "/media/form.webp",
+    "source": "docs/evidence/dashboard.jpg",
+    "width": 1348,
+    "height": 926,
+    "sha256": "01d33bcbe4d3ab2777cb2fcae5ed93a9df3c0b0fc2faaaa8ac81d7962109002d"
+  },
+  {
+    "project": "studybuddy",
+    "asset": "/media/previews/studybuddy-home.webp",
+    "source": "screenshots/01_home_screen.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "c2bcfe3aae11923f1f8811809472818f4d3095f431b312a42524a0a31c0b24e7"
+  },
+  {
+    "project": "studybuddy",
+    "asset": "/media/previews/studybuddy-osi.webp",
+    "source": "screenshots/02_osi_answer.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "5d7adfa64806b388efa7dbd9c09f57eb2715f61f6204918ea4ebf7580c12c3c7"
+  },
+  {
+    "project": "studybuddy",
+    "asset": "/media/previews/studybuddy-dbms.webp",
+    "source": "screenshots/03_dbms_answer.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "750c82828ecccfd887483941f6fa575c14beea52500fdebe9e36218faac27ea9"
+  },
+  {
+    "project": "airbnb",
+    "asset": "/media/airbnb.webp",
+    "source": "Saksham_Jadhav_Airbnb_Summary_FINAL.pdf",
+    "width": 1019,
+    "height": 1440,
+    "sha256": "fc07894f0ce54d4cfbe1ca68f2a85e2aaef57642eb3c19259ddbf61fa40bdb4c"
+  },
+  {
+    "project": "logistic-diabetes",
+    "asset": "/media/previews/logistic-confusion.webp",
+    "source": "Saksham_Jadhav_Logistic_Regression.ipynb",
+    "width": 538,
+    "height": 490,
+    "sha256": "61f532517448798c3205c0bf5665b4dd7eb2720b27bbc66fb03965464624ed3f"
+  },
+  {
+    "project": "logistic-diabetes",
+    "asset": "/media/previews/logistic-roc.webp",
+    "source": "Saksham_Jadhav_Logistic_Regression.ipynb",
+    "width": 482,
+    "height": 490,
+    "sha256": "b729753f7f077095e4e2fc94bbc96d8f54f80e723c355191d476060591a5fb76"
+  },
+  {
+    "project": "logistic-diabetes",
+    "asset": "/media/logistic-diabetes.webp",
+    "source": "Saksham_Jadhav_Logistic_Regression.ipynb",
+    "width": 790,
+    "height": 490,
+    "sha256": "5b79b8a4424a8f4c493d30cd52908823e4d6ad0e5e306d0fb52aa72ecab95824"
+  },
+  {
+    "project": "random-forest-diabetes",
+    "asset": "/media/random-forest-diabetes.webp",
+    "source": "SUPPORT/confusion_matrix.png",
+    "width": 976,
+    "height": 877,
+    "sha256": "a5e2e5feb46e3ec1a68f2af965388b26bf963cdbe32d6797bc859984820adf0d"
+  },
+  {
+    "project": "random-forest-diabetes",
+    "asset": "/media/previews/forest-importance.webp",
+    "source": "SUPPORT/feature_importance.png",
+    "width": 1379,
+    "height": 938,
+    "sha256": "7591db4f1fda27554aa308f5c6d6f93e6857f502e64041d27e814caf363b314a"
+  },
+  {
+    "project": "random-forest-diabetes",
+    "asset": "/media/previews/forest-roc.webp",
+    "source": "SUPPORT/roc_curve.png",
+    "width": 866,
+    "height": 877,
+    "sha256": "5ff56539bcb0585bb7684c55e1b50076377c48495e3b194d9ee114db33b72ddf"
+  }
+]

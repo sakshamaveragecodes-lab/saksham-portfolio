@@ -1,0 +1,349 @@
+{
+  "sourcelens": {
+    "audience": "Readers who need to locate answers in a bounded collection of readable PDFs and check the original page.",
+    "takeaway": "A retrieval pipeline with explicit provenance and refusal behavior, rather than an unconstrained chat wrapper.",
+    "walkthrough": "The application extracts text page by page, retains physical page numbers, and embeds overlapping chunks with MiniLM. Normalized embeddings feed an exact FAISS index. Retrieved passages are assessed by Qwen; application code validates quoted text before attaching document and page citations.",
+    "demo": "The preview shows original screenshots. The demonstration below exposes stored Qwen answers from an authored synthetic policy corpus, including a refusal; no PDF upload, retrieval or model inference runs on this website.",
+    "stages": [
+      "Validate bounded PDF uploads before extraction; unreadable scans require OCR that is outside this implementation.",
+      "Extract readable text and preserve the physical PDF page number for each passage.",
+      "Split into 900-character windows with 120-character overlap to retain context across boundaries.",
+      "Encode chunks as normalized, 384-dimensional MiniLM vectors.",
+      "Retrieve the five strongest inner-product matches; normalized vectors make this cosine-equivalent.",
+      "Use Qwen to select relevant excerpts rather than freely synthesize unsupported prose.",
+      "Validate quotations in application code and attach filename/page references, or refuse when evidence is insufficient."
+    ],
+    "slides": [
+      {
+        "title": "Prepare the collection",
+        "image": "/media/previews/sourcelens-ready.webp",
+        "note": "The processed collection defines what can be searched. Changing documents invalidates the old index until processing completes.",
+        "source": "assets/app-ready.png",
+        "kind": "Actual application capture",
+        "code": null,
+        "width": 1440,
+        "height": 1080
+      },
+      {
+        "title": "Question → cited answer",
+        "image": "/media/sourcelens.webp",
+        "note": "The original interface couples a question with quoted evidence and physical page citations. Compare the stored policy cases in the demonstration.",
+        "source": "assets/app-answer.png",
+        "kind": "Actual application capture",
+        "code": null,
+        "width": 1440,
+        "height": 1080
+      },
+      {
+        "title": "Insufficient evidence",
+        "image": "/media/sourcelens-refusal.webp",
+        "note": "The app can refuse unsupported questions. A citation establishes provenance, not that a selected passage fully answers the question.",
+        "source": "assets/app-refusal.png",
+        "kind": "Actual application capture",
+        "code": null,
+        "width": 1440,
+        "height": 1080
+      }
+    ],
+    "narrow": "/media/previews/sourcelens-mobile.webp",
+    "narrowSource": "assets/app-mobile.png",
+    "narrowWidth": 390,
+    "narrowHeight": 844
+  },
+  "careerlens": {
+    "audience": "Students and early-career applicants exploring how explicit resume terminology aligns with curated technical roles.",
+    "takeaway": "An explainable NLP scoring system with visible weighting, skill gaps and recommendations that can be inspected.",
+    "walkthrough": "PDF/DOCX extraction feeds section detection and a 110-skill dictionary with aliases. Each profile combines required-skill coverage, preferred-skill coverage and TF-IDF cosine similarity. Thirteen fixed role profiles make the calculation reproducible; skill gaps feed a dependency-ordered learning roadmap and downloadable report.",
+    "demo": "Original screenshots and the recorded Python application walkthrough show the wider workflow. The browser demo runs the source-derived role formula on selected skills; it neither uploads nor parses a resume.",
+    "stages": [
+      "Accept supported PDF/DOCX documents without retaining personal uploads.",
+      "Validate the file and extract readable text; extraction quality limits downstream matching.",
+      "Locate resume sections to distinguish contextual mentions.",
+      "Map technical terms and aliases to 110 canonical skills.",
+      "Combine 75% core coverage, 15% preferred coverage and 10% TF-IDF similarity; use 90/10 without preferred skills.",
+      "Rank 13 curated profiles and expose matched versus missing terminology.",
+      "Order learning recommendations by dependencies and prepare an in-memory report."
+    ],
+    "slides": [
+      {
+        "title": "Sample profile & role results",
+        "image": "/media/careerlens.webp",
+        "note": "The original analyzer summarizes a fictional sample and ranked roles. Scores describe lexical alignment, not a hiring decision.",
+        "source": "docs/screenshots/02_overview.png",
+        "kind": "Actual application capture",
+        "code": null,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Inspect matched skills",
+        "image": "/media/previews/careerlens-skills.webp",
+        "note": "Detected skills and gaps make the ranking inspectable. A missing keyword is not evidence of missing ability.",
+        "source": "docs/screenshots/03_skills.png",
+        "kind": "Actual application capture",
+        "code": null,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Prepare the report",
+        "image": "/media/previews/careerlens-report.webp",
+        "note": "The original application generates an in-memory PDF report. The portfolio does not generate a new resume analysis.",
+        "source": "docs/screenshots/06_report.png",
+        "kind": "Actual application capture",
+        "code": null,
+        "width": 1440,
+        "height": 1000
+      }
+    ],
+    "narrow": "/media/previews/careerlens-mobile.webp",
+    "narrowSource": "docs/screenshots/09_mobile_analysis.png",
+    "narrowWidth": 390,
+    "narrowHeight": 844
+  },
+  "form": {
+    "audience": "People exploring exercise tracking alongside a structured fitness, nutrition and habit workspace.",
+    "takeaway": "Browser geometry integrated with application state and a tenant-scoped backend, with simulation kept distinct from real activity.",
+    "walkthrough": "The source application processes camera frames with MediaPipe in the browser, then computes angles and stable exercise phases from landmarks. Complete movement cycles produce repetition metrics. The TypeScript Worker API and D1 store account and workout data; FastAPI is an optional interoperability service.",
+    "demo": "The original dashboard is a real repository capture. The guided process view describes the trainer without inventing another screenshot. The existing replay runs original geometry on synthetic landmarks; no camera, MediaPipe model or live backend runs here.",
+    "stages": [
+      "Acquire frames locally in the original app; this portfolio never requests camera access.",
+      "The original MediaPipe worker estimates landmarks; live webcam inference was not verified in the source record.",
+      "Compute exercise-specific joint angles from landmarks.",
+      "Hold angle thresholds for 120 ms to avoid counting unstable phase transitions.",
+      "Count complete cycles and retain repetition metrics; synthetic replay stays labelled.",
+      "Send structured data to tenant-scoped TypeScript Worker handlers, not raw camera frames.",
+      "Persist accounts, sessions and activity in relational D1; exclude synthetic activity from real adherence analytics."
+    ],
+    "slides": [
+      {
+        "title": "The original workspace",
+        "image": "/media/form.webp",
+        "note": "A source capture of FORM’s sample dashboard. Account, workout and nutrition features belong to the original full application.",
+        "source": "docs/evidence/dashboard.jpg",
+        "kind": "Actual application capture",
+        "code": null,
+        "width": 1348,
+        "height": 926
+      },
+      {
+        "title": "Inside the exercise tracker",
+        "image": null,
+        "note": "Source-grounded process view, not a screenshot. Try the existing pose replay below to inspect the original geometry.",
+        "source": "docs/ALGORITHMS.md",
+        "kind": "Guided process visualization",
+        "code": "LOCAL CAMERA FRAMES\n        ↓\nMEDIAPIPE → LANDMARKS\n        ↓\nJOINT ANGLES → STABLE PHASES\n        ↓\nCOMPLETE CYCLE → REP METRICS\n\nPortfolio replay: synthetic landmarks only."
+      }
+    ]
+  },
+  "studybuddy": {
+    "audience": "Students asking short study questions on a machine capable of running a small local language model.",
+    "takeaway": "A deliberately focused integration between a Python interface and a local inference service.",
+    "walkthrough": "A Streamlit question is passed to the locally running Ollama service using llama3.2:1b, then the returned text is displayed. The project includes a Windows setup launcher and documented prompts. There is no retrieval index, database, authentication or persistent conversation system.",
+    "demo": "Select original captures to follow a documented study question and its recorded response. These are screenshots of past application behavior, not newly generated answers or a hosted Ollama session.",
+    "stages": [
+      "A student types a study question; the repository includes five validation prompts.",
+      "Streamlit collects the question and displays the response in the same interface.",
+      "Python connects to the local Ollama service, which must already be running.",
+      "The local llama3.2:1b model generates text using the user’s machine.",
+      "Display the model response; explanations can be wrong and have no independent quality benchmark."
+    ],
+    "slides": [
+      {
+        "title": "Start with a study question",
+        "image": "/media/previews/studybuddy-home.webp",
+        "note": "The real Streamlit home screen. Ollama and its downloaded model are local requirements of the original application.",
+        "source": "screenshots/01_home_screen.png",
+        "kind": "Actual application capture",
+        "code": null,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Recorded example · OSI model",
+        "image": "/media/previews/studybuddy-osi.webp",
+        "note": "Documented prompt: “Explain the OSI model in simple words.” The screenshot preserves the original model response; it is not regenerated here.",
+        "source": "screenshots/02_osi_answer.png",
+        "kind": "Actual application capture",
+        "code": null,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Recorded example · DBMS",
+        "image": "/media/previews/studybuddy-dbms.webp",
+        "note": "Documented prompt asks about normalization, including 1NF, 2NF and 3NF. This capture is workflow evidence, not validation of answer correctness.",
+        "source": "screenshots/03_dbms_answer.png",
+        "kind": "Actual application capture",
+        "code": null,
+        "width": 1440,
+        "height": 1000
+      }
+    ]
+  },
+  "pymentor": {
+    "audience": "Beginners asking Python questions through a terminal rather than a web interface.",
+    "takeaway": "A readable LangChain composition with input validation, provider error boundaries and isolated offline tests.",
+    "walkthrough": "The command-line loop normalizes whitespace and rejects empty or overlong questions. A PromptTemplate frames the Python teaching task; ChatGoogleGenerativeAI connects to Gemini and StrOutputParser returns text for the console. The application supports interactive and single-question modes.",
+    "demo": "This terminal-style preview displays source excerpts and a documented test question. It does not show a fabricated Gemini response. The guided demo traces orchestration without contacting the provider or using an API key.",
+    "stages": [
+      "Normalize whitespace; reject empty questions and inputs longer than 2,000 characters.",
+      "Apply the source prompt’s Python-learning instructions to the validated question.",
+      "Invoke the configured Gemini connector using environment-loaded credentials in the original app only.",
+      "Convert the model message to a string with StrOutputParser.",
+      "Print the answer or a clear setup/API error, then continue the console loop."
+    ],
+    "slides": [
+      {
+        "title": "A real command-line workflow",
+        "image": null,
+        "note": "A documented test question in a source-grounded terminal visualization. No generated answer or live command execution is presented.",
+        "source": "langchain_project/README.md",
+        "kind": "Guided terminal visualization",
+        "code": "$ python app.py\n\nPython question (documented test):\nWhat is a Python list and how is it different from a tuple?\n\n[Validated question → prompt → Gemini → text]\n\nInference is not running in this preview."
+      },
+      {
+        "title": "The source pipeline",
+        "image": null,
+        "note": "These lines are excerpts from the implementation. The full application requires a user-owned provider key.",
+        "source": "langchain_project/app.py",
+        "kind": "Source excerpt",
+        "code": "chain = prompt | llm | StrOutputParser()\n\nchain.invoke({\"question\": cleaned_question})"
+      },
+      {
+        "title": "Explicit failure boundaries",
+        "image": null,
+        "note": "Input validation and API/setup errors are implemented; offline test doubles check flow without proving live provider availability.",
+        "source": "langchain_project/app.py",
+        "kind": "Source-grounded process visualization",
+        "code": "INPUT\n  Empty / > 2,000 characters → reject\n\nSETUP\n  Missing key / packages → explain\n\nPROVIDER\n  Network / quota / empty output → handle\n\nNo provider request is sent by this website."
+      }
+    ]
+  },
+  "airbnb": {
+    "audience": "A technical reviewer exploring how a simple regression baseline behaves on historical listing data.",
+    "takeaway": "A complete notebook baseline whose evaluation is explained in price units as well as variance explained.",
+    "walkthrough": "The notebook inspects the NYC 2019 dataset, prepares numeric and encoded features, and uses a fixed-seed 80/20 split. LinearRegression learns a baseline on the training portion. Held-out predictions are evaluated with R² and absolute/squared error measures.",
+    "demo": "The preview combines the actual committed report with recorded notebook values. The existing metric explorer explains stored results; there is no deployed valuation model and no visitor listing is scored.",
+    "stages": [
+      "Use the historical New York City Airbnb 2019 listing dataset.",
+      "Inspect missing values and prepare the notebook’s analysis subset.",
+      "Build the encoded feature matrix used by the baseline.",
+      "Reserve 20% of the prepared data using the notebook’s fixed random seed.",
+      "Fit scikit-learn LinearRegression on the training portion.",
+      "Compare held-out predictions with actual prices using R², MAE, MSE and RMSE."
+    ],
+    "slides": [
+      {
+        "title": "The committed project report",
+        "image": "/media/airbnb.webp",
+        "note": "Actual report capture from the repository. This project is a notebook study, not an Airbnb web application.",
+        "source": "Saksham_Jadhav_Airbnb_Summary_FINAL.pdf",
+        "kind": "Original report capture",
+        "code": null,
+        "width": 1019,
+        "height": 1440
+      },
+      {
+        "title": "Read error in context",
+        "image": null,
+        "note": "Recorded notebook values, displayed as a readout. These are historical prepared-split results, not fresh training or current-market accuracy.",
+        "source": "Saksham_Jadhav_Airbnb_Linear_Regression_FINAL.ipynb",
+        "kind": "Recorded notebook results",
+        "code": "LinearRegression · held-out results\n\nR²                 0.4708\nMAE               $38.54\nRMSE              $53.24\n\nR² is variance explained, not accuracy.\nNo current listing valuation runs here."
+      }
+    ]
+  },
+  "logistic-diabetes": {
+    "audience": "Learners and reviewers comparing preprocessing and classification tradeoffs on a small public dataset.",
+    "takeaway": "An interpretable baseline with leakage-aware preprocessing and explicit precision/recall tradeoffs.",
+    "walkthrough": "Invalid physiological zeros are treated as missing. A median imputer, StandardScaler and class-balanced logistic classifier are fitted within a pipeline after a stratified 80/20 split. The notebook evaluates class predictions and probability ranking separately on 154 held-out rows.",
+    "demo": "Original notebook plots show the confusion matrix, ROC curve and fitted coefficients. The metric explorer reads recorded outputs; it does not accept patient data or make medical predictions.",
+    "stages": [
+      "Start with 768 rows from the educational Pima diabetes dataset.",
+      "Replace invalid physiological zeros with missing values.",
+      "Fit median imputation on training data inside the pipeline.",
+      "Standardize features using training-derived statistics.",
+      "Fit a class-balanced logistic regression classifier.",
+      "Inspect predictions on 154 held-out rows with precision, recall, F1 and ROC-AUC."
+    ],
+    "slides": [
+      {
+        "title": "Classification errors",
+        "image": "/media/previews/logistic-confusion.webp",
+        "note": "Original confusion-matrix plot extracted from notebook cell 24 without retraining. Read positive and negative errors separately; accuracy does not establish clinical usefulness.",
+        "source": "Saksham_Jadhav_Logistic_Regression.ipynb",
+        "kind": "Original notebook plot",
+        "code": null,
+        "width": 538,
+        "height": 490
+      },
+      {
+        "title": "Threshold-independent ranking",
+        "image": "/media/previews/logistic-roc.webp",
+        "note": "Original stored ROC plot, extracted from notebook cell 26 without retraining. Recorded ROC-AUC is 0.813.",
+        "source": "Saksham_Jadhav_Logistic_Regression.ipynb",
+        "kind": "Original notebook plot",
+        "code": null,
+        "width": 482,
+        "height": 490
+      },
+      {
+        "title": "Inspect fitted coefficients",
+        "image": "/media/logistic-diabetes.webp",
+        "note": "Original coefficient plot from cell 29. Associations describe this fitted model; they do not establish causation.",
+        "source": "Saksham_Jadhav_Logistic_Regression.ipynb",
+        "kind": "Original notebook plot",
+        "code": null,
+        "width": 790,
+        "height": 490
+      }
+    ]
+  },
+  "random-forest-diabetes": {
+    "audience": "Learners examining whether a tuned tree ensemble improves an educational classification experiment.",
+    "takeaway": "Reproducible model selection with feature inspection and an honest account of missed positive cases.",
+    "walkthrough": "After invalid-zero replacement and a stratified split, median imputation stays inside the training pipeline. Five-fold GridSearchCV selects hyperparameters by ROC-AUC. The final 300-tree, depth-8 model is assessed on a held-out split, with feature importance interpreted as model-specific evidence.",
+    "demo": "Actual committed evaluation plots expose errors, ranking and feature importance. The metric explorer explains stored results; no model is trained or used for patient-level inference in the portfolio.",
+    "stages": [
+      "Mark invalid physiological zeros as missing.",
+      "Create stratified training and held-out subsets.",
+      "Fit imputation inside the pipeline so held-out statistics do not leak into training.",
+      "Select hyperparameters using five-fold stratified CV and ROC-AUC.",
+      "Use the recorded 300-tree, depth-8 random forest; bounded parallelism limits resource use.",
+      "Evaluate held-out predictions separately from tuning; explicitly inspect the 25 false negatives."
+    ],
+    "slides": [
+      {
+        "title": "Look beyond aggregate accuracy",
+        "image": "/media/random-forest-diabetes.webp",
+        "note": "Original evaluation artifact. The held-out confusion matrix records 25 false negatives alongside 29 true positives.",
+        "source": "SUPPORT/confusion_matrix.png",
+        "kind": "Original evaluation plot",
+        "code": null,
+        "width": 976,
+        "height": 877
+      },
+      {
+        "title": "What the model uses",
+        "image": "/media/previews/forest-importance.webp",
+        "note": "Actual committed feature-importance plot. Importance is specific to this model and dataset; it is not a causal or medical finding.",
+        "source": "SUPPORT/feature_importance.png",
+        "kind": "Original evaluation plot",
+        "code": null,
+        "width": 1379,
+        "height": 938
+      },
+      {
+        "title": "Ranking on held-out data",
+        "image": "/media/previews/forest-roc.webp",
+        "note": "Actual stored ROC curve. Held-out ROC-AUC is 0.8104; the separate best cross-validation value is 0.8304.",
+        "source": "SUPPORT/roc_curve.png",
+        "kind": "Original evaluation plot",
+        "code": null,
+        "width": 866,
+        "height": 877
+      }
+    ]
+  }
+}

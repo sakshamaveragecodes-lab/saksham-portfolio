@@ -1,0 +1,71 @@
+[
+  {
+    "project": "sourcelens",
+    "commit": "d8b5b1adec7db08303493cfa8aa160888d03135c",
+    "verifiedSourcePaths": [
+      "assets/app-answer.png",
+      "assets/app-mobile.png",
+      "assets/app-ready.png",
+      "assets/app-refusal.png"
+    ]
+  },
+  {
+    "project": "careerlens",
+    "commit": "c4880f7442e73fbc403795b4df5ed0eb621ea8a5",
+    "verifiedSourcePaths": [
+      "docs/screenshots/02_overview.png",
+      "docs/screenshots/03_skills.png",
+      "docs/screenshots/06_report.png",
+      "docs/screenshots/09_mobile_analysis.png"
+    ]
+  },
+  {
+    "project": "form",
+    "commit": "c1ff6ce3bf80dd53b3e5756d389a7133a1513d31",
+    "verifiedSourcePaths": [
+      "docs/ALGORITHMS.md",
+      "docs/evidence/dashboard.jpg"
+    ]
+  },
+  {
+    "project": "studybuddy",
+    "commit": "25fd4ba55b30f05be45739d05bd77548c2ef6ac8",
+    "verifiedSourcePaths": [
+      "screenshots/01_home_screen.png",
+      "screenshots/02_osi_answer.png",
+      "screenshots/03_dbms_answer.png"
+    ]
+  },
+  {
+    "project": "pymentor",
+    "commit": "71b72f4672522b8a66de40439a3411508ddf3fb6",
+    "verifiedSourcePaths": [
+      "langchain_project/README.md",
+      "langchain_project/app.py"
+    ]
+  },
+  {
+    "project": "airbnb",
+    "commit": "454e1d14f3c34b64e45f0291e0a476fbd788eae9",
+    "verifiedSourcePaths": [
+      "Saksham_Jadhav_Airbnb_Linear_Regression_FINAL.ipynb",
+      "Saksham_Jadhav_Airbnb_Summary_FINAL.pdf"
+    ]
+  },
+  {
+    "project": "logistic-diabetes",
+    "commit": "a564aa4c97d2ee3be3b4952836d441b566fbe6db",
+    "verifiedSourcePaths": [
+      "Saksham_Jadhav_Logistic_Regression.ipynb"
+    ]
+  },
+  {
+    "project": "random-forest-diabetes",
+    "commit": "6edb782b97b5bbb3337fb5f75afd379b5d8c3377",
+    "verifiedSourcePaths": [
+      "SUPPORT/confusion_matrix.png",
+      "SUPPORT/feature_importance.png",
+      "SUPPORT/roc_curve.png"
+    ]
+  }
+]

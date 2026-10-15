@@ -1,6 +1,8 @@
 # Project Saksham
 
 ## Current milestone
+
+Preview/explanation upgrade: implemented one shared source-backed preview for all eight existing projects, with workflow stages, genuine mobile screenshots where available, labelled terminal/notebook views, full-size image panning and an accessible native fullscreen dialog. Added audience/takeaway summaries and precise original-architecture explanations. No homepage, hero, dependencies, backend or paid services changed. Original demos preserved; CareerLens recording moved into a disclosure in Preview. Lint, TypeScript, eight unit/provenance tests, static Pages export and all 14 local browser tests passed. All preview source paths verified in the eight pinned GitHub trees. Representative desktop/mobile/fullscreen screenshots inspected. Current milestone: push, Pages deployment, then full public verification. See docs/PROJECT_PREVIEWS.md and docs/qa/preview-upgrade-local.json.
 Production published and verified: https://sakshamaveragecodes-lab.github.io/saksham-portfolio/
 
 Initial release record (before the resume update): application commit 33d5bebc3249e2d6847cabfd40809ae5d6b50c99 deployed successfully by run 38799584642; verify run 38799584095 also passed. All ten browser tests passed against the actual public site with normal TLS verification and supported cloud CA/proxy configuration. Real production WebGL and pause control passed. Production Lighthouse 13.5.0 mobile lab run: 100/100/100/100, LCP 1.3 s, CLS 0, TBT 60 ms. This is a single lab run through the cloud proxy, not field INP or a performance guarantee.

@@ -1,0 +1,28 @@
+{
+  "scope": "One local mobile simulation of the CareerLens project page with the new preview. Not production or field measurements.",
+  "url": "http://127.0.0.1:3100/saksham-portfolio/projects/careerlens/",
+  "tool": "Lighthouse 13.5.0",
+  "executed": "2026-10-15T21:17:52.452Z",
+  "scores": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100,
+    "agentic-browsing": 100
+  },
+  "metrics": {
+    "largest-contentful-paint": {
+      "value": 1912.6158,
+      "display": "1.9 s"
+    },
+    "cumulative-layout-shift": {
+      "value": 0,
+      "display": "0"
+    },
+    "total-blocking-time": {
+      "value": 38.5,
+      "display": "40 ms"
+    }
+  },
+  "fieldINP": "Not measured"
+}

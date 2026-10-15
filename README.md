@@ -25,6 +25,8 @@ Run the build before browser tests. Cloud browser tests use `/usr/bin/chromium`;
 
 ## Content & provenance
 
+- `src/lib/project-details.json`: per-project preview stages, source artifacts, audience summaries and precise architecture descriptions; see [preview maintenance](docs/PROJECT_PREVIEWS.md).
+- `src/components/project-preview.tsx`: shared browser frame, native fullscreen dialog, genuine mobile captures and labelled terminal/notebook views.
 - `src/lib/projects.json`: typed case studies, implementation details, source SHAs, demo modes and limitations.
 - `public/project-evidence.json`: downloadable audit registry, including exclusions.
 - `src/lib/profile.ts`: professional contact, official resume checksum, education, program and credential details transcribed from the supplied document.

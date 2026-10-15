@@ -48,10 +48,12 @@ CivicMerge source was not accessible under the supplied account, and its supplie
 - `output: 'export'`: no SSR runtime, API routes, functions, database, persistent server or paid inference.
 - All demos compute locally or show explicit recorded/guided evidence.
 - Assets are self-hosted; no analytics, external fonts, tracking SDKs or third-party inference requests.
-- Existing Vercel Hobby project `saksham-portfolio` is the intended destination, using its generated HTTPS subdomain for this personal portfolio. No new project, subscription, domain or payment was created.
-- Account tier, quotas, current provider terms and production deployment must still be verified with authenticated provider access. A static architecture does not establish the account's billing state or guarantee unlimited free availability.
+- The existing Vercel Git integration attempted deployment and failed. The deployment logs require unavailable Vercel authentication. GitHub Pages is prepared as a free static fallback in the same public repository; enabling Pages was rejected by the scoped integration and requires the owner to select GitHub Actions in repository Settings → Pages. No new Vercel project, subscription, domain or payment was created.
+- The Vercel account tier, quotas and build failure still require authenticated inspection. No billing or plan settings were changed. Public-repository GitHub Pages has a free hosting tier; account-specific service limits still apply.
 
-`vercel.json` specifies the exported directory and security headers. Vercel applies compression and CDN caching. If a different static provider is ultimately used, retain equivalent headers and update the canonical origin in layout, sitemap and robots.
+`vercel.json` specifies the exported directory and security headers for Vercel. A production HTML CSP meta tag also applies restrictions on static hosts; GitHub Pages does not support arbitrary custom HTTP headers. All content remains static and there are no privileged client operations.
+
+`.github/workflows/deploy-pages.yml` builds the project-path export and publishes it when Pages is enabled. Use `NEXT_PUBLIC_BASE_PATH=/saksham-portfolio` and `NEXT_PUBLIC_SITE_URL=https://sakshamaveragecodes-lab.github.io/saksham-portfolio` for that build. Start it locally with `NEXT_PUBLIC_BASE_PATH=/saksham-portfolio npm start`, then use `TEST_BASE_URL=http://127.0.0.1:3000/saksham-portfolio npm run test:e2e`. Vercel root builds omit the base path and set the site URL to their actual verified origin. The similarly named `saksham-portfolio.vercel.app` is another person's website and must not be used as this project's domain.
 
 ## Release
 

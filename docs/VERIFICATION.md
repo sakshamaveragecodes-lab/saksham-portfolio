@@ -16,7 +16,7 @@ The actual execution results below concern this portfolio. Original project resu
 
 ## Performance
 
-`qa/lighthouse-local.json` retains the measured tool version, timestamp and local scope. Lighthouse 12.8.2 mobile emulation against the compressed static build reported:
+`qa/lighthouse-local.json` retains the measured tool version, timestamp and local scope. Lighthouse 13.5.0 mobile emulation against the compressed static build reported:
 
 | Metric | Result |
 | --- | --- |
@@ -24,9 +24,9 @@ The actual execution results below concern this portfolio. Original project resu
 | Accessibility | 100 |
 | Best Practices | 100 |
 | SEO | 100 |
-| LCP | 1.9 seconds |
+| LCP | 1.8 seconds |
 | CLS | 0 |
-| Total blocking time | 90 ms |
+| Total blocking time | 120 ms |
 
 The initial uncompressed/streamed build scored 77; a root loading boundary delayed real content and shifted the footer. Removing that boundary fixed the shift; local compression makes the serving model representative of a static CDN. These are **local lab results**, not measurements of Vercel or guarantees across networks/devices. Real-user INP is unmeasured. No analytics service was added.
 
@@ -49,8 +49,9 @@ No project is labelled LIVE. Browser demonstrations remain independent of extern
 
 1. The official latest resume PDF is unavailable. Its download/viewer, education, internships, certifications and professional email cannot be validated. The pages expose this limitation. The viewer/download implementation supports a verified future PDF through `src/lib/profile.ts`.
 2. CivicMerge's supplied URL was blocked by the environment egress proxy. No source was discovered under the supplied account. Its features and deployment remain unverified. Python Fundamentals is an empty repository.
-3. Vercel credentials, account tier/quota/terms and production operation are not verified. The existing project is the intended destination; no paid service or duplicate project was created. See `.codex/STATE.md` for the final Git push/deployment outcome.
-4. The CI workflow is saved but is not claimed to have run until GitHub reports a result.
+3. The initial release was pushed to `main` and GitHub CI passed. Vercel's Git integration created deployment `dpl_6G3mzZCwsTopXLg4a9ye3LFtstrQ` and reported failure. Authenticated build logs are unavailable. Its generated preview hostname is recorded in the GitHub deployment status; the guessed `saksham-portfolio.vercel.app` is a different person's website and is not this portfolio.
+4. The same-repository GitHub Pages fallback is implemented. The existing GitHub integration authenticated as the owner and could push, but enabling Pages returned HTTP 403, “Resource not accessible by integration.” The owner must select GitHub Actions in Settings → Pages before publishing can proceed. No paid service or duplicate Vercel project was created.
+5. The verify workflow succeeded in GitHub Actions for initial commit `64b7b85`. Subsequent publish-workflow status and production verification remain distinct.
 
 ## Reproduce
 

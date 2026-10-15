@@ -1,0 +1,31 @@
+{
+  "scope": "Single mobile simulation against the resume-update public release through the cloud egress proxy; not field measurements",
+  "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+  "tool": "Lighthouse 13.5.0",
+  "executed": "2026-10-15T20:36:45.750Z",
+  "scores": {
+    "performance": 94,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "largest-contentful-paint": {
+      "value": 1971.8055,
+      "display": "2.0\u00a0s"
+    },
+    "cumulative-layout-shift": {
+      "value": 0,
+      "display": "0"
+    },
+    "total-blocking-time": {
+      "value": 165.5,
+      "display": "170\u00a0ms"
+    },
+    "first-contentful-paint": {
+      "value": 1565.8055,
+      "display": "1.6\u00a0s"
+    }
+  },
+  "fieldINP": "Not measured"
+}

@@ -2,9 +2,14 @@
 
 **Public production:** https://sakshamaveragecodes-lab.github.io/saksham-portfolio/
 
-The application at commit `33d5bebc3249e2d6847cabfd40809ae5d6b50c99` was published by [GitHub Actions run 38799584642](https://github.com/sakshamaveragecodes-lab/saksham-portfolio/actions/runs/38799584642). Its separate verify workflow also passed. Production behavior was checked in Chromium; deployment success alone was not treated as verification.
+The initial application at commit `33d5bebc3249e2d6847cabfd40809ae5d6b50c99` was published by [GitHub Actions run 38799584642](https://github.com/sakshamaveragecodes-lab/saksham-portfolio/actions/runs/38799584642). Its separate verify workflow also passed. Production behavior was checked in Chromium; deployment success alone was not treated as verification.
+
+The official resume/profile update at `3a3826e01647e0a75c2946ce5efb7b122b5cacc5` was published by run 38802583632. The full-Chromium CI configuration at `013f5a947cced0f94a9382eb1f8d1c218b158741` passed verify run 38803288093 and publish run 38803287756.
 
 ## Actual production checks
+
+**Latest resume update:** all 11 public-site browser tests passed, including actual native viewer loading, real download events, original PDF checksum, education, program, two resume-listed credentials and the professional email link. The original 10-test release record below is retained as historical evidence. See `qa/resume-update-production.json`.
+
 
 - **10 Playwright tests passed** against the public HTTPS URL. They cover the recruiter journey, filters, actual scoring/replay updates, architecture selection, all 17 content routes, local assets, anchors, 404, sitemap, mobile navigation, keyboard skip navigation, reduced motion, guided pipelines, stored metric controls, real video playback and initial HTML without JavaScript.
 - Axe scans on six representative routes reported no WCAG A/AA violations. This is automated evidence, not a complete accessibility certification.
@@ -14,6 +19,9 @@ The application at commit `33d5bebc3249e2d6847cabfd40809ae5d6b50c99` was publish
 - `qa/production-browser-summary.json` records the final passing production run. Earlier environment trust/DNS failures were diagnosed and superseded, not labelled passing.
 
 ## Measured performance
+
+The latest resume/profile release mobile lab run measured **94 Performance / 100 Accessibility / 100 Best Practices / 100 SEO**, LCP **2.0 s**, CLS **0**, TBT **170 ms**. See `qa/resume-update-lighthouse.json`. This remains a single simulation through the cloud proxy, not field INP. The earlier initial-release measurements below are historical.
+
 
 Lighthouse 13.5.0 performed **one mobile simulation against the production URL through this cloud environment's egress proxy**:
 
@@ -93,3 +101,5 @@ Cloud Chromium must trust the environment's platform CA, just as its system HTTP
 Source received 16 October 2026: one-page owner-supplied official PDF. Published SHA-256: `7b6219b010f443301b7a75756ebcf531b1f227300d897d9b4e1fb6e10f82a130` (original bytes preserved). PDF structure inspection identified a standard initial-view destination and a content-credentials attachment, rather than an executable initial action. Professional contact information is present; no residential address or government identifier was identified. The phone number remains only in the official PDF.
 
 The resume viewer, download and professional email action are implemented. BCA education is explicitly in progress with an expected June 2027 completion. UNLOX is presented as an internship and project-based learning program; Trivion is the partner named by the resume, not an asserted employer. Two credentials are labelled resume-sourced without implying independent issuer verification. Updated verification results are recorded in `qa/resume-update-local.json` and `qa/resume-update-production.json` after execution.
+
+The resume update passed lint, TypeScript, production export, seven algorithm tests and all eleven local and public browser tests. Axe coverage now includes nine representative routes. PDF download bytes and native viewer behavior were tested separately; the original global framing-denial header was narrowed for same-origin PDF responses. The app retains its framing-denial policy. Full Chromium is explicitly selected in CI for native PDF viewer support; the rerun passed. CI failures are now surfaced as check annotations so diagnostics do not rely solely on the separate runner log archive.

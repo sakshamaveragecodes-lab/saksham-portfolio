@@ -19,3 +19,7 @@ jobs:
       - run: npm run typecheck
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
+        id: browser-tests
+      - name: Surface browser failures in check annotations
+        if: failure() && steps.browser-tests.outcome == 'failure'
+        run: node scripts/report-browser-failures.mjs

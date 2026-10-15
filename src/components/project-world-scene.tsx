@@ -1,5 +1,5 @@
 'use client';
-import {useFrame} from '@react-three/fiber';
+import {Canvas,useFrame} from '@react-three/fiber';
 import {useMemo,useRef} from 'react';
 import * as THREE from 'three';
 
@@ -61,7 +61,7 @@ function DataSurface({kind,color}:{kind:Slug;color:string}){
  if(kind==='studybuddy')return <group>{[1.25,1.9].map((r,i)=><mesh key={i} rotation={[.65+i*.4,.4+i*.3,0]}><torusGeometry args={[r,.014,4,90]}/><meshBasicMaterial color={color} transparent opacity={.25}/></mesh>)}</group>;
  return <group>{[0,1,2].map(i=><mesh key={i} position={[0,(i-1)*1.03,-.8]} rotation={[Math.PI/2,0,.2]}><torusGeometry args={[1.1,.01,5,90]}/><meshBasicMaterial color={color} opacity={.22} transparent/></mesh>)}</group>;
 }
-export default function ProjectWorldScene({slug,stageCount,active,onSelect,playing}:{slug:string;stageCount:number;active:number;onSelect:(i:number)=>void;playing:boolean}){
+function WorldContent({slug,stageCount,active,onSelect,playing}:{slug:string;stageCount:number;active:number;onSelect:(i:number)=>void;playing:boolean}){
  const kind=(slug in themes?slug:'sourcelens') as Slug;
  const color=themes[kind];
  const positions=useMemo(()=>Array.from({length:stageCount},(_,i)=>coords(kind,i,stageCount)),[kind,stageCount]);
@@ -69,3 +69,5 @@ export default function ProjectWorldScene({slug,stageCount,active,onSelect,playi
  useFrame(({pointer},delta)=>{if(!group.current)return;group.current.rotation.y=THREE.MathUtils.lerp(group.current.rotation.y,pointer.x*.12+Math.sin(performance.now()*.00013)*.07,Math.min(1,delta*1.5));group.current.rotation.x=THREE.MathUtils.lerp(group.current.rotation.x,pointer.y*.055,Math.min(1,delta*1.5));});
  return <><color attach="background" args={['#090f1a']}/><fog attach="fog" args={['#090f1a',7.2,13]}/><ambientLight intensity={.8}/><directionalLight position={[4,4,5]} intensity={1.65} color={color}/><group ref={group}><Atmosphere color={color}/><DataSurface kind={kind} color={color}/><LinkLines positions={positions} color={color}/>{positions.map((p,i)=><Node key={i} p={p} index={i} active={i===active} color={color} kind={kind} onSelect={onSelect}/>)}</group>{playing&&<pointLight position={[0,0,3]} color={color} intensity={.7} distance={10}/>}</>;
 }
+
+export default function ProjectWorldScene(props:{slug:string;stageCount:number;active:number;onSelect:(i:number)=>void;playing:boolean;visible?:boolean}){return <Canvas dpr={[1,1.35]} frameloop={props.visible===false?'never':'always'} camera={{position:[0,0,8.7],fov:48}} gl={{antialias:true,alpha:false,powerPreference:'low-power'}} aria-label="Interactive three-dimensional data flow"><WorldContent {...props}/></Canvas>}

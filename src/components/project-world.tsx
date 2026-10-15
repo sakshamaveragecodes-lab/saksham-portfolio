@@ -17,10 +17,10 @@ export function ProjectWorld({slug,name,steps,descriptions}:{slug:string;name:st
  useEffect(()=>{
   const media=window.matchMedia('(prefers-reduced-motion: reduce)');
   const update=()=>{setReduced(media.matches);if(media.matches)setPlaying(false)};
-  update();media.addEventListener('change',update);
+  media.addEventListener('change',update);
   let ok=false;try{const canvas=document.createElement('canvas');const gl=canvas.getContext('webgl2');ok=!!gl;gl?.getExtension('WEBGL_lose_context')?.loseContext()}catch{ok=false}
-  setCapable(ok);
-  return()=>media.removeEventListener('change',update);
+  const scheduled=window.requestAnimationFrame(()=>{update();setCapable(ok)});
+  return()=>{window.cancelAnimationFrame(scheduled);media.removeEventListener('change',update)};
  },[]);
  useEffect(()=>{
   if(!stageRef.current)return;

@@ -34,7 +34,7 @@ export function ProjectWorld({slug,name,steps,descriptions}:{slug:string;name:st
   <div className="world-viewport" ref={stageRef}>
    <div className="world-hud world-hud-top"><span className="mono">SYSTEM / {slug.toUpperCase().replaceAll('-','_')}</span><span className="mono">STAGE {String(active+1).padStart(2,'0')} / {String(steps.length).padStart(2,'0')}</span></div>
    <div className="world-sky" aria-hidden="true"/>
-   {ready&&capable&&!reduced?<WorldBoundary><div className="world-canvas"><WorldScene slug={slug} stageCount={steps.length} active={active} onSelect={jump} playing={playing}/></div></WorldBoundary>:<div className="world-css-fallback" aria-hidden="true"><i/><i/><i/><span>3D / ENGINEERING</span></div>}
+   {ready&&capable&&!reduced?<WorldBoundary><div className="world-canvas"><WorldScene slug={slug} stageCount={steps.length} active={active} onSelect={jump} playing={playing} visible={visible}/></div></WorldBoundary>:<div className="world-css-fallback" aria-hidden="true"><i/><i/><i/><span>3D / ENGINEERING</span></div>}
    <div className="world-hud world-hud-bottom"><span>ROTATE WITH POINTER · SELECT GLOWING NODES</span><span>{reduced?'STATIC MODE':capable?'WEBGL RENDERING':'ACCESSIBLE FALLBACK'}</span></div>
   </div>
   <div className="world-console">

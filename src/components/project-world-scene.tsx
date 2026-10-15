@@ -44,7 +44,7 @@ function Figure({color}:{color:string}){
  [[0,-.45,0],[-.46,-1.15,.16]],[[-.46,-1.15,.16],[-.56,-1.73,.4]],
  [[0,-.45,0],[.46,-1.15,-.16]],[[.46,-1.15,-.16],[.55,-1.73,-.4]]
  ];
- const line=useMemo(()=>new Float32Array(bones.flatMap(([a,b])=>[...a,...b])),[]);
+ const line=new Float32Array(bones.flatMap(([a,b])=>[...a,...b]));
  return <group scale={.86}><lineSegments><bufferGeometry><bufferAttribute attach="attributes-position" args={[line,3]}/></bufferGeometry><lineBasicMaterial color={color} transparent opacity={.42}/></lineSegments><mesh position={[0,1.55,0]}><sphereGeometry args={[.22,14,12]}/><meshBasicMaterial color={color} wireframe transparent opacity={.55}/></mesh>{bones.slice(0,7).map(([a],i)=><mesh key={i} position={a}><sphereGeometry args={[.06,9,9]}/><meshBasicMaterial color="#d2fff0"/></mesh>)}</group>;
 }
 function Forest({color}:{color:string}){

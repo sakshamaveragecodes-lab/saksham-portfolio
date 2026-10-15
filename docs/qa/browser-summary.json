@@ -1,7 +1,7 @@
 {
   "stats": {
-    "startTime": "2026-10-15T19:55:16.926Z",
-    "duration": 24632.073,
+    "startTime": "2026-10-15T20:04:53.456Z",
+    "duration": 23404.476000000002,
     "expected": 10,
     "skipped": 0,
     "unexpected": 0,
@@ -49,5 +49,5 @@
       "passed": true
     }
   ],
-  "scope": "Local compressed static export; system Chromium"
+  "scope": "Local GitHub Pages project-path static export with production CSP; system Chromium"
 }

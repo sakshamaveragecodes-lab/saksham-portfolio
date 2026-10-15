@@ -1,7 +1,7 @@
 {
-  "scope": "Local static export served with gzip; not production or field data",
+  "scope": "Local GitHub Pages project-path static export with gzip and production CSP; not public production or field data",
   "tool": "Lighthouse 13.5.0",
-  "executed": "2026-10-15T19:55:52.599Z",
+  "executed": "2026-10-15T20:05:59.485Z",
   "scores": {
     "performance": 99,
     "accessibility": 100,
@@ -10,7 +10,7 @@
   },
   "metrics": {
     "largest-contentful-paint": {
-      "value": 1846.052,
+      "value": 1834.5634999999997,
       "display": "1.8\u00a0s"
     },
     "cumulative-layout-shift": {
@@ -18,11 +18,11 @@
       "display": "0"
     },
     "total-blocking-time": {
-      "value": 122,
+      "value": 121,
       "display": "120\u00a0ms"
     },
     "first-contentful-paint": {
-      "value": 761.0519999999999,
+      "value": 760.28175,
       "display": "0.8\u00a0s"
     }
   },

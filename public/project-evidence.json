@@ -27,7 +27,7 @@
       "steps": [
         "PDF validation",
         "Page extraction",
-        "Chunking \u00b7 900 / 120",
+        "Chunking · 900 / 120",
         "MiniLM embeddings",
         "FAISS retrieval",
         "Qwen selection",
@@ -60,7 +60,9 @@
       "commit": "d8b5b1adec7db08303493cfa8aa160888d03135c",
       "status": "Source available",
       "deployment": "No public deployment verified",
-      "source": "https://github.com/sakshamaveragecodes-lab/sourcelens-rag-chatbot"
+      "source": "https://github.com/sakshamaveragecodes-lab/sourcelens-rag-chatbot",
+      "imageWidth": 1440,
+      "imageHeight": 1080
     },
     {
       "slug": "careerlens",
@@ -95,7 +97,7 @@
         "Learning roadmap"
       ],
       "decisions": [
-        "Fit binary TF-IDF once on fixed role profiles, then project the resume onto each target\u2019s skills. Unrelated skills cannot dilute the score.",
+        "Fit binary TF-IDF once on fixed role profiles, then project the resume onto each target’s skills. Unrelated skills cannot dilute the score.",
         "Use 75% core coverage, 15% preferred coverage and 10% cosine similarity; use 90/10 when preferred requirements are absent.",
         "Show contextual mentions without weighting prestige, protected attributes or inferred ability."
       ],
@@ -121,7 +123,9 @@
       "commit": "c4880f7442e73fbc403795b4df5ed0eb621ea8a5",
       "status": "Source available",
       "deployment": "No public deployment verified",
-      "source": "https://github.com/sakshamaveragecodes-lab/careerlens-ai-resume-analyzer"
+      "source": "https://github.com/sakshamaveragecodes-lab/careerlens-ai-resume-analyzer",
+      "imageWidth": 1440,
+      "imageHeight": 1000
     },
     {
       "slug": "form",
@@ -182,7 +186,9 @@
       "commit": "c1ff6ce3bf80dd53b3e5756d389a7133a1513d31",
       "status": "Source available",
       "deployment": "No public deployment verified",
-      "source": "https://github.com/sakshamaveragecodes-lab/form-ai-fitness-assistant"
+      "source": "https://github.com/sakshamaveragecodes-lab/form-ai-fitness-assistant",
+      "imageWidth": 1348,
+      "imageHeight": 926
     },
     {
       "slug": "studybuddy",
@@ -207,7 +213,7 @@
         "Question",
         "Streamlit interface",
         "Ollama local API",
-        "Llama 3.2 \u00b7 1B",
+        "Llama 3.2 · 1B",
         "Answer display"
       ],
       "decisions": [
@@ -233,7 +239,9 @@
       "commit": "25fd4ba55b30f05be45739d05bd77548c2ef6ac8",
       "status": "Source available",
       "deployment": "No public deployment verified",
-      "source": "https://github.com/sakshamaveragecodes-lab/ollama-streamlit-studybuddy"
+      "source": "https://github.com/sakshamaveragecodes-lab/ollama-streamlit-studybuddy",
+      "imageWidth": 1440,
+      "imageHeight": 1000
     },
     {
       "slug": "pymentor",
@@ -251,7 +259,7 @@
       "features": [
         "Interactive console question loop",
         "Single-question CLI mode",
-        "PromptTemplate \u2192 model \u2192 StrOutputParser",
+        "PromptTemplate → model → StrOutputParser",
         "Input limits and setup/API error handling",
         "Offline self-test with explicit test doubles"
       ],
@@ -285,7 +293,9 @@
       "commit": "71b72f4672522b8a66de40439a3411508ddf3fb6",
       "status": "Source available",
       "deployment": "No public deployment verified",
-      "source": "https://github.com/sakshamaveragecodes-lab/langchain-ai-question-answering-chatbot"
+      "source": "https://github.com/sakshamaveragecodes-lab/langchain-ai-question-answering-chatbot",
+      "imageWidth": null,
+      "imageHeight": null
     },
     {
       "slug": "airbnb",
@@ -306,7 +316,7 @@
         "Encoded feature matrix",
         "Fixed-seed 80/20 split",
         "Linear regression predictions",
-        "R\u00b2, MAE, MSE and RMSE evaluation"
+        "R², MAE, MSE and RMSE evaluation"
       ],
       "steps": [
         "NYC 2019 data",
@@ -318,15 +328,15 @@
       ],
       "decisions": [
         "Use a familiar baseline that exposes how features relate to nightly price.",
-        "Report absolute error as well as R\u00b2 so readers can interpret prediction quality."
+        "Report absolute error as well as R² so readers can interpret prediction quality."
       ],
       "challenges": [
         "Skewed prices and incomplete listing attributes constrain the baseline.",
         "A historical observational dataset cannot establish causal pricing effects."
       ],
       "evaluation": [
-        "Stored executed notebook output: R\u00b2 0.4708; MAE $38.54; RMSE $53.24.",
-        "These describe the notebook\u2019s prepared dataset and split, not future-market accuracy."
+        "Stored executed notebook output: R² 0.4708; MAE $38.54; RMSE $53.24.",
+        "These describe the notebook’s prepared dataset and split, not future-market accuracy."
       ],
       "limitations": [
         "No deployed pricing service or exported browser model.",
@@ -339,11 +349,13 @@
       "commit": "454e1d14f3c34b64e45f0291e0a476fbd788eae9",
       "status": "Source available",
       "deployment": "No public deployment verified",
-      "source": "https://github.com/sakshamaveragecodes-lab/airbnb-linear-regression-project"
+      "source": "https://github.com/sakshamaveragecodes-lab/airbnb-linear-regression-project",
+      "imageWidth": 1019,
+      "imageHeight": 1440
     },
     {
       "slug": "logistic-diabetes",
-      "name": "Diabetes \u00b7 Logistic Regression",
+      "name": "Diabetes · Logistic Regression",
       "repo": "logistic-regression-diabetes-prediction",
       "category": "Machine Learning",
       "tagline": "Interpretable classification.",
@@ -392,11 +404,13 @@
       "commit": "a564aa4c97d2ee3be3b4952836d441b566fbe6db",
       "status": "Source available",
       "deployment": "No public deployment verified",
-      "source": "https://github.com/sakshamaveragecodes-lab/logistic-regression-diabetes-prediction"
+      "source": "https://github.com/sakshamaveragecodes-lab/logistic-regression-diabetes-prediction",
+      "imageWidth": 790,
+      "imageHeight": 490
     },
     {
       "slug": "random-forest-diabetes",
-      "name": "Diabetes \u00b7 Random Forest",
+      "name": "Diabetes · Random Forest",
       "repo": "random-forest-diabetes-prediction",
       "category": "Machine Learning",
       "tagline": "Evaluate beyond accuracy.",
@@ -447,7 +461,9 @@
       "commit": "6edb782b97b5bbb3337fb5f75afd379b5d8c3377",
       "status": "Source available",
       "deployment": "No public deployment verified",
-      "source": "https://github.com/sakshamaveragecodes-lab/random-forest-diabetes-prediction"
+      "source": "https://github.com/sakshamaveragecodes-lab/random-forest-diabetes-prediction",
+      "imageWidth": 976,
+      "imageHeight": 877
     }
   ],
   "excluded": [

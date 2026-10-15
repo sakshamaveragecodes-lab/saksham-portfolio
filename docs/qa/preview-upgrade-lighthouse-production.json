@@ -1,0 +1,27 @@
+{
+  "scope": "Single mobile simulation against the deployed CareerLens project preview through the cloud egress proxy; not field measurements",
+  "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/careerlens/",
+  "tool": "Lighthouse 13.5.0",
+  "executed": "2026-10-15T21:20:51.702Z",
+  "scores": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "largest-contentful-paint": {
+      "value": 1328.05,
+      "display": "1.3 s"
+    },
+    "cumulative-layout-shift": {
+      "value": 0,
+      "display": "0"
+    },
+    "total-blocking-time": {
+      "value": 49,
+      "display": "50 ms"
+    }
+  },
+  "fieldINP": "Not measured"
+}

@@ -6,6 +6,14 @@ The initial application at commit `33d5bebc3249e2d6847cabfd40809ae5d6b50c99` was
 
 The official resume/profile update at `3a3826e01647e0a75c2946ce5efb7b122b5cacc5` was published by run 38802583632. The full-Chromium CI configuration at `013f5a947cced0f94a9382eb1f8d1c218b158741` passed verify run 38803288093 and publish run 38803287756.
 
+## Application preview upgrade
+
+Application commit `a43477711d4aec0c5c44520b18782256394e9063` deployed successfully through Pages run [38808860949](https://github.com/sakshamaveragecodes-lab/saksham-portfolio/actions/runs/38808860949); verify run [38808860928](https://github.com/sakshamaveragecodes-lab/saksham-portfolio/actions/runs/38808860928) also passed. Lint, strict TypeScript, eight unit/provenance tests, the static production export and all 14 local browser tests passed. All 14 tests then passed against the actual public HTTPS site in 51.8 seconds, with certificate verification enabled. See `qa/preview-upgrade-production.json`.
+
+The suite visits every stage of all eight previews at 390 and 1440 pixels, inspects full-size images and genuine mobile captures, tests modal closing/focus containment/return, reduced motion, graceful failed-image recovery, source links, original demos, video playback, resume download/checksum and contact links. Existing 768-pixel coverage remains. Automated axe scans cover nine existing representative routes plus three additional preview types in page and expanded-dialog states; no sampled WCAG A/AA violations were found. This is not a complete accessibility or physical-device certification. Representative production screenshot, terminal, notebook, mobile and expanded-view images were inspected.
+
+All source artifact paths were verified through their eight pinned GitHub trees (`qa/preview-source-links.json`); local image dimensions and hashes are in `qa/preview-media.json`. No original model tests were rerun or newly implied. The native viewer’s cached-image loading issue was fixed rather than relaxing assertions. No dependencies or hosting services were added. See `PROJECT_PREVIEWS.md` for maintenance and demonstration boundaries.
+
 ## Actual production checks
 
 **Latest resume update:** all 11 public-site browser tests passed, including actual native viewer loading, real download events, original PDF checksum, education, program, two resume-listed credentials and the professional email link. The original 10-test release record below is retained as historical evidence. See `qa/resume-update-production.json`.
@@ -19,6 +27,8 @@ The official resume/profile update at `3a3826e01647e0a75c2946ce5efb7b122b5cacc5`
 - `qa/production-browser-summary.json` records the final passing production run. Earlier environment trust/DNS failures were diagnosed and superseded, not labelled passing.
 
 ## Measured performance
+
+The preview upgrade’s **CareerLens project page** measured **100 Performance / 100 Accessibility / 100 Best Practices / 100 SEO**, LCP **1.3 s**, CLS **0**, TBT **50 ms**, in one production mobile simulation through the cloud proxy. See `qa/preview-upgrade-lighthouse-production.json`. Its local mobile simulation also scored 100 in the four standard categories (LCP 1.9 s, CLS 0). These are page-specific lab samples, not site-wide guarantees or field INP. The homepage was not modified by this upgrade; its earlier measurements below retain their original release scope.
 
 The latest resume/profile release mobile lab run measured **94 Performance / 100 Accessibility / 100 Best Practices / 100 SEO**, LCP **2.0 s**, CLS **0**, TBT **170 ms**. See `qa/resume-update-lighthouse.json`. This remains a single simulation through the cloud proxy, not field INP. The earlier initial-release measurements below are historical.
 

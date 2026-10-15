@@ -1,0 +1,73 @@
+{
+  "scope": "Actual public HTTPS site; all eight project previews, existing demos, nine-route axe regression, three additional preview page/dialog scans, responsive navigation, official PDF bytes/download and profile links",
+  "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+  "applicationCommit": "a43477711d4aec0c5c44520b18782256394e9063",
+  "publishRun": 38808860949,
+  "verifyRun": 38808860928,
+  "stats": {
+    "startTime": "2026-10-15T21:19:41.731Z",
+    "duration": 51816.292,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "name": "main journey, filters, flagship demo, architecture and source",
+      "passed": true
+    },
+    {
+      "name": "CareerLens component updates scores and FORM computes real replay reps",
+      "passed": true
+    },
+    {
+      "name": "all routes, assets, anchors and metadata are valid",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 390px",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 768px",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 1440px",
+      "passed": true
+    },
+    {
+      "name": "keyboard navigation, reduced motion and accessibility scans",
+      "passed": true
+    },
+    {
+      "name": "search empty state and category/technology filters work",
+      "passed": true
+    },
+    {
+      "name": "initial static HTML exposes content without JavaScript",
+      "passed": true
+    },
+    {
+      "name": "guided pipelines, stored metrics, refusal cases and actual video work",
+      "passed": true
+    },
+    {
+      "name": "official PDF download, education, credentials and email are backed by the supplied resume",
+      "passed": true
+    },
+    {
+      "name": "all eight source previews, stages and viewport controls at 390px",
+      "passed": true
+    },
+    {
+      "name": "all eight source previews, stages and viewport controls at 1440px",
+      "passed": true
+    },
+    {
+      "name": "preview and expanded viewer accessibility, close control and image failure fallback",
+      "passed": true
+    }
+  ]
+}

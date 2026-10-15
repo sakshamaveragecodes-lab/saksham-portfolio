@@ -1,0 +1,53 @@
+{
+  "stats": {
+    "startTime": "2026-10-15T19:55:16.926Z",
+    "duration": 24632.073,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "name": "main journey, filters, flagship demo, architecture and source",
+      "passed": true
+    },
+    {
+      "name": "CareerLens component updates scores and FORM computes real replay reps",
+      "passed": true
+    },
+    {
+      "name": "all routes, assets, anchors and metadata are valid",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 390px",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 768px",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 1440px",
+      "passed": true
+    },
+    {
+      "name": "keyboard navigation, reduced motion and accessibility scans",
+      "passed": true
+    },
+    {
+      "name": "search empty state and category/technology filters work",
+      "passed": true
+    },
+    {
+      "name": "initial static HTML exposes content without JavaScript",
+      "passed": true
+    },
+    {
+      "name": "guided pipelines, stored metrics, refusal cases and actual video work",
+      "passed": true
+    }
+  ],
+  "scope": "Local compressed static export; system Chromium"
+}

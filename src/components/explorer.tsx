@@ -1,0 +1,10 @@
+'use client';
+import {useState} from 'react';
+import {Search,SlidersHorizontal,Box,LayoutGrid} from 'lucide-react';
+import {projects} from '@/lib/projects';
+import {ProjectCard} from './project-card';
+const categories=['All work',...new Set(projects.map(p=>p.category))];
+export function Explorer(){const[query,setQuery]=useState('');const[category,setCategory]=useState('All work');const[tech,setTech]=useState('All technologies');const[depth,setDepth]=useState(false);
+ const filtered=projects.filter(p=>(category==='All work'||p.category===category)&&(tech==='All technologies'||p.stack.includes(tech))&&`${p.name} ${p.description} ${p.stack.join(' ')}`.toLowerCase().includes(query.toLowerCase()));
+ return <><div className="lab-toolbar"><label className="search"><Search size={18}/><span className="sr-only">Search projects</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search ideas, projects, technologies…"/></label><label className="tech-select"><SlidersHorizontal size={16}/><span className="sr-only">Filter by technology</span><select value={tech} onChange={e=>setTech(e.target.value)}><option>All technologies</option>{[...new Set(projects.flatMap(p=>p.stack))].sort().map(s=><option key={s}>{s}</option>)}</select></label><button className="view-toggle" aria-pressed={depth} onClick={()=>setDepth(!depth)}>{depth?<LayoutGrid size={18}/>:<Box size={18}/>} {depth?'Grid view':'Depth view'}</button></div><div className="filter-row" role="group" aria-label="Project categories">{categories.map(c=><button aria-pressed={category===c} className={category===c?'selected':''} key={c} onClick={()=>setCategory(c)}>{c}</button>)}<span className="mono" aria-live="polite">{filtered.length} PROJECTS</span></div><div className={`projects-grid ${depth?'depth-view':''}`}>{filtered.map((p,i)=><ProjectCard project={p} key={p.slug} index={i}/>)}</div>{!filtered.length&&<div className="empty-state"><h2>No matching projects.</h2><p>Try another technology or a broader search.</p><button className="button" onClick={()=>{setQuery('');setCategory('All work');setTech('All technologies')}}>Reset filters</button></div>}</>
+}

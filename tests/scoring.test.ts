@@ -1,0 +1,13 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {roles,scoreRole} from '../src/lib/scoring';
+import {PoseEngine,syntheticPose} from '../src/lib/pose';
+import {projects} from '../src/lib/projects';
+test('role scoring: empty selection is zero; full selection reaches 100 for every role',()=>{roles.forEach((r,i)=>{assert.equal(scoreRole([],i).score,0);assert.equal(scoreRole([...r.required,...r.preferred],i).score,100)})});
+test('adding a relevant skill never lowers the score, and irrelevant skills do not dilute it',()=>{roles.forEach((r,i)=>{const selected:string[]=[];let last=0;for(const skill of [...r.required,...r.preferred]){selected.push(skill);const value=scoreRole(selected,i).score;assert.ok(value>=last);last=value}assert.equal(scoreRole(['made-up-skill',...selected],i).score,last)})});
+test('skill repetition earns no extra score',()=>{assert.equal(scoreRole(['Python'],1).score,scoreRole(['Python','Python'],1).score)});
+test('FORM actual replay engine requires full cycles and counts controlled motion',()=>{const engine=new PoseEngine('squat');for(let t=0;t<=12000;t+=40)engine.update(syntheticPose('squat',t/1000),t);assert.equal(engine.reps.length,3);assert.ok(engine.reps.every(r=>r.duration>=0.8&&r.duration<=20))});
+test('FORM pauses on missing joints and does not count incomplete movements',()=>{const engine=new PoseEngine('squat');assert.equal(engine.update([],40).visible,false);for(let t=80;t<1600;t+=40)engine.update(syntheticPose('squat',t/1000),t);assert.equal(engine.reps.length,0)});
+test('every published project has provenance, limitations, technical content and a working demo mode',()=>{assert.equal(projects.length,8);for(const p of projects){assert.match(p.commit,/^[a-f0-9]{40}$/);assert.ok(p.features.length>=4);assert.ok(p.evaluation.length>=2);assert.ok(p.limitations.length>=2);assert.notEqual(p.mode,'LIVE');assert.match(p.source,/^https:\/\/github.com\/sakshamaveragecodes-lab\//)}});
+import fixtures from './scoring-parity.json';
+test('browser formula agrees with 156 original Python/sklearn scoring fixtures across all roles',()=>{for(const f of fixtures){const result=scoreRole(f.selected,f.index);assert.equal(result.score,f.score,`role ${f.index}`);assert.ok(Math.abs(result.similarityPoints/10-f.cosine)<1e-12)}});

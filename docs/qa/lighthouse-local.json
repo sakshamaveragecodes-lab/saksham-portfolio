@@ -1,0 +1,30 @@
+{
+  "scope": "Local static export served with gzip; not production or field data",
+  "tool": "Lighthouse 12.8.2",
+  "executed": "2026-10-15T19:51:07.464Z",
+  "scores": {
+    "performance": 99,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "largest-contentful-paint": {
+      "value": 1862.9269,
+      "display": "1.9 s"
+    },
+    "cumulative-layout-shift": {
+      "value": 0,
+      "display": "0"
+    },
+    "total-blocking-time": {
+      "value": 92,
+      "display": "90 ms"
+    },
+    "first-contentful-paint": {
+      "value": 759.9268999999999,
+      "display": "0.8 s"
+    }
+  },
+  "fieldINP": "Not measured"
+}

@@ -1,0 +1,467 @@
+{
+  "scope": "Source inspection, not a rerun of original full application tests",
+  "projects": [
+    {
+      "slug": "sourcelens",
+      "name": "SourceLens",
+      "repo": "sourcelens-rag-chatbot",
+      "category": "Generative AI",
+      "tagline": "Answers that show their work.",
+      "description": "A domain-specific, extractive RAG application that turns uploaded PDFs into evidence-constrained answers with physical page citations. It addresses a practical problem: language models can sound certain even when the source does not support an answer.",
+      "stack": [
+        "Python",
+        "Streamlit",
+        "FAISS",
+        "Sentence Transformers",
+        "Qwen2.5",
+        "PyTorch"
+      ],
+      "features": [
+        "Page-aware PDF extraction and bounded uploads",
+        "900-character chunks with 120-character overlap",
+        "Normalized 384-dimensional MiniLM embeddings",
+        "FAISS IndexFlatIP top-five retrieval",
+        "Quotation validation, citations and insufficient-evidence refusal",
+        "Session-isolated collections and explicit cloud-provider consent"
+      ],
+      "steps": [
+        "PDF validation",
+        "Page extraction",
+        "Chunking \u00b7 900 / 120",
+        "MiniLM embeddings",
+        "FAISS retrieval",
+        "Qwen selection",
+        "Verified quotations"
+      ],
+      "decisions": [
+        "Normalized embeddings make inner-product search cosine-equivalent. FAISS keeps retrieval inspectable.",
+        "Qwen selects relevant excerpts; application code validates quotations and assembles the answer. This conservative design trades broad synthesis for traceable provenance.",
+        "Indexes and uploads stay in session memory; changing a collection disables chat until the new collection is processed."
+      ],
+      "challenges": [
+        "Preserve physical page numbers when some pages have no readable text.",
+        "Separate invalid model output from an authentic insufficient-evidence refusal.",
+        "Rank compound question clauses separately to reduce topic crowding."
+      ],
+      "evaluation": [
+        "Repository record: 34 automated tests and 12 browser checks.",
+        "Recorded development evaluation: 23/23 authored synthetic questions, including five refusal cases. 21 successful cases were retained and two rerun after a quotation-validation fix.",
+        "These are historical repository results, not an independent benchmark or tests rerun by this portfolio."
+      ],
+      "limitations": [
+        "No OCR or layout/table reconstruction.",
+        "Citation provenance does not prove relevance or source truth.",
+        "Portfolio walkthrough uses recorded synthetic cases; it runs neither MiniLM nor Qwen."
+      ],
+      "mode": "GUIDED_DEMO",
+      "image": "/media/sourcelens.webp",
+      "docs": "README.md",
+      "featured": true,
+      "commit": "d8b5b1adec7db08303493cfa8aa160888d03135c",
+      "status": "Source available",
+      "deployment": "No public deployment verified",
+      "source": "https://github.com/sakshamaveragecodes-lab/sourcelens-rag-chatbot"
+    },
+    {
+      "slug": "careerlens",
+      "name": "CareerLens",
+      "repo": "careerlens-ai-resume-analyzer",
+      "category": "NLP",
+      "tagline": "Make matching explainable.",
+      "description": "An educational resume-analysis application that makes lexical skill matching transparent: identify documented skills, compare curated role profiles and turn missing terminology into a learning roadmap.",
+      "stack": [
+        "Python",
+        "Streamlit",
+        "scikit-learn",
+        "TF-IDF",
+        "Plotly",
+        "ReportLab"
+      ],
+      "features": [
+        "110 canonical skills with aliases",
+        "13 curated job-role profiles",
+        "Hybrid coverage and TF-IDF cosine ranking",
+        "Required and preferred skill gaps",
+        "Dependency-ordered learning recommendations",
+        "PDF/DOCX parsing and in-memory PDF reporting"
+      ],
+      "steps": [
+        "PDF / DOCX",
+        "Validate & extract",
+        "Section detection",
+        "Skill dictionary",
+        "TF-IDF + coverage",
+        "Rank & explain",
+        "Learning roadmap"
+      ],
+      "decisions": [
+        "Fit binary TF-IDF once on fixed role profiles, then project the resume onto each target\u2019s skills. Unrelated skills cannot dilute the score.",
+        "Use 75% core coverage, 15% preferred coverage and 10% cosine similarity; use 90/10 when preferred requirements are absent.",
+        "Show contextual mentions without weighting prestige, protected attributes or inferred ability."
+      ],
+      "challenges": [
+        "Preserve C++, C#, .NET and CI/CD punctuation during extraction.",
+        "Reject unsafe or oversized documents without persisting personal uploads.",
+        "Explain that a missing keyword is not proof of missing ability."
+      ],
+      "evaluation": [
+        "Recorded evaluation: three fictional profiles exported in two formats; all six top-role checks matched.",
+        "The repository includes parser, scoring, monotonicity, PDF and UI tests and a recorded browser walkthrough.",
+        "Perfect fixture scores apply only to this small authored dataset."
+      ],
+      "limitations": [
+        "Lexical matching does not establish proficiency, employability or hiring probability.",
+        "Portfolio executes the role-scoring formula on explicit skill selections; it does not parse resumes or reproduce the full Python application.",
+        "English technical roles; curated profiles are not live job vacancies."
+      ],
+      "mode": "CLIENT_SIDE_INTERACTIVE",
+      "image": "/media/careerlens.webp",
+      "docs": "README.md",
+      "featured": true,
+      "commit": "c4880f7442e73fbc403795b4df5ed0eb621ea8a5",
+      "status": "Source available",
+      "deployment": "No public deployment verified",
+      "source": "https://github.com/sakshamaveragecodes-lab/careerlens-ai-resume-analyzer"
+    },
+    {
+      "slug": "form",
+      "name": "FORM",
+      "repo": "form-ai-fitness-assistant",
+      "category": "Computer Vision",
+      "tagline": "Movement, made visible.",
+      "description": "A fitness workspace combining browser-side pose geometry, nutrition, habits and progress tracking with a TypeScript backend. Privacy is a concrete boundary: camera frames are processed locally rather than uploaded.",
+      "stack": [
+        "TypeScript",
+        "React",
+        "MediaPipe",
+        "Cloudflare Workers",
+        "D1",
+        "Drizzle"
+      ],
+      "features": [
+        "Six exercise geometries with complete-cycle rep detection",
+        "Local MediaPipe inference with visible landmarks",
+        "Nutrition estimates and dietary filtering",
+        "Habit indexes, schedules and progress reports",
+        "Tenant-scoped accounts, RBAC and session recovery",
+        "Optional FastAPI interoperability and simulated equipment"
+      ],
+      "steps": [
+        "Browser camera",
+        "MediaPipe worker",
+        "Landmark geometry",
+        "Stable phase detection",
+        "Repetition metrics",
+        "Worker API",
+        "D1 persistence"
+      ],
+      "decisions": [
+        "The authoritative backend uses TypeScript Workers and relational D1; FastAPI is an optional integration service.",
+        "Hold angle thresholds for 120 ms and require complete movement cycles before counting a rep.",
+        "Keep synthetic replay labelled and excluded from real activity and adherence analytics."
+      ],
+      "challenges": [
+        "Degrade safely when camera or WebGL support is missing.",
+        "Maintain tenant and role boundaries across account, workout and administrative routes.",
+        "Treat geometric cues as unvalidated coaching heuristics rather than medical or safety guarantees."
+      ],
+      "evaluation": [
+        "Repository record dated 28 September 2026: 80 automated tests plus 11 running-build HTTP checks passed.",
+        "Records cover geometry, nutrition, actual API handlers on SQLite, UI and Python interoperability.",
+        "Live webcam inference, physical equipment and external LLM calls were not verified."
+      ],
+      "limitations": [
+        "Portfolio runs the original geometric replay engine on synthetic landmarks, with no camera or inference model.",
+        "Geometric thresholds have not been validated across users and camera placements.",
+        "Nutrition and movement outputs are educational estimates."
+      ],
+      "mode": "CLIENT_SIDE_INTERACTIVE",
+      "image": "/media/form.webp",
+      "docs": "README.md",
+      "featured": true,
+      "commit": "c1ff6ce3bf80dd53b3e5756d389a7133a1513d31",
+      "status": "Source available",
+      "deployment": "No public deployment verified",
+      "source": "https://github.com/sakshamaveragecodes-lab/form-ai-fitness-assistant"
+    },
+    {
+      "slug": "studybuddy",
+      "name": "StudyBuddy AI",
+      "repo": "ollama-streamlit-studybuddy",
+      "category": "Generative AI",
+      "tagline": "A local study companion.",
+      "description": "A deliberately small conversational study assistant connecting a Streamlit interface to Ollama and the local Llama 3.2 1B model. It explores the shortest useful path between a question and locally generated explanation.",
+      "stack": [
+        "Python",
+        "Streamlit",
+        "Ollama",
+        "Llama 3.2"
+      ],
+      "features": [
+        "Question input in Streamlit",
+        "Local Ollama model connection",
+        "Model response display",
+        "Windows setup launcher and documented test prompts"
+      ],
+      "steps": [
+        "Question",
+        "Streamlit interface",
+        "Ollama local API",
+        "Llama 3.2 \u00b7 1B",
+        "Answer display"
+      ],
+      "decisions": [
+        "Keep inference local instead of requiring an API key.",
+        "Keep the application intentionally simple: no database, authentication or retrieval pipeline."
+      ],
+      "challenges": [
+        "Require a running Ollama service and an available local model.",
+        "Small language models can produce incorrect explanations."
+      ],
+      "evaluation": [
+        "Four actual application screenshots and five documented test prompts are present.",
+        "No independent answer-quality benchmark is claimed."
+      ],
+      "limitations": [
+        "Requires local model resources; no hosted model runs in this portfolio.",
+        "No RAG, durable conversations or authentication."
+      ],
+      "mode": "GUIDED_DEMO",
+      "image": "/media/studybuddy.webp",
+      "docs": "README.md",
+      "featured": false,
+      "commit": "25fd4ba55b30f05be45739d05bd77548c2ef6ac8",
+      "status": "Source available",
+      "deployment": "No public deployment verified",
+      "source": "https://github.com/sakshamaveragecodes-lab/ollama-streamlit-studybuddy"
+    },
+    {
+      "slug": "pymentor",
+      "name": "PyMentor AI",
+      "repo": "langchain-ai-question-answering-chatbot",
+      "category": "Generative AI",
+      "tagline": "A small pipeline, made explicit.",
+      "description": "A console Python doubt solver demonstrating composable LangChain orchestration: validated question, controlled prompt, Gemini connector and string output parser.",
+      "stack": [
+        "Python",
+        "LangChain",
+        "Gemini",
+        "PromptTemplate"
+      ],
+      "features": [
+        "Interactive console question loop",
+        "Single-question CLI mode",
+        "PromptTemplate \u2192 model \u2192 StrOutputParser",
+        "Input limits and setup/API error handling",
+        "Offline self-test with explicit test doubles"
+      ],
+      "steps": [
+        "Input validation",
+        "PromptTemplate",
+        "Gemini connector",
+        "StrOutputParser",
+        "Console answer"
+      ],
+      "decisions": [
+        "Use the pipe operator to make the model pipeline readable.",
+        "Load provider credentials from environment configuration; never ship keys to a browser."
+      ],
+      "challenges": [
+        "Handle unavailable provider models, quotas and empty outputs explicitly.",
+        "Separate offline pipeline checks from real API inference."
+      ],
+      "evaluation": [
+        "Repository contains a self-test and five documented Python questions.",
+        "Offline test doubles validate flow; they do not establish live Gemini availability."
+      ],
+      "limitations": [
+        "The portfolio shows a guided pipeline without sending requests to Gemini.",
+        "Original application needs a user-owned API key and network access; that dependency is not part of this zero-cost website."
+      ],
+      "mode": "GUIDED_DEMO",
+      "image": null,
+      "docs": "langchain_project/README.md",
+      "featured": false,
+      "commit": "71b72f4672522b8a66de40439a3411508ddf3fb6",
+      "status": "Source available",
+      "deployment": "No public deployment verified",
+      "source": "https://github.com/sakshamaveragecodes-lab/langchain-ai-question-answering-chatbot"
+    },
+    {
+      "slug": "airbnb",
+      "name": "Airbnb Price Regression",
+      "repo": "airbnb-linear-regression-project",
+      "category": "Machine Learning",
+      "tagline": "A baseline with visible error.",
+      "description": "An educational linear-regression notebook on the New York City Airbnb 2019 dataset, covering preparation, feature engineering, held-out predictions and error analysis.",
+      "stack": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "scikit-learn",
+        "Jupyter"
+      ],
+      "features": [
+        "Dataset inspection and preprocessing",
+        "Encoded feature matrix",
+        "Fixed-seed 80/20 split",
+        "Linear regression predictions",
+        "R\u00b2, MAE, MSE and RMSE evaluation"
+      ],
+      "steps": [
+        "NYC 2019 data",
+        "Clean & prepare",
+        "Encode features",
+        "80 / 20 split",
+        "LinearRegression",
+        "Held-out metrics"
+      ],
+      "decisions": [
+        "Use a familiar baseline that exposes how features relate to nightly price.",
+        "Report absolute error as well as R\u00b2 so readers can interpret prediction quality."
+      ],
+      "challenges": [
+        "Skewed prices and incomplete listing attributes constrain the baseline.",
+        "A historical observational dataset cannot establish causal pricing effects."
+      ],
+      "evaluation": [
+        "Stored executed notebook output: R\u00b2 0.4708; MAE $38.54; RMSE $53.24.",
+        "These describe the notebook\u2019s prepared dataset and split, not future-market accuracy."
+      ],
+      "limitations": [
+        "No deployed pricing service or exported browser model.",
+        "Portfolio metric explorer explains stored outputs; it does not generate listing valuations."
+      ],
+      "mode": "GUIDED_DEMO",
+      "image": "/media/airbnb.webp",
+      "docs": "Saksham_Jadhav_Airbnb_Linear_Regression_FINAL.ipynb",
+      "featured": false,
+      "commit": "454e1d14f3c34b64e45f0291e0a476fbd788eae9",
+      "status": "Source available",
+      "deployment": "No public deployment verified",
+      "source": "https://github.com/sakshamaveragecodes-lab/airbnb-linear-regression-project"
+    },
+    {
+      "slug": "logistic-diabetes",
+      "name": "Diabetes \u00b7 Logistic Regression",
+      "repo": "logistic-regression-diabetes-prediction",
+      "category": "Machine Learning",
+      "tagline": "Interpretable classification.",
+      "description": "An educational classification experiment using the Pima diabetes dataset to study imputation, scaling, class balancing and evaluation tradeoffs. It is not a clinical diagnostic application.",
+      "stack": [
+        "Python",
+        "Pandas",
+        "scikit-learn",
+        "Jupyter"
+      ],
+      "features": [
+        "Median imputation and standardized features",
+        "Balanced logistic regression",
+        "Stratified 80/20 split with seed 42",
+        "Precision, recall, F1 and ROC-AUC",
+        "Classification and confusion-matrix analysis"
+      ],
+      "steps": [
+        "768 dataset rows",
+        "Clean invalid zeros",
+        "Median imputer",
+        "StandardScaler",
+        "Balanced classifier",
+        "154-row test set"
+      ],
+      "decisions": [
+        "Fit preprocessing inside a pipeline to avoid leakage from the held-out split.",
+        "Use class balancing and report recall alongside accuracy."
+      ],
+      "challenges": [
+        "Distinguish model discrimination from clinical usefulness.",
+        "Small retrospective data limits generalization."
+      ],
+      "evaluation": [
+        "Stored notebook output: accuracy 0.734, precision 0.603, recall 0.704, F1 0.650, ROC-AUC 0.813.",
+        "Test split contains 154 rows; metrics are rounded as recorded."
+      ],
+      "limitations": [
+        "Educational dataset experiment only; no diagnosis or health recommendations.",
+        "No patient inputs are collected by the portfolio."
+      ],
+      "mode": "GUIDED_DEMO",
+      "image": "/media/logistic-diabetes.webp",
+      "docs": "Saksham_Jadhav_Logistic_Regression.ipynb",
+      "featured": false,
+      "commit": "a564aa4c97d2ee3be3b4952836d441b566fbe6db",
+      "status": "Source available",
+      "deployment": "No public deployment verified",
+      "source": "https://github.com/sakshamaveragecodes-lab/logistic-regression-diabetes-prediction"
+    },
+    {
+      "slug": "random-forest-diabetes",
+      "name": "Diabetes \u00b7 Random Forest",
+      "repo": "random-forest-diabetes-prediction",
+      "category": "Machine Learning",
+      "tagline": "Evaluate beyond accuracy.",
+      "description": "A tree-ensemble classification study with reproducible preprocessing, stratified tuning, feature importance and a held-out evaluation on the Pima dataset.",
+      "stack": [
+        "Python",
+        "Pandas",
+        "scikit-learn",
+        "Random Forest",
+        "Jupyter"
+      ],
+      "features": [
+        "Invalid-zero replacement and pipeline imputation",
+        "Stratified five-fold GridSearchCV",
+        "300-tree final model with depth 8",
+        "Feature-importance inspection",
+        "Stored confusion matrix and ROC curve"
+      ],
+      "steps": [
+        "Data cleaning",
+        "Stratified split",
+        "Median imputer",
+        "Five-fold tuning",
+        "Random forest",
+        "Held-out evaluation"
+      ],
+      "decisions": [
+        "Tune using ROC-AUC inside cross-validation, then inspect an untouched held-out split.",
+        "Use n_jobs=1 in the notebook to bound resource use.",
+        "Report false negatives explicitly rather than relying on aggregate accuracy."
+      ],
+      "challenges": [
+        "Account for invalid physiological zeros without leaking test statistics.",
+        "Feature importance is model-specific and does not imply causation."
+      ],
+      "evaluation": [
+        "Recorded test outputs: 75.32% accuracy, 69.05% precision, 53.70% recall, 60.42% F1 and 0.8104 ROC-AUC.",
+        "Confusion matrix: TN 87, FP 13, FN 25, TP 29. Best five-fold CV ROC-AUC 0.8304."
+      ],
+      "limitations": [
+        "Not a clinically validated diagnostic system.",
+        "Results are dataset- and split-specific; original training is not running in the browser."
+      ],
+      "mode": "GUIDED_DEMO",
+      "image": "/media/random-forest-diabetes.webp",
+      "docs": "SUBMIT/Random_Forest_Diabetes_Project.ipynb",
+      "featured": false,
+      "commit": "6edb782b97b5bbb3337fb5f75afd379b5d8c3377",
+      "status": "Source available",
+      "deployment": "No public deployment verified",
+      "source": "https://github.com/sakshamaveragecodes-lab/random-forest-diabetes-prediction"
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Python Fundamentals",
+      "reason": "Repository is empty"
+    },
+    {
+      "name": "CivicMerge",
+      "reason": "No source available; supplied deployment could not be verified"
+    },
+    {
+      "name": "Additional AI evaluation work",
+      "reason": "Professional history identified additional work, but a sanitized source archive is not accessible for publication and verification."
+    }
+  ]
+}

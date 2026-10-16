@@ -6,6 +6,14 @@ The initial application at commit `33d5bebc3249e2d6847cabfd40809ae5d6b50c99` was
 
 The official resume/profile update at `3a3826e01647e0a75c2946ce5efb7b122b5cacc5` was published by run 38802583632. The full-Chromium CI configuration at `013f5a947cced0f94a9382eb1f8d1c218b158741` passed verify run 38803288093 and publish run 38803287756.
 
+## Immersive edition local release gate
+
+The feature branch continues from the current production source `6441cd7`; no previous preview or professional source was removed. Lint, strict TypeScript, ten algorithm/provenance tests and the static build pass. All 23 browser tests pass in one final run (see `qa/immersive-local-browser.json`), including all eight application workspaces, the original previews/demos/PDF, desktop/mobile/tablet, axe, keyboard, reduced effects, native/fallback dialogs, actual software WebGL, viewport suspension, context loss and the credited exhibit’s real page-turning controls. Screenshots were inspected and representative captures retained. Automated checks are not an exhaustive accessibility certification or physical-device test.
+
+One local mobile Lighthouse sample per route measured Home **99/100/100/100** (LCP 1.9 s), SourceLens case study **99/100/100/100** (LCP 2.1 s), and CareerLens workspace **98/98/100/100** (LCP 2.2 s). All three recorded CLS 0. These are lab simulations, not field INP or guarantees; see `qa/immersive-lighthouse-local.json`. Initial JS remains 109 kB on Home (baseline 109 kB), 130 kB on case studies (baseline 128 kB), and 137 kB on new workspaces. The 3.4 MB optional exhibit assets are not loaded by ordinary portfolio pages. No dependency was added; npm audit reports zero advisories, with vendored source checked separately.
+
+Reference licensing and canonical/adapter integrity are documented in `THIRD_PARTY_REFERENCES.md`; source behavior and maintenance in `IMMERSIVE_EDITION.md`. Production verification is performed after the PR release, separately from these local results.
+
 ## Application preview upgrade
 
 Application commit `a43477711d4aec0c5c44520b18782256394e9063` deployed successfully through Pages run [38808860949](https://github.com/sakshamaveragecodes-lab/saksham-portfolio/actions/runs/38808860949); verify run [38808860928](https://github.com/sakshamaveragecodes-lab/saksham-portfolio/actions/runs/38808860928) also passed. Lint, strict TypeScript, eight unit/provenance tests, the static production export and all 14 local browser tests passed. All 14 tests then passed against the actual public HTTPS site in 51.8 seconds, with certificate verification enabled. See `qa/preview-upgrade-production.json`.

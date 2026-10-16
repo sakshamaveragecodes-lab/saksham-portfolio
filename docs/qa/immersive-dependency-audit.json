@@ -1,0 +1,11 @@
+{
+  "scope": "npm dependencies, including development packages; vendored immutable ThreeUI/Three.js files are separately source-verified, not covered by npm audit",
+  "vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  }
+}

@@ -23,6 +23,10 @@ npm run test:e2e
 
 Run the build before browser tests. Cloud browser tests use `/usr/bin/chromium`; override `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` for another system Chromium. CI uses Playwright's installed Chromium. `TEST_BASE_URL` targets an existing deployment. Tests cover real UI behavior, source-derived scoring, replay logic, routing, assets, keyboard access, reduced motion, accessibility and responsive layouts.
 
+## Immersive edition
+
+Eight full application workspaces are available at `/projects/[slug]/experience/`. Their browser logic, recorded outputs and guided views are explicitly labelled; existing cloud previews remain separate. The original hero and project worlds have bounded procedural effects, offscreen/hidden pause and device-local reduced-effects controls. See [maintenance](docs/IMMERSIVE_EDITION.md) and the optional [credited reference exhibit](docs/THIRD_PARTY_REFERENCES.md).
+
 ## Content & provenance
 
 - `src/lib/project-details.json`: per-project preview stages, source artifacts, audience summaries and precise architecture descriptions; see [preview maintenance](docs/PROJECT_PREVIEWS.md).

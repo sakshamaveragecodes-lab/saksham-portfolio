@@ -6,6 +6,24 @@ The initial application at commit `33d5bebc3249e2d6847cabfd40809ae5d6b50c99` was
 
 The official resume/profile update at `3a3826e01647e0a75c2946ce5efb7b122b5cacc5` was published by run 38802583632. The full-Chromium CI configuration at `013f5a947cced0f94a9382eb1f8d1c218b158741` passed verify run 38803288093 and publish run 38803287756.
 
+## Immersive edition — public release
+
+[PR #2](https://github.com/sakshamaveragecodes-lab/saksham-portfolio/pull/2) merged source `8020b4f` as `a77e3c3`. Updated PR runs `38860745796` and `38860739961`, merge verification `38861180439` and Pages publication `38861180433` all succeeded. Initial CI failures were investigated and corrected: probes now wait for an allowed scene to enter view, and fallback-dialog focus is applied after its DOM is open. Rendered-canvas and focus assertions were retained; asynchronous graphics initialization has a bounded 20-second test budget.
+
+All **23 browser tests passed on the actual public HTTPS website** in one run. They exercised all eight multi-screen workspaces, original cloud previews/demos/video/PDF download checksum, desktop/mobile/tablet, automated accessibility checks, real software WebGL, pause/viewport lifecycle, context-loss and no-WebGL fallback, native/fallback expanded dialogs, local visual preferences, clipboard, and actual ThreeUI browsing/opening/page turning/closing. Representative production screenshots were inspected. All seven publicly served canonical/adapter/vendor file hashes match the verified source manifest. See `qa/immersive-production-browser.json` and `qa/immersive-production-integrity.json`.
+
+One production mobile Lighthouse simulation per representative route measured:
+
+| Route | Performance | Accessibility | Best practices | SEO | LCP | CLS |
+| --- | --- | --- | --- | --- | --- | --- |
+| Home | 99 | 100 | 100 | 100 | 1.8 s | 0 |
+| SourceLens case study | 100 | 100 | 100 | 100 | 1.8 s | 0 |
+| CareerLens workspace | 100 | 98 | 100 | 100 | 1.7 s | 0 |
+
+These are lab samples through the cloud proxy, not physical-device testing, field INP or performance guarantees. The browser and API checks kept normal TLS certificate validation. See `qa/immersive-lighthouse-production.json`.
+
+Hosting remains the original free public-repository GitHub Pages deployment. No application dependency, server, database, inference API, subscription, domain or payment was added. The legacy Vercel preview status remains failed as before; the successful public release is GitHub Pages. No hosting/account permission was bypassed.
+
 ## Immersive edition local release gate
 
 The feature branch continues from the current production source `6441cd7`; no previous preview or professional source was removed. Lint, strict TypeScript, ten algorithm/provenance tests and the static build pass. All 23 browser tests pass in one final run (see `qa/immersive-local-browser.json`), including all eight application workspaces, the original previews/demos/PDF, desktop/mobile/tablet, axe, keyboard, reduced effects, native/fallback dialogs, actual software WebGL, viewport suspension, context loss and the credited exhibit’s real page-turning controls. Screenshots were inspected and representative captures retained. Automated checks are not an exhaustive accessibility certification or physical-device test.

@@ -1,0 +1,79 @@
+{
+  "scope": "One mobile Lighthouse simulation per representative page; lab samples, not field INP or performance guarantees",
+  "tool": "Lighthouse",
+  "fieldINP": "Not measured",
+  "pages": [
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+      "executed": "2026-10-16T06:30:16.472Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1831.4560000000001,
+          "display": "1.8 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 69,
+          "display": "70 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/sourcelens/",
+      "executed": "2026-10-16T06:30:24.292Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1763.2399,
+          "display": "1.8 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 60,
+          "display": "60 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/careerlens/experience/",
+      "executed": "2026-10-16T06:30:32.941Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 98,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1713.1212,
+          "display": "1.7 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 54.5,
+          "display": "50 ms"
+        }
+      }
+    }
+  ]
+}

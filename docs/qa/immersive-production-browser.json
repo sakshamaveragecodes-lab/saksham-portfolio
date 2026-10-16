@@ -1,0 +1,111 @@
+{
+  "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+  "scope": "Actual public HTTPS deployment; normal certificate validation, software WebGL, original previews and all eight application workspaces",
+  "sourceCommit": "8020b4f8d1da170a024ca3920f4e8e886217ca08",
+  "mergeCommit": "a77e3c396b13d58afe2cde6ec7d8a23b23c3163e",
+  "pullRequest": 2,
+  "publishRun": 38861180433,
+  "verifyRun": 38861180439,
+  "stats": {
+    "startTime": "2026-10-16T06:27:41.456Z",
+    "duration": 152303.50199999998,
+    "expected": 23,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "name": "all eight application workspaces: screens, reset and return at 390px",
+      "passed": true
+    },
+    {
+      "name": "all eight application workspaces: screens, reset and return at 1440px",
+      "passed": true
+    },
+    {
+      "name": "recorded RAG trace, computed career report, FORM replay, StudyBuddy records and terminal boundary",
+      "passed": true
+    },
+    {
+      "name": "every project has accessible, distinct 3D guided architecture",
+      "passed": true
+    },
+    {
+      "name": "motion layer remains decorative and core content is immediately available",
+      "passed": true
+    },
+    {
+      "name": "main journey, filters, flagship demo, architecture and source",
+      "passed": true
+    },
+    {
+      "name": "CareerLens component updates scores and FORM computes real replay reps",
+      "passed": true
+    },
+    {
+      "name": "all routes, assets, anchors and metadata are valid",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 390px",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 768px",
+      "passed": true
+    },
+    {
+      "name": "responsive layouts and visual evidence 1440px",
+      "passed": true
+    },
+    {
+      "name": "keyboard navigation, reduced motion and accessibility scans",
+      "passed": true
+    },
+    {
+      "name": "search empty state and category/technology filters work",
+      "passed": true
+    },
+    {
+      "name": "initial static HTML exposes content without JavaScript",
+      "passed": true
+    },
+    {
+      "name": "guided pipelines, stored metrics, refusal cases and actual video work",
+      "passed": true
+    },
+    {
+      "name": "official PDF download, education, credentials and email are backed by the supplied resume",
+      "passed": true
+    },
+    {
+      "name": "all eight source previews, stages and viewport controls at 390px",
+      "passed": true
+    },
+    {
+      "name": "all eight source previews, stages and viewport controls at 1440px",
+      "passed": true
+    },
+    {
+      "name": "preview and expanded viewer accessibility, close control and image failure fallback",
+      "passed": true
+    },
+    {
+      "name": "technology map and persisted visual preference work without affecting project content",
+      "passed": true
+    },
+    {
+      "name": "original 3D hero and project worlds render, pause, expand, suspend and recover from context loss",
+      "passed": true
+    },
+    {
+      "name": "optional licensed exhibit is offline, interactive and released when closed",
+      "passed": true
+    },
+    {
+      "name": "tablet workspaces and no-WebGL fallback stay usable",
+      "passed": true
+    }
+  ]
+}

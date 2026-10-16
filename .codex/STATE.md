@@ -1,3 +1,15 @@
+# Active enhancement — full-page motion and mobile/document repair
+
+Owner attached continuation directive on 16 October 2026: extend cinematic storytelling through every content section; priority mobile navigation and Resume plugin fallback. Same original feature branch/workspace. No delegates or paid infrastructure.
+
+Baseline production remains e96732de865a23e1f67279c57c24f128067528df. Reproduced public mobile menu: height359/viewport844, background scrolled0→600 with menu open. PDF HTTP200/application-pdf and original SHA match; physical Android PDF plugin behavior unavailable. Baseline receipt /tmp/section-review/baseline-issues.json.
+
+Current uncommitted implementation: native modal 100dvh safe-area navigation with body scroll lock/Escape/focus isolation/render pause; official byte-identical PDF plus locally rendered WebP/extracted-text fallback, optional native iframe, zoom/full PDF/download. Reproducible derivative script requires local Poppler+existing sharp, no new dependencies. Shared rendering continues into reading sections, hands off to existing 3D walkthrough, pauses for modal/hidden tab. Reversible section roles, camera/assembly compositions, conceptual SVG instruments per project section, architectural flow, distinct lightweight project-card motifs, filtering layout transitions and nonblocking selected-card route echo. Existing previews/demos/workspaces/data unchanged.
+
+Next exact step: final full34-test regression + then34 desktop/mobile full-page/reverse recordings are running sequentially in session18534; logs /tmp/section-review/regression-final.log and recording.log. All3 focused navigation/resume checks now pass; lint/strictTS/static export/15 unit tests/production audit0 pass. Runtime source ready for visual checkpoint, not yet deployed. Complete visual inspection, profile representative scenes/Lighthouse, create final receipts and finish passing PR/Pages/public verification. No approvals needed. Earlier failures were diagnostic: strict descendant selector fixed to direct child, real pointer coordinates used to test scroll preservation without Playwright sticky-trigger auto-scroll, inward next-project rotation fixed actual27px overflow, menu ordinal spans made aria-hidden to retain original accessible names. Explicit focus wrap verified; native close state updates removed; hydration and cached-image readiness hardened. Existing scene-suspension assertions now distinguish continuous reading from the specialized walkthrough handoff; original functional assertions remain.
+
+---
+
 # Project Saksham — release state
 
 ## Verified current release

@@ -7,7 +7,7 @@ export type Vec3 = [
 export const cinemaState = { progress: 0, source: false, compact: false, active: false, paused: false, pointer: [0, 0] as [
         number,
         number
-    ], quality: 1, selection: -1, spread: 0 };
+    ], content: false, section: 0, sectionProgress: 0, sectionKind: 'overview', quality: 1, selection: -1, spread: 0 };
 export const smooth = (t: number) => { const x = Math.max(0, Math.min(1, t)); return x * x * (3 - 2 * x); };
 export function segment(progress: number, stops: Vec3[]): Vec3 {
     const p = Math.max(0, Math.min(stops.length - 1, progress * (stops.length - 1)));
@@ -39,4 +39,4 @@ export function sheetPose(index: number, count: number, p: number, source: boole
 export function cameraPose(p: number, source: boolean, mobile: boolean, pointer: [
     number,
     number
-]) { const camera = segment(p, source ? [[6, 2.1, 13.5], [.2, .4, 5], [7, 2, 10], [1, 1.2, 8]] : [[6, 2, 13.5], [.2, .35, 4], [8, 3.2, 12], [9, 4, 16]]); const focus = segment(p, [[0, 0, 0], [4.7, .2, -5], [0, 0, 0], [0, 0, 0]]); const offset = mobile ? 0 : 2.3; camera[0] += offset + pointer[0] * .22; camera[1] += (mobile ? 1.2 : 0) - pointer[1] * .16; camera[2] += mobile ? 6 : 0; focus[0] -= mobile ? 0 : 2.4 - 1.4 * smooth((p - .4) / .6); focus[1] += mobile ? 1.5 : 0; return { camera, focus, offset }; }
+]) { const camera = segment(p, source ? [[6, 2.1, 13.5], [.2, .4, 5], [7, 2, 10], [1, 1.2, 8]] : [[6, 2, 13.5], [.2, .35, 4], [8, 3.2, 12], [9, 4, 16]]); const focus = segment(p, [[0, 0, 0], [4.7, .2, -5], [0, 0, 0], [0, 0, 0]]); const offset = mobile ? 0 : 2.3; camera[0] += offset + pointer[0] * .22; camera[1] += (mobile ? 1.2 : 0) - pointer[1] * .16; camera[2] += mobile ? 6 : 0; focus[0] -= mobile ? 0 : 2.4 - 1.4 * smooth((p - .4) / .6); focus[1] += mobile ? 1.5 : 0; if(cinemaState.content){const t=cinemaState.sectionProgress,turn=cinemaState.section%4;camera[0]+=Math.sin(t*Math.PI)*2.2*(turn%2?-1:1);camera[1]+=turn*.35;camera[2]+=3;focus[0]+=1.5;focus[1]-=.8;}return { camera, focus, offset }; }

@@ -1,5 +1,5 @@
 import {withNormals,type MeshData} from './geometry';
-import {segment,smooth,type Vec3} from './timeline';
+import {cinemaState,segment,smooth,type Vec3} from './timeline';
 import {worlds,type WorldKey} from './worlds';
 export type Pose={position:Vec3;rotation:Vec3;scale:Vec3};
 export type Assembly={surfaces:Pose[];boxes:Pose[];nodes:Pose[]};
@@ -103,5 +103,6 @@ export function worldCamera(key:WorldKey,p:number,mobile:boolean,pointer:[number
  const def=worlds[key],camera=segment(p,def.camera),focus=segment(p,def.focus),offset=mobile?0:2.7;
  camera[0]+=offset+pointer[0]*.28;camera[1]+=(mobile?1.5:0)-pointer[1]*.2;camera[2]+=mobile?7:2.5*smooth(p/.6);
  focus[0]-=mobile?0:.6;focus[1]+=mobile?2:0;
+ if(cinemaState.content){const t=cinemaState.sectionProgress,chapter=cinemaState.section%4;camera[0]+=Math.sin(t*Math.PI)*2.6*(chapter%2?-1:1);camera[1]+=chapter*.4;camera[2]+=mobile?2:4;focus[0]+=mobile?0:1.4;focus[1]-=.7;}
  return {camera,focus,offset};
 }

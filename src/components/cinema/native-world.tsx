@@ -22,12 +22,12 @@ export default function NativeWorld({world,active,onReady,onFailure}:{world:Worl
   const canvas=ref.current;if(!canvas)return;
   const gl=canvas.getContext('webgl2',{alpha:false,antialias:false,powerPreference:'low-power'});if(!gl){onFailure();return;}
   const debug=gl.getExtension('WEBGL_debug_renderer_info'),software=/swiftshader|llvmpipe|software/i.test(debug?String(gl.getParameter(debug.UNMASKED_RENDERER_WEBGL)):'');
-  let quality=software?.65:Math.min(devicePixelRatio,innerWidth<=850?1.25:1.5),raf=0,last=0,time=0,p=0,spread=0,disposed=false,slow=0;
+  let quality=software?.65:Math.min(devicePixelRatio,innerWidth<=850?1.25:1.5),raf=0,last=0,time=0,p=0,spread=0,disposed=false,slow=0,resizePending=false;
   const stats={frames:0,frameMs:[] as number[],calls:0,triangles:0,geometries:4,textures:0,quality};window.__sakshamCinema=stats;
   const meshes:Mesh[]=[],programs:Program[]=[],matrix=new Matrix4(),root=new Matrix4(),floor=new Matrix4(),view=new Matrix4(),projection=new Matrix4(),mv=new Matrix4(),normal=new Matrix3(),pos=new Vector3(),size=new Vector3(),quat=new Quaternion(),euler=new Euler(),eye=new Vector3(),focus=new Vector3(),up=new Vector3(0,1,0),target=new Vector3(),data=new Float32Array(64*16);
   const write=(i:number,pose:Pose)=>{matrix.compose(pos.set(...pose.position),quat.setFromEuler(euler.set(...pose.rotation)),size.set(...pose.scale));data.set(matrix.elements,i*16);};
-  const resize=()=>{canvas.width=Math.max(1,Math.round(canvas.clientWidth*quality));canvas.height=Math.max(1,Math.round(canvas.clientHeight*quality));gl.viewport(0,0,canvas.width,canvas.height);const y=.1*Math.tan(42*Math.PI/360),x=y*canvas.width/canvas.height;projection.makePerspective(-x,x,y,-y,.1,100);};
-  const observer=new ResizeObserver(resize);observer.observe(canvas);resize();
+  const resize=()=>{const w=Math.max(1,Math.round(canvas.clientWidth*quality)),h=Math.max(1,Math.round(canvas.clientHeight*quality));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}gl.viewport(0,0,canvas.width,canvas.height);const y=.1*Math.tan(42*Math.PI/360),x=y*canvas.width/canvas.height;projection.makePerspective(-x,x,y,-y,.1,100);};
+  const observer=new ResizeObserver(()=>{resizePending=true;start.current()});observer.observe(canvas);resize();
   const lost=(event:Event)=>{event.preventDefault();onFailure();};canvas.addEventListener('webglcontextlost',lost);
   const cleanup=()=>{if(disposed)return;if(stats.frames>0)continuity.current={eye:eye.toArray() as Vec3,focus:focus.toArray() as Vec3};disposed=true;cancelAnimationFrame(raf);observer.disconnect();canvas.removeEventListener('webglcontextlost',lost);meshes.forEach(m=>{m.buffers.forEach(b=>gl.deleteBuffer(b));gl.deleteVertexArray(m.vao);});programs.forEach(p=>gl.deleteProgram(p.program));delete window.__sakshamCinema;};
   let metal:Program,water:Program;
@@ -54,11 +54,13 @@ export default function NativeWorld({world,active,onReady,onFailure}:{world:Worl
    arrival=Math.min(1,arrival+dt*1.6);const enter=smooth(arrival);
    const mobile=innerWidth<=850,camera=worldCamera(world,p,mobile,cinemaState.pointer);eye.lerp(target.set(...camera.camera),blend);focus.set(...camera.focus);if(previous&&arrival<1)focus.lerpVectors(pos.set(...previous.focus),target.set(...camera.focus),enter);view.lookAt(eye,focus,up).setPosition(eye).invert();
    root.compose(pos.set(camera.offset,(mobile?-1:0)-(1-enter)*.8,0),quat.setFromEuler(euler.set(0,Math.sin(time*.12)*.025+(1-enter)*.3,0)),size.setScalar(.86*(.72+.28*enter)));floor.compose(pos.set(0,-3.2,0),quat.setFromEuler(euler.set(-Math.PI/2,0,0)),size.setScalar(1));
+   // Resizing clears the drawing buffer: always resize BEFORE this frame's draw.
+   if(delta>.035)slow++;if(stats.frames===59&&slow>20){quality=software?.45:.85;stats.quality=quality;resizePending=true;}
+   if(resizePending){resize();resizePending=false;}
    gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);stats.calls=0;stats.triangles=0;
    uniforms(water,floor);draw(meshes[3],[{position:[0,0,0],rotation:[0,0,0],scale:[1,1,1]}]);uniforms(metal,root);
    const assembly=worldAssembly(world,p,time,spread,cinemaState.selection);gl.uniform1f(metal.uniforms.uSurface,1);draw(meshes[0],assembly.surfaces);gl.uniform1f(metal.uniforms.uSurface,0);draw(meshes[1],assembly.boxes);draw(meshes[2],assembly.nodes);
    stats.frames++;if(stats.frames>30){stats.frameMs.push(delta*1000);if(stats.frameMs.length>720)stats.frameMs.shift();}
-   if(delta>.035)slow++;if(stats.frames===60&&slow>20){quality=software?.45:.85;stats.quality=quality;resize();}
    gl.bindVertexArray(null);
   };
   start.current=()=>{if(!raf&&!disposed){last=0;raf=requestAnimationFrame(frame);}};onReady();start.current();return cleanup;

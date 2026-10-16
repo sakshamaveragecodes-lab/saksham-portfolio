@@ -30,7 +30,7 @@ export default function LeanScene({ active, onReady, onFailure }: {
             onFailure();
             return;
         }
-        let raf = 0, disposed = false, last = 0, time = 0, p = 0, slow = 0, quality = 1;
+        let raf = 0, disposed = false, last = 0, time = 0, p = 0, slow = 0, quality = 1, resizePending = false;
         const debug = gl.getExtension('WEBGL_debug_renderer_info');
         const software = /swiftshader|llvmpipe|software/i.test(debug ? String(gl.getParameter(debug.UNMASKED_RENDERER_WEBGL)) : '');
         quality = software ? .65 : Math.min(devicePixelRatio, 1.25);
@@ -52,7 +52,7 @@ export default function LeanScene({ active, onReady, onFailure }: {
             canvas.width = w;
             canvas.height = h;
         } gl.viewport(0, 0, w, h); const y = .1 * Math.tan(42 * Math.PI / 360), x = y * w / h; projection.makePerspective(-x, x, y, -y, .1, 100); };
-        const resize = new ResizeObserver(sizeCanvas);
+        const resize = new ResizeObserver(() => {resizePending=true;start.current()});
         resize.observe(canvas);
         sizeCanvas();
         cinemaState.quality = quality;
@@ -108,6 +108,10 @@ export default function LeanScene({ active, onReady, onFailure }: {
                 }
                 write(instances, i, s.position, s.rotation, s.scale);
             }
+            // Never clear a completed frame by resizing after presentation.
+            if(delta>.035)slow++;
+            if(stats.frames===59&&slow>20&&software){quality=.45;stats.quality=quality;cinemaState.quality=quality;resizePending=true;}
+            if(resizePending){sizeCanvas();resizePending=false;}
             gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
             stats.calls = 0;
             stats.triangles = 0;
@@ -157,17 +161,6 @@ export default function LeanScene({ active, onReady, onFailure }: {
                 stats.frameMs.push(delta * 1000);
                 if (stats.frameMs.length > 720)
                     stats.frameMs.shift();
-            }
-            if (delta > .035)
-                slow++;
-            if (stats.frames === 60 && slow > 20 && software) {
-                quality = .45;
-                stats.quality = quality;
-                cinemaState.quality = quality;
-                const w = Math.round(canvas.clientWidth * quality), h = Math.round(canvas.clientHeight * quality);
-                canvas.width = w;
-                canvas.height = h;
-                gl.viewport(0, 0, w, h);
             }
             gl.bindVertexArray(null);
         };

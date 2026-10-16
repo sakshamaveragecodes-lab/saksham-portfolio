@@ -38,3 +38,4 @@ body:has(.cinema-story) .brand-mark{color:#d9edf7;text-shadow:0 0 28px #89c9e833
 @media(max-width:850px){body:has(.cinema-story) .nav-links.is-open{background:radial-gradient(ellipse at 90% 10%,#254253,#0b1520 65%);box-shadow:0 30px 70px #000b;border-bottom:1px solid #6f96ab55}body:has(.cinema-story) .nav-links.is-open a{padding-left:12px;border-left:1px solid #6b95ac66}body:has(.cinema-story) .nav-links>a[aria-current=page]::after{display:none}}
 @media(max-width:850px){html[data-effects=reduced] .cinema-projects .cinema-chapter{top:auto!important;transform:none!important}}
 @media(prefers-reduced-motion:reduce){.cinema-projects .cinema-chapter{top:auto!important;transform:none!important}}
+html[data-cinema-failed=true] .world-controls,html[data-cinema-failed=true] .cinema-foot button:first-child{display:none}

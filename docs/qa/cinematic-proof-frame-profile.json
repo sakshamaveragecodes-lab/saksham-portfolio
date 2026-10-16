@@ -1,0 +1,38 @@
+[
+  {
+    "label": "desktop",
+    "samples": 166,
+    "medianFrameMs": 33.099999994039536,
+    "p95FrameMs": 52.29999999701977,
+    "approxFps": 27.781961808163647,
+    "calls": 3,
+    "triangles": 3464,
+    "geometries": 3,
+    "textures": 0,
+    "quality": 0.45,
+    "offscreenFrames": 0,
+    "afterRouteLeave": {
+      "canvasCount": 0,
+      "statsRetained": false
+    },
+    "environment": "Headless Chromium SwiftShader software rendering; stationary scene; no video capture; physical GPU performance unavailable"
+  },
+  {
+    "label": "mobile",
+    "samples": 355,
+    "medianFrameMs": 16.699999999999818,
+    "p95FrameMs": 16.799999999999272,
+    "approxFps": 59.16863895463179,
+    "calls": 3,
+    "triangles": 2824,
+    "geometries": 4,
+    "textures": 0,
+    "quality": 0.65,
+    "offscreenFrames": 0,
+    "afterRouteLeave": {
+      "canvasCount": 0,
+      "statsRetained": false
+    },
+    "environment": "Headless Chromium SwiftShader software rendering; stationary scene; no video capture; physical GPU performance unavailable"
+  }
+]

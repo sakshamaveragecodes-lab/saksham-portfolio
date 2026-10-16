@@ -161,3 +161,5 @@ html[data-section-motion=true] .depth-view .project-card{transform:perspective(1
 @media(max-width:700px){.project-art>span{font-size:32px;margin-bottom:25px}.project-art>.project-motif{opacity:.65}.architecture-trace{height:55px;padding:6px 15px}}
 @media(prefers-reduced-motion:reduce){.project-card,.project-motif,.architecture-flow button{transform:none!important;transition:none!important}.trace-progress{transition:none}::view-transition-group(*){animation-duration:0s}}
 html[data-effects=reduced] .project-motif,html[data-effects=reduced] .architecture-flow button{transform:none!important;transition:none!important}html[data-effects=reduced] .trace-progress{transition:none}
+/* Short mobile viewports scroll the directory, while Close remains reachable. */
+.navigation-top{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;flex-shrink:0;background:#152936}

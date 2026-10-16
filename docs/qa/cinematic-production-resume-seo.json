@@ -1,0 +1,52 @@
+{
+  "scope": "One mobile Lighthouse simulation per representative page; lab samples, not field INP or performance guarantees",
+  "tool": "Lighthouse",
+  "fieldINP": "Not measured",
+  "pages": [
+    {
+      "failures": [
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "description": "Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more about crawler directives](https://developer.chrome.com/docs/lighthouse/seo/is-crawlable/).",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "source",
+                "valueType": "code",
+                "label": "Blocking Directive Source"
+              }
+            ],
+            "items": [
+              {
+                "source": {
+                  "type": "node",
+                  "lhId": "1-31-META",
+                  "path": "2,HTML,0,HEAD,15,META",
+                  "selector": "head > meta",
+                  "boundingRect": {
+                    "top": 0,
+                    "bottom": 0,
+                    "left": 0,
+                    "right": 0,
+                    "width": 0,
+                    "height": 0
+                  },
+                  "snippet": "<meta name=\"robots\" content=\"noindex, follow\" />",
+                  "nodeLabel": "head > meta"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/resume/",
+      "executed": "2026-10-16T18:27:53.776Z",
+      "scores": {
+        "seo": 60
+      },
+      "metrics": {}
+    }
+  ]
+}

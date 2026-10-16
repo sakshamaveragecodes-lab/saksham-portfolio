@@ -45,9 +45,9 @@ The explicit last hostname argument overrides the npm script's default 0.0.0.0 b
 
 Local source edits receive Next HMR. Changes made by Codex in the cloud do **not** appear on Windows until an updated source snapshot/bundle is transferred. A public Git push is not needed for that transfer. Keep all implementation in this original conversation; use Windows only for running/reviewing the exported work.
 
-The cloud server currently works internally at port 3300. Codex browser-open returns `queued`; it is not a private forwarding provisioner, nor proof that a desktop tab reached this process. No supported private forwarding/browser-inspection tool is exposed in this environment. Do not keep retrying loopback links as though they were cloud preview URLs.
+A development server can run internally at port3300; the static export used for current cloud checks runs internally at port3400. Neither loopback address is a desktop forwarding URL. Codex browser-open returns `queued`; it is not a private forwarding provisioner, nor proof that a desktop tab reached this process. No supported private forwarding/browser-inspection tool is exposed in this environment. Do not keep retrying loopback links as though they were cloud preview URLs.
 
-All professional content, original previews, Full App workspaces, demos, resume and credited exhibit are preserved. The latest bundle contains the implemented Home and SourceLens cinematic proof and all preserved original functionality. Remaining projects and major pages are still pending extension after visual approval. Hosting remains the existing ₹0 GitHub Pages deployment.
+All professional content, original previews, Full App workspaces, demos, resume and credited exhibit are preserved. The latest bundle contains all eight distinct cinematic project worlds, all major portfolio pages, the continuous reading-section system, the mobile modal directory and plugin-independent Resume preview. All original functionality remains available. The owner has authorized the complete passing release; no intermediate visual-approval gate remains. Hosting remains the existing ₹0 GitHub Pages deployment.
 
 ## Update an existing review checkout after a checkpoint
 
@@ -61,6 +61,6 @@ git pull --ff-only "$env:USERPROFILE\Downloads\saksham-portfolio-feature.bundle"
 npm.cmd run dev -- --hostname 127.0.0.1 --port 3300
 ```
 
-This fast-forwards **only the local feature branch**, using the downloaded bundle. It does not merge into main, push to GitHub, or publish anything. If the command cannot fast-forward, stop and report the Git output in this original conversation. The cinematic proof adds no dependencies; npm ci is needed for a fresh clone, or when a later checkpoint changes the lockfile.
+This fast-forwards **only the local feature branch**, using the downloaded bundle. It does not merge into main, push to GitHub, or publish anything. If the command cannot fast-forward, stop and report the Git output in this original conversation. This enhancement adds no dependencies; npm ci is needed for a fresh clone, or when a later checkpoint changes the lockfile.
 
 Review the full four-chapter scroll and reverse scroll on Home and SourceLens. Try the project links in the Systems chapter, Pause atmosphere, Reduce effects, Skip introduction and the preserved SourceLens preview, Full App workspace, demonstration and architecture. The local server updates after local source transfers; there is still no automatic cloud-to-Windows source synchronization.

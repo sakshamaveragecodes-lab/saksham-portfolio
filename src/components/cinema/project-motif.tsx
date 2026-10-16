@@ -1,0 +1,11 @@
+/** Original lightweight projections: no canvas per card and no represented model output. */
+export function ProjectMotif({slug}:{slug:string}){const groups=[];
+ if(slug==='form'){const points=[[150,25],[150,65],[110,90],[190,90],[150,120],[120,160],[180,160],[110,200],[200,200]];for(const[a,b]of [[0,1],[1,2],[1,3],[1,4],[4,5],[4,6],[5,7],[6,8]])groups.push(<path key={'l'+a+b} d={`M${points[a]}L${points[b]}`}/>);points.forEach(([cx,cy],i)=>groups.push(<circle key={'n'+i} cx={cx} cy={cy} r="5"/>));}
+ else if(slug==='careerlens'){for(let i=0;i<15;i++){const t=i/14*Math.PI*3,x=150+Math.cos(t)*80,y=30+i*12;groups.push(<path key={i} d={`M${x} ${y}L${150+Math.cos(t+2)*65} ${y+12}L${150+Math.cos(t+4)*80} ${y}`}/>);}}
+ else if(slug==='studybuddy'){for(let i=0;i<5;i++)groups.push(<path key={i} d={`M150 ${75+i*8}Q90 ${15+i*9} 35 ${55+i*10}V${155+i*7}Q90 ${130+i*8} 150 ${190+i*6}Q220 ${125+i*8} 280 ${150+i*9}V${45+i*10}Q215 ${20+i*8} 150 ${75+i*8}V${190+i*6}`}/>);}
+ else if(slug==='pymentor'){for(let i=0;i<5;i++)groups.push(<path key={i} d={`M${30+i*25} ${20+i*18}H${270-i*25}V${220-i*18}H${30+i*25}Z`}/>);groups.push(<path key="path" d="M0 180C90 180 55 40 150 120S215 120 300 50"/>);}
+ else if(slug==='airbnb'){for(let i=0;i<12;i++){const x=30+(i%4)*65,y=120+Math.floor(i/4)*30,h=30+(i*17)%65;groups.push(<path key={i} d={`M${x} ${y}V${y-h}L${x+18} ${y-h-10}L${x+43} ${y-h}V${y}L${x+25} ${y+10}Z M${x} ${y-h}L${x+25} ${y-h+10}L${x+43} ${y-h}M${x+25} ${y-h+10}V${y+10}`}/>);}}
+ else if(slug==='logistic-diabetes'){for(let i=0;i<8;i++)groups.push(<path key={i} d={`M20 ${195-i*8}C130 ${195-i*8} 130 ${45-i*3} 280 ${45-i*3}`}/>);groups.push(<path key="axes" d="M20 10V220H290M150 10V220"/>);}
+ else if(slug==='random-forest-diabetes'){for(let i=0;i<3;i++){const x=60+i*90;groups.push(<path key={i} d={`M${x} 210V140L${x-25} 100L${x-40} 65M${x-25} 100L${x-8} 60M${x} 140L${x+25} 100L${x+40} 60M${x+25} 100L${x+8} 55`}/>);}}
+ else{for(let i=0;i<7;i++)groups.push(<path key={i} d={`M${40+i*25} ${30+i*12}L${125+i*18} ${15+i*12}L${180+i*18} ${70+i*12}L${85+i*25} ${90+i*12}Z`}/>);groups.push(<path key="trace" d="M20 210Q110 120 170 190T290 125"/>);}
+ return <svg className="project-motif" viewBox="0 0 310 240" fill="none" aria-hidden="true"><g>{groups}</g></svg>}

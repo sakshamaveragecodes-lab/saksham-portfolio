@@ -1,0 +1,22 @@
+{
+  "source": "@designcodeio/threeui@1.2.0 — CompleteShelfLandingPage",
+  "author": "Meng To / ThreeUI",
+  "license": "MIT",
+  "canonicalSha256": "606f200fed8602c243f40a11c8c364f0e625c57f80e7c97dc76419da207f198e",
+  "adapterSha256": "4afae11fe651ec1aaf58b5a87de3caefa69e2af846894d6e60fe9b24f8898d0f",
+  "threeVersion": "0.165.0",
+  "files": {
+    "vendor/build/three.module.js": "5916c8dfb5f4e3eede312de305345868d4a0a8105383b080c6985565d6e79b46",
+    "vendor/examples/jsm/controls/OrbitControls.js": "f260591ef315aa04888152e7f121865214e33fb54727145cf4e4445058db1297",
+    "vendor/examples/jsm/environments/RoomEnvironment.js": "e1b92c4dd2d89752293546790bfda9828a630a79700c66f5b736fad7a88cb7e4",
+    "vendor/examples/jsm/geometries/RoundedBoxGeometry.js": "d20aeaf7077c459a8d952d215738d7b44fba028440bb862d84b622a34f0c80bb",
+    "vendor/examples/jsm/lights/RectAreaLightUniformsLib.js": "08085bc942253cd54948bf936fecb66b54514a135872656e475a1cab09b55214"
+  },
+  "changes": [
+    "Self-host Three.js 0.165.0 and four required addons",
+    "Replace Google Inter stylesheet with system-ui fallback",
+    "Add attribution comment and restrictive offline CSP",
+    "Adaptive economy rendering: omit software/mobile shadows and environment capture; bound desktop shadows/DPR",
+    "Validated same-origin host messages pause offscreen rendering and honor device-local reduced-effects preference"
+  ]
+}

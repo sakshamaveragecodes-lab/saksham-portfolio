@@ -1,0 +1,7 @@
+'use client';
+import {useState} from 'react';
+import Link from 'next/link';
+import {ArrowUpRight,Network} from 'lucide-react';
+import {projects} from '@/lib/projects';
+const technologies=['Python','TypeScript','React','Streamlit','FAISS','LangChain','MediaPipe','scikit-learn','Jupyter','PyTorch','Ollama','D1'];
+export function SkillsMap(){const[selected,setSelected]=useState('Python');const matches=projects.filter(p=>p.stack.includes(selected));return <section className="knowledge-map" aria-labelledby="map-heading"><div className="knowledge-intro"><span className="eyebrow">INTERACTIVE KNOWLEDGE MAP</span><h2 id="map-heading">Follow a technology<br/>into the work.</h2><p>Select a node to inspect source-backed project connections. Connections indicate implementation, not proficiency levels.</p><Network size={65} strokeWidth={.7} aria-hidden="true"/></div><div className="knowledge-body"><div className="knowledge-nodes" role="group" aria-label="Explore technology connections">{technologies.map((t,i)=><button key={t} aria-pressed={selected===t} onClick={()=>setSelected(t)}><span className="mono">{String(i+1).padStart(2,'0')}</span>{t}</button>)}</div><div className="knowledge-results" aria-live="polite"><span className="mono">{selected.toUpperCase()} / {matches.length} SOURCE CONNECTIONS</span>{matches.map(p=><Link key={p.slug} href={`/projects/${p.slug}/`}><span>{p.name}<small>{p.tagline}</small></span><ArrowUpRight size={18}/></Link>)}</div></div></section>}

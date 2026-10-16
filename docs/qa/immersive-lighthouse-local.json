@@ -1,0 +1,79 @@
+{
+  "scope": "One mobile Lighthouse simulation per representative page; lab samples, not field INP or performance guarantees",
+  "tool": "Lighthouse",
+  "fieldINP": "Not measured",
+  "pages": [
+    {
+      "url": "http://127.0.0.1:3200/saksham-portfolio/",
+      "executed": "2026-10-16T06:10:47.876Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1934.5306,
+          "display": "1.9 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 85,
+          "display": "90 ms"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/saksham-portfolio/projects/sourcelens/",
+      "executed": "2026-10-16T06:10:54.375Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 2145.0353,
+          "display": "2.1 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 32.50000000000023,
+          "display": "30 ms"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3200/saksham-portfolio/projects/careerlens/experience/",
+      "executed": "2026-10-16T06:11:01.036Z",
+      "scores": {
+        "performance": 98,
+        "accessibility": 98,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 2240.9957,
+          "display": "2.2 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 82.00000000000045,
+          "display": "80 ms"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+.dialog{width:min(1220px,96vw);max-height:94dvh;padding:0;border:1px solid #526985;border-radius:14px;background:#101724;color:#e8f0fb;overflow:auto;margin:auto;box-shadow:0 25px 110px #000a}
+.dialog::backdrop{background:#020611de;backdrop-filter:blur(8px)}
+.overlay{position:fixed;inset:3dvh 2vw;z-index:100;width:auto;max-height:94dvh}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 22px;border-bottom:1px solid #34455c;font-size:13px}
+.close{background:#202d3e;color:#eaf2ff;border:1px solid #526985;border-radius:6px;padding:10px 14px;min-height:44px}
+.paused :global(.world-css-fallback i){animation-play-state:paused}
+.caption{position:absolute;bottom:48px;left:25px;right:25px;z-index:3;color:#aabbd1;font:10px var(--mono);pointer-events:none;line-height:1.6}
+@media(max-width:600px){.dialog{width:96vw}.toolbar{padding:10px 14px}.caption{bottom:53px;left:16px;font-size:9px}}

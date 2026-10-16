@@ -1,0 +1,8 @@
+{
+  "version": "0.165.0",
+  "dist": {
+    "tarball": "https://registry.npmjs.org/three/-/three-0.165.0.tgz",
+    "integrity": "sha512-cc96IlVYGydeceu0e5xq70H8/yoVT/tXBxV/W8A/U6uOq7DXc4/s1Mkmnu6SqoYGhSRWWYFOhVwvq6V0VtbplA==",
+    "shasum": "43b93b9b56c71b7eeee6b531d737ab573633ccd1"
+  }
+}

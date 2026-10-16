@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "sourcelens",
+    "accessible": true,
+    "repository": {
+      "default_branch": "main",
+      "html_url": "https://github.com/sakshamaveragecodes-lab/sourcelens-rag-chatbot",
+      "private": false
+    }
+  },
+  {
+    "slug": "careerlens",
+    "accessible": true,
+    "repository": {
+      "default_branch": "main",
+      "html_url": "https://github.com/sakshamaveragecodes-lab/careerlens-ai-resume-analyzer",
+      "private": false
+    }
+  },
+  {
+    "slug": "form",
+    "accessible": true,
+    "repository": {
+      "default_branch": "main",
+      "html_url": "https://github.com/sakshamaveragecodes-lab/form-ai-fitness-assistant",
+      "private": false
+    }
+  },
+  {
+    "slug": "studybuddy",
+    "accessible": true,
+    "repository": {
+      "default_branch": "main",
+      "html_url": "https://github.com/sakshamaveragecodes-lab/ollama-streamlit-studybuddy",
+      "private": false
+    }
+  },
+  {
+    "slug": "pymentor",
+    "accessible": true,
+    "repository": {
+      "default_branch": "main",
+      "html_url": "https://github.com/sakshamaveragecodes-lab/langchain-ai-question-answering-chatbot",
+      "private": false
+    }
+  },
+  {
+    "slug": "airbnb",
+    "accessible": true,
+    "repository": {
+      "default_branch": "main",
+      "html_url": "https://github.com/sakshamaveragecodes-lab/airbnb-linear-regression-project",
+      "private": false
+    }
+  },
+  {
+    "slug": "logistic-diabetes",
+    "accessible": true,
+    "repository": {
+      "default_branch": "main",
+      "html_url": "https://github.com/sakshamaveragecodes-lab/logistic-regression-diabetes-prediction",
+      "private": false
+    }
+  },
+  {
+    "slug": "random-forest-diabetes",
+    "accessible": true,
+    "repository": {
+      "default_branch": "main",
+      "html_url": "https://github.com/sakshamaveragecodes-lab/random-forest-diabetes-prediction",
+      "private": false
+    }
+  }
+]

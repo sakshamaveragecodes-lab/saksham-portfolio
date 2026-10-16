@@ -101,7 +101,7 @@ export function worldAssembly(key:WorldKey,p:number,time:number,spread:number,se
 }
 export function worldCamera(key:WorldKey,p:number,mobile:boolean,pointer:[number,number]){
  const def=worlds[key],camera=segment(p,def.camera),focus=segment(p,def.focus),offset=mobile?0:2.7;
- camera[0]+=offset+pointer[0]*.28;camera[1]+=(mobile?1.5:0)-pointer[1]*.2;camera[2]+=mobile?7:0;
- focus[0]-=mobile?0:2.8;focus[1]+=mobile?2:0;
+ camera[0]+=offset+pointer[0]*.28;camera[1]+=(mobile?1.5:0)-pointer[1]*.2;camera[2]+=mobile?7:2.5*smooth(p/.6);
+ focus[0]-=mobile?0:.6;focus[1]+=mobile?2:0;
  return {camera,focus,offset};
 }

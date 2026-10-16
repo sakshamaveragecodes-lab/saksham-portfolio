@@ -29,7 +29,7 @@ npm run dev -- --hostname 127.0.0.1 --port 3300
 
 Then open `http://127.0.0.1:3300/` on **that same computer**; SourceLens is `/projects/sourcelens/`. No Pages base path is needed in development. This is an independent local dev process; it cannot observe edits made in the cloud unless source changes are transferred. It does not restore a private cloud live preview.
 
-A source archive generated from the current workspace's tracked files plus the cinematic documentation is available at `/tmp/cinematic-review/saksham-portfolio-development.tar.gz`. It excludes `.git`, credentials, dependencies and generated outputs. Extract to a separate local folder and run the same install/dev commands (omit `git switch` for the archive). The archive is refreshed at implementation checkpoints. The latest proof is described in PROOF_REVIEW.md; prefer the feature-branch Git bundle when retaining branch history.
+A source archive generated from the current workspace's tracked files plus the cinematic documentation is available at `/tmp/cinematic-review/saksham-portfolio-development.tar.gz`. It excludes `.git`, credentials, dependencies and generated outputs. Extract to a separate local folder and run the same install/dev commands (omit `git switch` for the archive). The archive is refreshed at implementation checkpoints. The complete edition is described in COMPLETE_EDITION.md, with historical prototype evidence in PROOF_REVIEW.md; prefer the feature-branch Git bundle when retaining branch history.
 
 ## Evidence and review
 

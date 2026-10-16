@@ -3,7 +3,8 @@ import AxeBuilder from '@axe-core/playwright';
 const origin=process.env.TEST_BASE_URL||'http://127.0.0.1:3000';
 for(const width of [1280,390])test(`cinematic scroll, reverse travel, persistent renderer and original project handoff ${width}px`,async()=>{
  test.setTimeout(120000);
- const browser=await chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH||(process.env.CI?undefined:'/usr/bin/chromium'),channel:process.env.CI&&!process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH?'chromium':undefined,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+ const address=origin.startsWith('https:')?(process.env.HTTPS_PROXY||process.env.HTTP_PROXY):undefined;const proxyUrl=address?new URL(address):undefined;const proxy=proxyUrl?{server:`${proxyUrl.protocol}//${proxyUrl.host}`,username:decodeURIComponent(proxyUrl.username)||undefined,password:decodeURIComponent(proxyUrl.password)||undefined}:undefined;
+ const browser=await chromium.launch({proxy,executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH||(process.env.CI?undefined:'/usr/bin/chromium'),channel:process.env.CI&&!process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH?'chromium':undefined,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
  try{const page=await browser.newPage({viewport:{width,height:800}});const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())});
  await page.goto(origin+'/');await expect(page.locator('html')).toHaveAttribute('data-cinema-ready','true',{timeout:20000});await expect(page.locator('[data-cinema-renderer] canvas')).toHaveCount(1);
  await page.evaluate(()=>{const s=document.querySelector<HTMLElement>('[data-cinematic-story]')!;scrollTo({top:s.getBoundingClientRect().top+scrollY-(innerWidth<=850?72:87)+(s.offsetHeight-innerHeight)*.17,behavior:'instant'})});

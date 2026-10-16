@@ -1,5 +1,7 @@
 # Cinematic proof — direction pending reference inspection
 
+Historical direction document. The owner has approved the prototype baseline and authorized the complete edition and release after passing checks. Current implementation and verification: [COMPLETE_EDITION.md](COMPLETE_EDITION.md). The original discovery notes and storyboard below are retained as design history.
+
 Status: original storyboard retained for context. Home and SourceLens proof is now implemented and verified; see PROOF_REVIEW.md for the current build, results and remaining owner-review gate.
 
 ## Reference and preview evidence
@@ -61,4 +63,4 @@ Capture old/new homepage and SourceLens scroll, reverse scroll and keyboard/dire
 
 Rerun existing previews, Full App workspace, demo, architecture, source link, PDF and contact journeys; lint, strict TS, unit/provenance tests, build with Pages base path and relevant browser/axe checks. Measure frame-time distribution, major transferred resources and loading performance, with test hardware/software limits explicit. No claim of MORPHO-level quality or 60 fps without evidence.
 
-Review deliverable: actual unpublished interactive preview if a supported private route exists; otherwise recordings/screenshots and runnable development instructions, clearly labelled as a limitation. Owner visual approval is required before extending the direction, and final approval is required before production merge/deployment.
+Review deliverable: actual unpublished interactive preview if a supported private route exists; otherwise recordings/screenshots and runnable development instructions, clearly labelled as a limitation. This original review gate was subsequently satisfied and superseded by the owner’s explicit authorization to complete and release the passing edition.

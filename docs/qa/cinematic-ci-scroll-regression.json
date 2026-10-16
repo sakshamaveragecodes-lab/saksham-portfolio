@@ -1,0 +1,16 @@
+{
+  "failedRun": 38926008264,
+  "identicalPushRun": {
+    "id": 38925998053,
+    "conclusion": "success"
+  },
+  "diagnosis": "Initial CSS-native hash arrival and immediate scripted scrollIntoView competed during initialization; captured trace overshot from scrollY247 to9633 while the viewer was above the viewport. The activity gate correctly suspended it.",
+  "correction": "Separate scripted viewer setup from hash navigation. Wait for scene/control readiness, center explicitly, assert active visibility, retain all WebGL/fullscreen/focus/suspension checks. Additional independent test covers real SourceLens/CareerLens #world arrivals without scripted scrolling.",
+  "applicationChanges": false,
+  "focusedResult": {
+    "passed": 2,
+    "failed": 0,
+    "durationSeconds": 65
+  },
+  "freshFullSuiteAndCI": "pending"
+}

@@ -1,0 +1,1201 @@
+{
+  "scope": "28 real desktop/mobile forward/reverse scroll and inspection sequences, plus an actual client-navigation bridge. Cold scene geometry/shaders/cameras are unchanged by the later route-only bridge and failure-only controls CSS.",
+  "sequences": [
+    {
+      "key": "careerlens",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/careerlens/",
+      "frames": 385,
+      "seconds": 6.923213958740234,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 451,
+        "calls": 4,
+        "triangles": 3364,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "form",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/form/",
+      "frames": 395,
+      "seconds": 6.8484930992126465,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 458,
+        "calls": 4,
+        "triangles": 3324,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "studybuddy",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/studybuddy/",
+      "frames": 370,
+      "seconds": 6.995362997055054,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 436,
+        "calls": 4,
+        "triangles": 6740,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "pymentor",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/pymentor/",
+      "frames": 399,
+      "seconds": 6.749441862106323,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 464,
+        "calls": 4,
+        "triangles": 1656,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "airbnb",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/airbnb/",
+      "frames": 373,
+      "seconds": 6.912477970123291,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 439,
+        "calls": 4,
+        "triangles": 1960,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "logistic-diabetes",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/logistic-diabetes/",
+      "frames": 399,
+      "seconds": 6.776432991027832,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 462,
+        "calls": 4,
+        "triangles": 1628,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "random-forest-diabetes",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/random-forest-diabetes/",
+      "frames": 388,
+      "seconds": 6.912272930145264,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 454,
+        "calls": 4,
+        "triangles": 3452,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "projects",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/",
+      "frames": 384,
+      "seconds": 6.797544002532959,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 448,
+        "calls": 4,
+        "triangles": 5928,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "about",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/about/",
+      "frames": 370,
+      "seconds": 6.982369899749756,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 437,
+        "calls": 2,
+        "triangles": 7424,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "skills",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/skills/",
+      "frames": 387,
+      "seconds": 6.864362955093384,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 451,
+        "calls": 4,
+        "triangles": 4376,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "experience",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/experience/",
+      "frames": 402,
+      "seconds": 6.802345037460327,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 465,
+        "calls": 4,
+        "triangles": 1600,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "certifications",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/certifications/",
+      "frames": 388,
+      "seconds": 6.831166982650757,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 450,
+        "calls": 3,
+        "triangles": 3976,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "resume",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/resume/",
+      "frames": 361,
+      "seconds": 6.861912965774536,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 424,
+        "calls": 3,
+        "triangles": 7508,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "contact",
+      "device": "mobile",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/contact/",
+      "frames": 400,
+      "seconds": 6.7790210247039795,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 460,
+        "calls": 3,
+        "triangles": 3976,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "careerlens",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/careerlens/",
+      "frames": 162,
+      "seconds": 8.562716007232666,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 283,
+        "calls": 4,
+        "triangles": 3364,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "form",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/form/",
+      "frames": 170,
+      "seconds": 8.382008790969849,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 283,
+        "calls": 4,
+        "triangles": 3324,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "studybuddy",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/studybuddy/",
+      "frames": 151,
+      "seconds": 8.613150835037231,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 267,
+        "calls": 4,
+        "triangles": 6740,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "pymentor",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/pymentor/",
+      "frames": 175,
+      "seconds": 8.635180950164795,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 293,
+        "calls": 4,
+        "triangles": 1656,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "airbnb",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/airbnb/",
+      "frames": 161,
+      "seconds": 8.786820888519287,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 279,
+        "calls": 4,
+        "triangles": 1960,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "logistic-diabetes",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/logistic-diabetes/",
+      "frames": 170,
+      "seconds": 8.380998134613037,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 284,
+        "calls": 4,
+        "triangles": 1628,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "random-forest-diabetes",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/random-forest-diabetes/",
+      "frames": 176,
+      "seconds": 8.438013076782227,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 297,
+        "calls": 4,
+        "triangles": 3452,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "projects",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/",
+      "frames": 164,
+      "seconds": 8.44876503944397,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 278,
+        "calls": 4,
+        "triangles": 5928,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "about",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/about/",
+      "frames": 167,
+      "seconds": 8.663072109222412,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 284,
+        "calls": 2,
+        "triangles": 7424,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "skills",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/skills/",
+      "frames": 178,
+      "seconds": 8.519322872161865,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 295,
+        "calls": 4,
+        "triangles": 4376,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "experience",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/experience/",
+      "frames": 176,
+      "seconds": 8.418205976486206,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 293,
+        "calls": 4,
+        "triangles": 1600,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "certifications",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/certifications/",
+      "frames": 168,
+      "seconds": 8.464169025421143,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 283,
+        "calls": 3,
+        "triangles": 3976,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "resume",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/resume/",
+      "frames": 170,
+      "seconds": 8.562785863876343,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 286,
+        "calls": 3,
+        "triangles": 7508,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    },
+    {
+      "key": "contact",
+      "device": "desktop",
+      "url": "http://127.0.0.1:3400/saksham-portfolio/contact/",
+      "frames": 173,
+      "seconds": 8.316710948944092,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "stats": {
+        "frames": 290,
+        "calls": 3,
+        "triangles": 3976,
+        "geometries": 4,
+        "textures": 0,
+        "quality": 0.65
+      },
+      "scope": "Actual forward/reverse scroll, pointer response and exploded inspection. Software GPU, capture overhead; video rate is not renderer FPS."
+    }
+  ],
+  "navigation": {
+    "journey": "Lab \u2192 FORM \u2192 Lab \u2192 CareerLens via actual client links; retained canvas, camera carryover and depth arrival",
+    "frames": 107,
+    "seconds": 5.686134099960327,
+    "errors": []
+  },
+  "tablet": [
+    {
+      "key": "projects",
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "key": "form",
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "key": "resume",
+      "errors": [],
+      "overflow": false
+    }
+  ],
+  "videos": [
+    {
+      "file": "about-desktop.mp4",
+      "bytes": 1124282,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.700000"
+        }
+      },
+      "capturedSeconds": 8.663072109222412,
+      "durationDifferenceSeconds": 0.03692789077758718,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "about-mobile.mp4",
+      "bytes": 472965,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "7.000000"
+        }
+      },
+      "capturedSeconds": 6.982369899749756,
+      "durationDifferenceSeconds": 0.01763010025024414,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "airbnb-desktop.mp4",
+      "bytes": 1337686,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.883333"
+        }
+      },
+      "capturedSeconds": 8.786820888519287,
+      "durationDifferenceSeconds": 0.09651211148071326,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "airbnb-mobile.mp4",
+      "bytes": 575156,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.933333"
+        }
+      },
+      "capturedSeconds": 6.912477970123291,
+      "durationDifferenceSeconds": 0.020855029876709175,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "careerlens-desktop.mp4",
+      "bytes": 1273800,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.616667"
+        }
+      },
+      "capturedSeconds": 8.562716007232666,
+      "durationDifferenceSeconds": 0.053950992767333616,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "careerlens-mobile.mp4",
+      "bytes": 591442,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.950000"
+        }
+      },
+      "capturedSeconds": 6.923213958740234,
+      "durationDifferenceSeconds": 0.026786041259765803,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "certifications-desktop.mp4",
+      "bytes": 1135676,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.500000"
+        }
+      },
+      "capturedSeconds": 8.464169025421143,
+      "durationDifferenceSeconds": 0.03583097457885742,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "certifications-mobile.mp4",
+      "bytes": 459675,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.850000"
+        }
+      },
+      "capturedSeconds": 6.831166982650757,
+      "durationDifferenceSeconds": 0.01883301734924281,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "contact-desktop.mp4",
+      "bytes": 1023528,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.350000"
+        }
+      },
+      "capturedSeconds": 8.316710948944092,
+      "durationDifferenceSeconds": 0.03328905105590785,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "contact-mobile.mp4",
+      "bytes": 444168,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.800000"
+        }
+      },
+      "capturedSeconds": 6.7790210247039795,
+      "durationDifferenceSeconds": 0.02097897529602033,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "experience-desktop.mp4",
+      "bytes": 1125054,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.450000"
+        }
+      },
+      "capturedSeconds": 8.418205976486206,
+      "durationDifferenceSeconds": 0.031794023513793235,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "experience-mobile.mp4",
+      "bytes": 506477,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.816667"
+        }
+      },
+      "capturedSeconds": 6.802345037460327,
+      "durationDifferenceSeconds": 0.014321962539672661,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "form-desktop.mp4",
+      "bytes": 1083699,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.416667"
+        }
+      },
+      "capturedSeconds": 8.382008790969849,
+      "durationDifferenceSeconds": 0.03465820903015171,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "form-mobile.mp4",
+      "bytes": 485878,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.866667"
+        }
+      },
+      "capturedSeconds": 6.8484930992126465,
+      "durationDifferenceSeconds": 0.018173900787353148,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "logistic-diabetes-desktop.mp4",
+      "bytes": 1183493,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.433333"
+        }
+      },
+      "capturedSeconds": 8.380998134613037,
+      "durationDifferenceSeconds": 0.05233486538696219,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "logistic-diabetes-mobile.mp4",
+      "bytes": 522976,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.800000"
+        }
+      },
+      "capturedSeconds": 6.776432991027832,
+      "durationDifferenceSeconds": 0.02356700897216779,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "navigation-desktop.mp4",
+      "bytes": 527949,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "5.700000"
+        }
+      },
+      "capturedSeconds": 5.686134099960327,
+      "durationDifferenceSeconds": 0.01386590003967303,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "projects-desktop.mp4",
+      "bytes": 1218588,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.516667"
+        }
+      },
+      "capturedSeconds": 8.44876503944397,
+      "durationDifferenceSeconds": 0.06790196055603026,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "projects-mobile.mp4",
+      "bytes": 557704,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.816667"
+        }
+      },
+      "capturedSeconds": 6.797544002532959,
+      "durationDifferenceSeconds": 0.019122997467040825,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "pymentor-desktop.mp4",
+      "bytes": 1295763,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.666667"
+        }
+      },
+      "capturedSeconds": 8.635180950164795,
+      "durationDifferenceSeconds": 0.03148604983520542,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "pymentor-mobile.mp4",
+      "bytes": 613820,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.766667"
+        }
+      },
+      "capturedSeconds": 6.749441862106323,
+      "durationDifferenceSeconds": 0.017225137893676745,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "random-forest-diabetes-desktop.mp4",
+      "bytes": 1144970,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.466667"
+        }
+      },
+      "capturedSeconds": 8.438013076782227,
+      "durationDifferenceSeconds": 0.028653923217772714,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "random-forest-diabetes-mobile.mp4",
+      "bytes": 516553,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.933333"
+        }
+      },
+      "capturedSeconds": 6.912272930145264,
+      "durationDifferenceSeconds": 0.02106006985473652,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "resume-desktop.mp4",
+      "bytes": 1081565,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.600000"
+        }
+      },
+      "capturedSeconds": 8.562785863876343,
+      "durationDifferenceSeconds": 0.03721413612365687,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "resume-mobile.mp4",
+      "bytes": 457291,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.883333"
+        }
+      },
+      "capturedSeconds": 6.861912965774536,
+      "durationDifferenceSeconds": 0.021420034225464235,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "skills-desktop.mp4",
+      "bytes": 1214228,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.583333"
+        }
+      },
+      "capturedSeconds": 8.519322872161865,
+      "durationDifferenceSeconds": 0.06401012783813442,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "skills-mobile.mp4",
+      "bytes": 539888,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "6.883333"
+        }
+      },
+      "capturedSeconds": 6.864362955093384,
+      "durationDifferenceSeconds": 0.01897004490661658,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "studybuddy-desktop.mp4",
+      "bytes": 1137867,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "8.666667"
+        }
+      },
+      "capturedSeconds": 8.613150835037231,
+      "durationDifferenceSeconds": 0.0535161649627689,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    },
+    {
+      "file": "studybuddy-mobile.mp4",
+      "bytes": 508849,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 390,
+            "height": 844,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "7.016667"
+        }
+      },
+      "capturedSeconds": 6.995362997055054,
+      "durationDifferenceSeconds": 0.021304002944946276,
+      "timing": "Frame receipt times normalized to measured CDP first/last paint span; raw original lists retained. Encoding rate is not renderer FPS."
+    }
+  ],
+  "captureNote": "CDP screen frames, no invented intermediate scene images. Frame receipt times normalized to measured first/last CDP paint span, video duration error<0.1s. 60fps encoding does not assert 60fps rendering."
+}

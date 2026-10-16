@@ -1,0 +1,44 @@
+{
+  "applicationCommit": "8518ea4dd03a4dc7957e09a52366100295342d93",
+  "scope": "Local static export with GitHub Pages base path. Production verification is a separate release gate.",
+  "lint": "passed",
+  "typescript": "passed",
+  "unitTests": 13,
+  "productionExport": "passed; 31 static/generated entries",
+  "browserRegression": {
+    "startTime": "2026-10-16T15:20:49.289Z",
+    "duration": 206937.085,
+    "expected": 30,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "finalKeyboardAndFallbackChecks": {
+    "startTime": "2026-10-16T15:28:44.532Z",
+    "duration": 71111.088,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "preservedComparedWith": "d39ff7583e519dba538838a443b6e97cb789091e",
+  "unchangedPaths": [
+    "public",
+    "src/lib",
+    "src/components/project-preview.tsx",
+    "src/components/demo.tsx",
+    "src/components/app-experience.tsx",
+    ".github",
+    "next.config.ts",
+    "package.json",
+    "package-lock.json"
+  ],
+  "officialResumeSHA256": "7b6219b010f443301b7a75756ebcf531b1f227300d897d9b4e1fb6e10f82a130",
+  "dependenciesAdded": 0,
+  "productionInfrastructure": "Existing static GitHub Pages; no inference, APIs, database, paid assets or persistent server",
+  "limitations": [
+    "Physical GPU, Windows execution, GPU memory bytes and field INP not measured.",
+    "Software desktop rendering remains below the 60fps ambition.",
+    "Official resume retains intentional noindex; local SEO score63."
+  ]
+}

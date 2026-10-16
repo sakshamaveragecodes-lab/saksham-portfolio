@@ -1,0 +1,79 @@
+{
+  "scope": "One mobile Lighthouse simulation per representative page; lab samples, not field INP or performance guarantees",
+  "tool": "Lighthouse",
+  "fieldINP": "Not measured",
+  "pages": [
+    {
+      "url": "http://127.0.0.1:3400/saksham-portfolio/",
+      "executed": "2026-10-16T13:41:18.718Z",
+      "scores": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1951.5803,
+          "display": "2.0 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 282,
+          "display": "280 ms"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/sourcelens/",
+      "executed": "2026-10-16T13:41:26.261Z",
+      "scores": {
+        "performance": 91,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 2380.8424999999997,
+          "display": "2.4 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 329.5,
+          "display": "330 ms"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:3400/saksham-portfolio/projects/careerlens/experience/",
+      "executed": "2026-10-16T13:41:34.678Z",
+      "scores": {
+        "performance": 98,
+        "accessibility": 98,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 2257.1666,
+          "display": "2.3 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 91,
+          "display": "90 ms"
+        }
+      }
+    }
+  ]
+}

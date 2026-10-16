@@ -1,6 +1,6 @@
 # Cinematic proof — direction pending reference inspection
 
-Status: architecture and storyboard proposal, **not an implemented or approved redesign**. Production stays unchanged. Scope of first visual review: homepage and SourceLens only. All existing content and interactions remain available.
+Status: architecture and storyboard proposal, **not an implemented or approved redesign**. Update: MORPHO desktop/mobile visual inspection now succeeds; see REFERENCE_ACCESS.md for observed sequences and remaining preview limits. Earlier access notes below are historical. Production stays unchanged. Scope of first visual review: homepage and SourceLens only. All existing content and interactions remain available.
 
 ## Reference and preview evidence
 

@@ -1,5 +1,7 @@
 # Development preview diagnosis — 16 October 2026
 
+Update: see REFERENCE_ACCESS.md and WINDOWS_REVIEW.md. MORPHO now renders in cloud Chromium; prior access failures below are historical. Private cloud-to-desktop forwarding remains unavailable; use the exact-feature-branch Git bundle for Windows review.
+
 No production changes. Existing feature branch: `feat/immersive-engineering-worlds`.
 
 ## What was verified

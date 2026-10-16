@@ -1,0 +1,175 @@
+{
+  "scope": "One mobile Lighthouse simulation per representative page; lab samples, not field INP or performance guarantees",
+  "tool": "Lighthouse",
+  "fieldINP": "Not measured",
+  "pages": [
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+      "executed": "2026-10-16T16:20:23.698Z",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1752.0835,
+          "display": "1.8 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 206.49999999999977,
+          "display": "210 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/sourcelens/",
+      "executed": "2026-10-16T16:20:31.621Z",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1595.4985000000001,
+          "display": "1.6 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 204.5,
+          "display": "200 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/careerlens/",
+      "executed": "2026-10-16T16:20:40.175Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1893.1707999999999,
+          "display": "1.9 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 79,
+          "display": "80 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/form/",
+      "executed": "2026-10-16T16:20:48.518Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1095.6193,
+          "display": "1.1 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 256,
+          "display": "260 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/",
+      "executed": "2026-10-16T16:20:56.582Z",
+      "scores": {
+        "performance": 98,
+        "accessibility": 98,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1722.5610000000001,
+          "display": "1.7 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 164.5,
+          "display": "160 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/resume/",
+      "executed": "2026-10-16T16:21:04.791Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1699.6688,
+          "display": "1.7 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 242.99999999999955,
+          "display": "240 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/careerlens/experience/",
+      "executed": "2026-10-16T16:21:18.580Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 98,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1590.7691,
+          "display": "1.6 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 54,
+          "display": "50 ms"
+        }
+      }
+    }
+  ]
+}

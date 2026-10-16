@@ -59,3 +59,9 @@ Stationary samples across the fourteen added worlds after warmup, with no concur
 | CareerLens workspace | 97 | 98 | 100 | 100 | 2.3s | 0 |
 
 These are individual cold-route Lighthouse lab samples before the route-only camera bridge/failure-only CSS refinements; cold scene behavior is unchanged. Production checks are recorded separately after release. The official Resume intentionally retains its existing `noindex` policy, so its SEO score is not represented as passing90. Physical GPU timing and field INP remain unmeasured. No claim of matching MORPHO’s finished production polish is made from software browser evidence alone.
+
+## Production release — 16 October 2026
+
+PR #4 merged as `e96732de865a23e1f67279c57c24f128067528df`. Both main Verify and Pages workflows succeeded. All 31 browser regression tests passed on the actual public HTTPS site (221.7s; no skipped, flaky or failed tests), and the explicit public WebGL scroll/reverse/handoff smoke passed. CareerLens desktop and FORM mobile public animations were recorded and inspected as temporal frame sequences, without runtime errors, failed assets or overflow.
+
+Public mobile Lighthouse: Home96, SourceLens96, CareerLens99, FORM95, Laboratory98, Resume95, CareerLens workspace100. Accessibility98–100, best practices100, SEO100 except the original intentional Resume noindex (60; sole failed audit is crawlability). All sampled LCP1.1–1.9s and CLS0. These are individual lab samples, not physical-device or field-INP guarantees. Full production receipts are `docs/qa/cinematic-production-*.json`; final postrelease receipts are retained on the original feature branch/review bundle and linked in the merged PR. No public runtime changes follow this release.

@@ -12,5 +12,10 @@
     "failed": 0,
     "durationSeconds": 65
   },
-  "freshFullSuiteAndCI": "pending"
+  "freshFullSuiteAndCI": {
+    "localBrowserTests": 31,
+    "candidateVerify": "both success",
+    "mainVerify": "success",
+    "productionBrowserTests": 31
+  }
 }

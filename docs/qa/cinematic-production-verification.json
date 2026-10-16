@@ -1,0 +1,70 @@
+{
+  "productionUrl": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+  "productionCommit": "e96732de865a23e1f67279c57c24f128067528df",
+  "candidateCommit": "e15bb57c9cda4deff2b20e1e93aa758872452227",
+  "applicationCommit": "8518ea4dd03a4dc7957e09a52366100295342d93",
+  "pullRequest": "https://github.com/sakshamaveragecodes-lab/saksham-portfolio/pull/4",
+  "merge": "normal merge; no admin bypass",
+  "workflows": {
+    "Pages": {
+      "id": 38930445897,
+      "conclusion": "success"
+    },
+    "mainVerify": {
+      "id": 38930445904,
+      "conclusion": "success"
+    },
+    "candidateVerify": [
+      38929534882,
+      38929526978
+    ]
+  },
+  "productionBrowserRegression": {
+    "startTime": "2026-10-16T16:16:39.241Z",
+    "duration": 221717.04200000002,
+    "expected": 31,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "productionWebGLSmoke": "passed, 1280px scroll/reverse/persistent renderer/project handoff",
+  "checks": {
+    "lint": "passed",
+    "strictTypeScript": "passed",
+    "unitAndProvenance": 13,
+    "staticExportEntries": 31,
+    "productionDependencyAudit": "0 advisories"
+  },
+  "preservation": "Original public assets, project/profile data, previews, full-app workspaces, demos, dependencies and workflows unchanged from d39ff75",
+  "visualReview": [
+    {
+      "slug": "careerlens",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "video": "/tmp/cinematic-review/complete/production-video/page@eaa10f454daaa0fa8d3efb53f4689fb0.webm"
+    },
+    {
+      "slug": "form",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "video": "/tmp/cinematic-review/complete/production-video/page@ee7141d4cfb151ed3a3a72ef3950d088.webm"
+    }
+  ],
+  "visualEvidence": "28 desktop/mobile sequences + client-navigation recording reviewed locally; public CareerLens desktop and FORM mobile recorded and reviewed as temporal frame sequences. Tablet checked separately. Videos are capture evidence, not renderer FPS measurements.",
+  "infrastructure": "Existing static GitHub Pages; no paid services, API, database or inference introduced",
+  "limitations": [
+    "Physical GPU/owner Windows timing, VRAM and field INP not measured",
+    "Software desktop frame rates below 60fps ambition",
+    "Resume intentionally retains original noindex; public SEO60, sole failed audit is is-crawlable",
+    "Unused pre-existing Vercel preview check fails; not the production host",
+    "Private cloud-to-desktop forwarding unavailable; Windows local bundle workflow retained"
+  ]
+}

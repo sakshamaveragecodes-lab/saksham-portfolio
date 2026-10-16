@@ -19,7 +19,7 @@ export function gridData(width: number, height: number, nx: number, ny: number, 
         }
     return withNormals(positions, uvs, new Uint16Array(indices), normals);
 }
-function withNormals(positions: Float32Array, uvs: Float32Array, indices: Uint16Array, normals = new Float32Array(positions.length)): MeshData {
+export function withNormals(positions: Float32Array, uvs: Float32Array, indices: Uint16Array, normals = new Float32Array(positions.length)): MeshData {
     for (let i = 0; i < indices.length; i += 3) {
         const a = indices[i] * 3, b = indices[i + 1] * 3, c = indices[i + 2] * 3;
         const ux = positions[b] - positions[a], uy = positions[b + 1] - positions[a + 1], uz = positions[b + 2] - positions[a + 2], vx = positions[c] - positions[a], vy = positions[c + 1] - positions[a + 1], vz = positions[c + 2] - positions[a + 2];

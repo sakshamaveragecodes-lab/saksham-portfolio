@@ -1,6 +1,6 @@
 # Cinematic proof: Home + SourceLens
 
-This is an unpublished visual direction for owner review. It is **not** approval to extend the redesign across the portfolio or publish it. Existing production and ₹0 GitHub Pages hosting are unchanged. All implementation remains on `feat/immersive-engineering-worlds` in the original conversation.
+Historical prototype checkpoint. The owner subsequently approved this baseline and authorized the complete portfolio transformation and production release after all mandatory checks pass. See COMPLETE_EDITION.md for the current scope. The evidence below describes the prototype, not new measurements for the completed edition.
 
 ## Open the proof
 

@@ -5,7 +5,9 @@ import { usePathname } from 'next/navigation';
 import { useEffectsAllowed } from '@/lib/effects';
 import { cinemaState, smooth } from './timeline';
 import './cinema.css';
+import {worldForPath} from './worlds';
 const UniverseScene = dynamic(() => import('./universe-scene'), { ssr: false });
+const NativeWorld = dynamic(() => import('./native-world'), {ssr:false});
 const LeanScene = dynamic(() => import('./lean-scene'), { ssr: false });
 class Boundary extends Component<{
     children: ReactNode;
@@ -20,7 +22,8 @@ class Boundary extends Component<{
 }
 export function EngineeringUniverse() {
     const path = usePathname().replace(/\/$/, '') || '/';
-    const eligible = path === '/' || path === '/projects/sourcelens';
+    const world = worldForPath(path);
+    const eligible = path === '/' || path === '/projects/sourcelens' || world !== null;
     const allowed = useEffectsAllowed();
     const [failed, setFailed] = useState(false);
     const [ready, setReady] = useState(false);
@@ -51,11 +54,13 @@ export function EngineeringUniverse() {
         const chapters = Array.from(story.querySelectorAll<HTMLElement>('[data-cinema-chapter]'));
         cinemaState.source = story.dataset.cinematicStory === 'source';
         cinemaState.selection = -1;
+        cinemaState.spread = 0;
         let raf = 0;
         const update = () => {
             const rect = story.getBoundingClientRect(), height = innerHeight;
             const progress = Math.max(0, Math.min(1, -(rect.top - (innerWidth <= 850 ? 72 : 87)) / Math.max(1, rect.height - height)));
             cinemaState.progress = progress;
+            story.querySelectorAll<HTMLButtonElement>('.world-chapter-controls button').forEach((button,i)=>button.setAttribute('aria-pressed',String(Math.round(progress*3)===i)));
             if (rail)
                 rail.textContent = String(Math.round(progress * 3) + 1).padStart(2, '0');
             const visible = rect.top < height && rect.bottom > height * .25 && document.visibilityState !== 'hidden';
@@ -113,5 +118,5 @@ export function EngineeringUniverse() {
     if (failed)
         return <div className="cinema-fallback-notice" role="status">Spatial rendering is unavailable. The complete readable introduction and project tools remain available.<button type="button" onClick={() => { setReady(false); setFailed(false); }}>Retry 3D rendering</button></div>;
     const Scene = compact ? LeanScene : UniverseScene;
-    return <div className="cinema-surface" ref={surface} data-cinema-renderer data-active={active} aria-hidden="true"><Boundary onFailure={failure}><Scene source={path === '/projects/sourcelens'} active={active} compact={compact} onReady={created} onFailure={failure}/></Boundary></div>;
+    return <div className="cinema-surface" ref={surface} data-cinema-renderer data-active={active} aria-hidden="true"><Boundary onFailure={failure}>{world ? <NativeWorld world={world} active={active} onReady={created} onFailure={failure}/> : <Scene source={path === '/projects/sourcelens'} active={active} compact={compact} onReady={created} onFailure={failure}/>}</Boundary></div>;
 }

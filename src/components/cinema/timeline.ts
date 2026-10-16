@@ -7,7 +7,7 @@ export type Vec3 = [
 export const cinemaState = { progress: 0, source: false, compact: false, active: false, paused: false, pointer: [0, 0] as [
         number,
         number
-    ], quality: 1, selection: -1 };
+    ], quality: 1, selection: -1, spread: 0 };
 export const smooth = (t: number) => { const x = Math.max(0, Math.min(1, t)); return x * x * (3 - 2 * x); };
 export function segment(progress: number, stops: Vec3[]): Vec3 {
     const p = Math.max(0, Math.min(stops.length - 1, progress * (stops.length - 1)));

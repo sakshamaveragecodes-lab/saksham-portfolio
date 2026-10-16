@@ -49,7 +49,6 @@ export default function NativeWorld({world,active,onReady,onFailure}:{world:Worl
   const first=worldCamera(world,0,innerWidth<=850,[0,0]),previous=continuity.current;let arrival=previous?0:1;eye.set(...(previous?.eye??first.camera));focus.set(...(previous?.focus??first.focus));
   const frame=(now:number)=>{
    raf=0;if(disposed||!activeRef.current)return;raf=requestAnimationFrame(frame);if(!cinemaState.active){last=now;return;}
-   if(cinemaState.content&&last&&now-last<32)return;
    const delta=last?(now-last)/1000:1/60;last=now;const dt=Math.min(delta,.05),blend=1-Math.exp(-dt*8);if(!cinemaState.paused)time+=dt;p+=(cinemaState.progress-p)*blend;spread+=(cinemaState.spread-spread)*blend;
    arrival=Math.min(1,arrival+dt*1.6);const enter=smooth(arrival);
    const mobile=innerWidth<=850,camera=worldCamera(world,p,mobile,cinemaState.pointer);eye.lerp(target.set(...camera.camera),blend);focus.set(...camera.focus);if(previous&&arrival<1)focus.lerpVectors(pos.set(...previous.focus),target.set(...camera.focus),enter);view.lookAt(eye,focus,up).setPosition(eye).invert();

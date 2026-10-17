@@ -74,6 +74,7 @@ export function EngineeringUniverse() {
         };
         cinemaState.present=present;
         const update = () => {
+            raf = 0;
             const rect = story.getBoundingClientRect(), height = innerHeight;
             const progress = Math.max(0, Math.min(1, -(rect.top - (innerWidth <= 850 ? 72 : 87)) / Math.max(1, rect.height - height)));
             if(dirty){content=contentSections().map(el=>{const r=el.getBoundingClientRect();return {el,top:r.top+scrollY,height:r.height}});dirty=false;}
@@ -101,7 +102,8 @@ export function EngineeringUniverse() {
                 {surface.current.style.opacity=visible?(reading?(innerWidth<=850?'.23':'.34'):String(Math.min(1,Math.max(0,(rect.bottom-height*.15)/(height*.6))))):'0';surface.current.dataset.mode=reading?'reading':'introduction';surface.current.dataset.section=cinemaState.sectionKind;}
 
         };
-        const schedule = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); };
+        // Coalesce events; cancelling a pending frame can starve updates during resize storms.
+        const schedule = () => { if (!raf) raf = requestAnimationFrame(update); };
         const pointer = (e: PointerEvent) => {
             if (e.pointerType !== 'mouse')
                 return;

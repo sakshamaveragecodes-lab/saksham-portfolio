@@ -7,9 +7,7 @@ import { cinemaState, smooth } from './timeline';
 import './cinema.css';
 import {contentSections,sectionKind,sectionFrame,readingComposition} from './reading';
 import {worldForPath} from './worlds';
-const UniverseScene = dynamic(() => import('./universe-scene'), { ssr: false });
-const NativeWorld = dynamic(() => import('./native-world'), {ssr:false});
-const LeanScene = dynamic(() => import('./lean-scene'), { ssr: false });
+const ProductionRenderer = dynamic(() => import('./production/renderer'), {ssr:false});
 class Boundary extends Component<{
     children: ReactNode;
     onFailure: () => void;
@@ -29,9 +27,7 @@ export function EngineeringUniverse() {
     const [failed, setFailed] = useState(false);
     const [ready, setReady] = useState(false);
     const [active, setActive] = useState(true);
-    const [compact, setCompact] = useState(() => typeof window !== 'undefined' && (innerWidth <= 850 || ((navigator as Navigator & {
-        deviceMemory?: number;
-    }).deviceMemory ?? 8) <= 4 || navigator.hardwareConcurrency <= 4));
+
     const surface = useRef<HTMLDivElement>(null);
     const failure = useCallback(() => { setFailed(true); setReady(false); }, []);
     const created = useCallback(() => setReady(true), []);
@@ -58,6 +54,21 @@ export function EngineeringUniverse() {
         cinemaState.selection = -1;
         cinemaState.spread = 0;
         let raf = 0;
+        const present=(progress:number)=>{
+            story.querySelectorAll<HTMLButtonElement>('.world-chapter-controls button').forEach((button,i)=>button.setAttribute('aria-pressed',String(Math.round(progress*3)===i)));
+            if (rail)
+                rail.textContent = String(Math.round(progress * 3) + 1).padStart(2, '0');
+            for (let i = 0; i < chapters.length; i++) {
+                const d = progress * 3 - i;
+                const opacity = 1 - smooth((Math.abs(d) - .18) / .32);
+                const c = chapters[i];
+                c.style.setProperty('--chapter-opacity', String(opacity));
+                c.style.translate = `${-d * 24}px ${-d * 13}px`;
+                c.dataset.current = String(Math.round(progress * 3) === i);
+                c.inert = Math.round(progress * 3) !== i || opacity < .05;
+            }
+        };
+        cinemaState.present=present;
         const update = () => {
             const rect = story.getBoundingClientRect(), height = innerHeight;
             const progress = Math.max(0, Math.min(1, -(rect.top - (innerWidth <= 850 ? 72 : 87)) / Math.max(1, rect.height - height)));
@@ -72,9 +83,6 @@ export function EngineeringUniverse() {
             const composition=readingComposition(cinemaState.sectionKind,cinemaState.sectionProgress);
             cinemaState.progress = reading?composition.progress:progress;
             if(reading)cinemaState.spread=composition.spread;
-            story.querySelectorAll<HTMLButtonElement>('.world-chapter-controls button').forEach((button,i)=>button.setAttribute('aria-pressed',String(Math.round(progress*3)===i)));
-            if (rail)
-                rail.textContent = String(Math.round(progress * 3) + 1).padStart(2, '0');
             const specialist=Array.from(document.querySelectorAll<HTMLElement>('.world-viewport')).some(el=>{const r=el.getBoundingClientRect();return r.top<height&&r.bottom>0});
             const modal=!!document.querySelector('dialog[open], [role=dialog]');
             const visible = (reading || rect.top < height && rect.bottom > height * .25) && !specialist && !modal && document.visibilityState !== 'hidden';
@@ -84,18 +92,10 @@ export function EngineeringUniverse() {
                 deviceMemory?: number;
             };
             cinemaState.compact = innerWidth <= 850 || (device.deviceMemory ?? 8) <= 4 || navigator.hardwareConcurrency <= 4;
-            setCompact(cinemaState.compact);
+
             if (surface.current)
                 {surface.current.style.opacity=visible?(reading?(innerWidth<=850?'.23':'.34'):String(Math.min(1,Math.max(0,(rect.bottom-height*.15)/(height*.6))))):'0';surface.current.dataset.mode=reading?'reading':'introduction';surface.current.dataset.section=cinemaState.sectionKind;}
-            for (let i = 0; i < chapters.length; i++) {
-                const d = progress * 3 - i;
-                const opacity = 1 - smooth((Math.abs(d) - .18) / .32);
-                const c = chapters[i];
-                c.style.setProperty('--chapter-opacity', String(opacity));
-                c.style.translate = `${-d * 24}px ${-d * 13}px`;
-                c.dataset.current = String(Math.round(progress * 3) === i);
-                c.inert = Math.round(progress * 3) !== i || opacity < .05;
-            }
+
         };
         const schedule = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); };
         const pointer = (e: PointerEvent) => {
@@ -128,6 +128,7 @@ export function EngineeringUniverse() {
                 c.style.removeProperty('translate');
                 delete c.dataset.current;
             }
+            if(cinemaState.present===present)cinemaState.present=undefined;
             cinemaState.active = false;cinemaState.content=false;
         };
     }, [eligible, allowed, ready, failed, path]);
@@ -135,6 +136,5 @@ export function EngineeringUniverse() {
         return null;
     if (failed)
         return <div className="cinema-fallback-notice" role="status">Spatial rendering is unavailable. The complete readable introduction and project tools remain available.<button type="button" onClick={() => { setReady(false); setFailed(false); }}>Retry 3D rendering</button></div>;
-    const Scene = compact ? LeanScene : UniverseScene;
-    return <div className="cinema-surface" ref={surface} data-cinema-renderer data-active={active} aria-hidden="true"><Boundary onFailure={failure}>{world ? <NativeWorld world={world} active={active} onReady={created} onFailure={failure}/> : <Scene source={path === '/projects/sourcelens'} active={active} compact={compact} onReady={created} onFailure={failure}/>}</Boundary></div>;
+    return <div className="cinema-surface" ref={surface} data-cinema-renderer data-active={active} aria-hidden="true"><Boundary onFailure={failure}><ProductionRenderer world={world || (path === '/projects/sourcelens'?'sourcelens':'home')} active={active} onReady={created} onFailure={failure}/></Boundary></div>;
 }

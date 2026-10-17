@@ -1,0 +1,44 @@
+# Evidence Foundry — full portfolio review candidate
+
+This is an unpublished extension of the accepted Foundry implementation direction. It is not a claim of MORPHO parity or artistic acceptance. Production is preserved until the owner gives final merge/deployment approval.
+
+## Rendered direction
+
+A continuous engineered interior, macro material detail, architectural travel and reversible structural opening connect introductions to the existing reading chapters. Four text chapters follow the presented camera phase. All dimensions and sculptural arrangements are authored artwork, never learned coordinates, actual documents, listing predictions or medical outputs.
+
+| Route | Original environment and transformation | Camera / interaction |
+|---|---|---|
+| Home | Eight closed silver sweeps split from a central loom and form short instrument surrounds; eight different instrument silhouettes emerge beyond the liquid bed and ribbed vault | Approach, enter the loom, pass between split structures, reveal the complete collection; pointer pressure on the bounded liquid surface and project focus lifts |
+| SourceLens | Original Blender chamber, six morphing silver membranes, articulated six-leaf aperture, thin-volume lens and eighteen retained source-like leaves | Travel through the chamber toward the archive; selected leaves advance, pointer excites surface waves |
+| CareerLens | Thirteen modeled helicoidal louvers separate into three curved scoring terraces, with individual mechanical vocabulary markers | Enter and pass the louver array, turn around the scoring terraces; separation opens the structures |
+| FORM | Joint housings, articulated anatomical frame and separately opening observation shields inside a measured floor chamber | Approach the complete rig, examine its synthetic joint geometry, move around the body and return to an overview; reversible authored pose, no camera inference |
+| StudyBuddy | Turning paper in a cantilever reading room; exposed local processor, cooling fins, copper pins and a physical connecting route | Descend into the folio and pass toward local computation; page geometry opens independently with the scene control |
+| PyMentor | Three four-leaf connector locks in a long architectural passage; a separate terminated boundary branch | Pass input, template/model/parser metaphors and turn toward the exit; articulated gate opening exposes the route |
+| Airbnb | Separate observational terraces and a lifted continuous regression canopy with visible residual rods | Descend through the city, rise around the canopy and inspect the gap; conceptual city and canopy, no exported estimator |
+| Logistic Regression | Eleven sectioned sigmoid surfaces with a moving threshold blade, separated wings and observation chambers | Move across the continuous-to-discrete boundary and around its exposed section; separation changes the membrane structure |
+| Random Forest | Five recursively modeled tree architectures, roots and converging optical conduits | Approach at root height, rise through branching structures, inspect the ensemble from above; separate ensemble roots |
+| Project Laboratory | Eight different miniature engineering pavilions above connected metallic channels | Move through the archipelago; index hover/focus lifts its corresponding instrument; searchable grid is preserved |
+| About | Nine excavated curved strata opening into a formation quarry | Descend into the cut, move around the layers; separation exposes their construction |
+| Skills | Four interlocking capability bridges, copper step details and an exposed glass core | Travel between bridges and around the core; opening the bridges complements the existing interactive skill map |
+| Experience | Twenty-four individually modeled rising steps, a continuous handrail and milestone record planes | Follow the ascending promenade, inspect its turn and look back; platform separation is reversible |
+| Certifications | Three nested six-part faceted repositories opening onto source-like records | Enter the nested vaults and orbit the retained source; no issuer badges or authentication claims |
+| Resume | A machined folio press, hinged silver cover, four conceptual paper layers and a glass reading plane | Approach the hinge, enter the opened folio and turn toward the reading plane; the actual official PDF remains below |
+| Contact | Two closed metallic ducts merge into a meeting chamber over flowing surface detail | Follow separate paths toward confluence and turn into the open space; no message is sent by artwork |
+
+## Rendering and resource contract
+
+`production/renderer.tsx` owns one persistent Three.js WebGL2 context for all ordinary cinematic routes. It retains the canvas across App Router navigation, interpolates the camera from its preceding pose, removes and disposes the preceding scene's geometry/materials (including asynchronous stale GLBs), and builds only the new environment. `Model.batch()` combines immutable geometry by material. Morph topology remains constant; the same meshes unfold rather than being swapped for color variants.
+
+An original angular softbox cube environment supplies controlled metal highlights. Each environment has an authored key/rim arrangement, reflection-rig yaw, material roughness and exposure; FORM uses lateral satin lighting, StudyBuddy a warm reading-room arrangement, the passage deep backlighting, and the city broad overhead light. Off-axis projection leaves space for typography while the camera continues to aim through the actual architecture. The SourceLens liquid is above the imported process bed, rather than concealed underneath it. Mobile/software rendering uses refracted environment lighting. Capable desktop uses one reduced-size screen-background pass for thin-volume glass and a planar reflection. Shadow maps are limited to desktop hardware. `?optics=full` is an explicit inspection diagnostic which forces that expensive path, including software; its results must not be confused with the adaptive default. Nested reflection draws restore glass visibility using a local visibility stack.
+
+The liquid is an interactive, bounded linear shallow-water height field with advected curl detail. It is not a volumetric CFD simulation. Glass is a thin-volume approximation, not ray-traced multi-bounce optics or caustics. Silver surfaces use a custom environment/Fresnel material, not a promise of offline path-traced rendering.
+
+Adaptive device pixel ratio uses observed frame intervals. Software desktop starts at0.6 and may reduce to0.55; mobile starts at0.7 and may reduce to0.55. Hardware desktop caps at1.4; mobile caps at1.1. This intentionally limits software fill cost; physical GPU measurements are still required to establish hardware frame rate and sharpness. A breakpoint rebuild releases old geometry without creating a second context. Native modal, specialist walkthrough and hidden-document states suspend ordinary scene rendering. Reading backgrounds render on demand when their scroll, pointer, selection or section pose changes; they stop submitting GPU frames when settled. Software and low-memory devices use the compact geometry tier without changing desktop typography or camera composition. The source archive uses two instanced draw calls for its eighteen retained leaves. Pause freezes material time while deliberate scrolling remains possible. Resize happens before drawing, avoiding buffer-clear flashes.
+
+Missing WebGL2/float render-target support, shader/asset initialization failure or context loss exposes the complete semantic reading edition and existing tools. Reduced motion creates no ordinary renderer. Every original preview, full application workspace, demonstration, technical diagram, provenance record, resume download and credited ThreeUI exhibit remains available. No backend, inference API, remote asset dependency, subscription or paid infrastructure was added.
+
+## Review evidence
+
+The earlier isolated `/cinematic-study/` and its three forty-second recordings remain unchanged. Full-site evidence is recorded separately under `/tmp/full-foundry-review`, with source commits, test boundaries, renderer identity and software-only performance reported in the QA manifest. Check the final QA receipt rather than interpreting the existence of this document as a passed release gate.
+
+MORPHO's previously captured desktop/mobile films remain reference-only materials. They are not bundled into application assets or the review package. Its photographic product/environment transitions and higher-order material/lighting craft still provide a more demanding artistic benchmark than these engineering environments. The candidate is original and inspectable; owner acceptance is separate from automated verification.

@@ -80,3 +80,11 @@ npm.cmd run dev -- --hostname 127.0.0.1 --port 3300
 ```
 
 Open `http://127.0.0.1:3300/cinematic-study/` **on that Windows computer**. If the fast-forward fails, preserve both histories; do not reset/discard local changes. Blender is unnecessary to run the committed asset. The bundle is a manual snapshot, not a cloud tunnel or automatic sync. The current public site is unchanged; this candidate is not approved for release.
+
+## Full portfolio extension
+
+The later `saksham-full-foundry.bundle` contains the complete unpublished route extension, not just `/cinematic-study/`. Fetch that bundle into the same existing checkout and fast-forward the existing feature branch using the procedure above. Do not reset or overwrite any local edits if fast-forward is unavailable. Use `npm.cmd ci` and `npm.cmd run dev -- --hostname 127.0.0.1 --port 3300` on Windows; open `http://127.0.0.1:3300/` on that same Windows computer. All eight ordinary project routes and major pages now use the shared production-stage renderer. The prior isolated `/cinematic-study/` remains available for comparison.
+
+The full review ZIP includes actual desktop/mobile Chromium films, frame sequences, source bundle and QA receipts. Cloud software rendering is separate from your machine's physical GPU. For an explicit expensive optics inspection use `/projects/careerlens/?optics=full`; the default URL remains adaptive. This query is a diagnostic, not a performance promise. Manual file transfer is still required; there is no cloud-to-desktop private forwarding or automatic live synchronization.
+
+The public GitHub Pages website is unchanged. The owner must give final merge/deployment approval after inspecting this complete candidate.

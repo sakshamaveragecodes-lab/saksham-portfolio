@@ -47,7 +47,7 @@ Local source edits receive Next HMR. Changes made by Codex in the cloud do **not
 
 A development server can run internally at port3300; the static export used for current cloud checks runs internally at port3400. Neither loopback address is a desktop forwarding URL. Codex browser-open returns `queued`; it is not a private forwarding provisioner, nor proof that a desktop tab reached this process. No supported private forwarding/browser-inspection tool is exposed in this environment. Do not keep retrying loopback links as though they were cloud preview URLs.
 
-All professional content, original previews, Full App workspaces, demos, resume and credited exhibit are preserved. The latest bundle contains all eight distinct cinematic project worlds, all major portfolio pages, the continuous reading-section system, the mobile modal directory and plugin-independent Resume preview. All original functionality remains available. The owner has authorized the complete passing release; no intermediate visual-approval gate remains. Hosting remains the existing ₹0 GitHub Pages deployment.
+All professional content, original previews, Full App workspaces, demos, resume and credited exhibit are preserved. The latest bundle contains all eight distinct cinematic project worlds, all major portfolio pages, the continuous reading-section system, the mobile modal directory and plugin-independent Resume preview. All original functionality remains available. The current review candidate remains unpublished. Final owner approval is required before merge/deployment. Hosting remains the existing ₹0 GitHub Pages deployment.
 
 ## Update an existing review checkout after a checkpoint
 

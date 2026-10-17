@@ -1,7 +1,6 @@
 'use client';
 import {useEffect,useRef,type RefObject} from 'react';
 import * as T from 'three';
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {Reflector} from 'three/examples/jsm/objects/Reflector.js';
 import {asset} from '@/lib/site';
 import {cinemaState} from '../timeline';
@@ -47,7 +46,8 @@ export default function ProductionRenderer({world,active,onReady,onFailure,canva
   model.root.addEventListener('removed',()=>Object.values(ownedPalette).forEach(m=>m.dispose()));
   eyeCurve=new T.CatmullRomCurve3(def.camera.map(v=>new T.Vector3(...v)),false,'centripetal');lookCurve=new T.CatmullRomCurve3(def.focus.map(v=>new T.Vector3(...v)),false,'centripetal');
   if(previous){arrival=0;p=cinemaState.progress;}else p=cinemaState.progress;
-  if(stage==='sourcelens'){const owned=model;new GLTFLoader().load(asset('/studies/evidence-foundry/'+(compact||software?'chamber-compact.glb':'chamber.glb')),g=>{if(disposed||model!==owned||stage!==ownedStage){disposeTree(g.scene,true);return;}const iris:T.Object3D[]=[];g.scene.traverse(o=>{if(o instanceof T.Mesh){o.castShadow=true;o.receiveShadow=true;const old=o.material as T.MeshStandardMaterial;o.material=old.metalness>.7?silver:ownedPalette.dark;old.dispose();if(o.name.startsWith('iris_leaf_'))iris.push(o)}});owned.root.add(g.scene);owned.motions.push(x=>iris.forEach((o,i)=>{const index=Number(o.name.split('_').at(-1))||i,a=index*Math.PI/3,f=ease(.27,.65,x);o.position.set(Math.cos(a)*f*2.2,Math.sin(a)*f*2.2,0)}));},undefined,()=>{if(!disposed&&model===owned&&stage===ownedStage)onFailure()});}building=false;
+  if(stage==='sourcelens'){const owned=model;void import('three/examples/jsm/loaders/GLTFLoader.js').then(({GLTFLoader})=>{if(disposed||model!==owned||stage!==ownedStage)return;new GLTFLoader().load(asset('/studies/evidence-foundry/'+(compact||software?'chamber-compact.glb':'chamber.glb')),g=>{if(disposed||model!==owned||stage!==ownedStage){disposeTree(g.scene,true);return;}const iris:T.Object3D[]=[];g.scene.traverse(o=>{if(o instanceof T.Mesh){o.castShadow=true;o.receiveShadow=true;const old=o.material as T.MeshStandardMaterial;o.material=old.metalness>.7?silver:ownedPalette.dark;old.dispose();if(o.name.startsWith('iris_leaf_'))iris.push(o)}});owned.root.add(g.scene);owned.motions.push(x=>iris.forEach((o,i)=>{const index=Number(o.name.split('_').at(-1))||i,a=index*Math.PI/3,f=ease(.27,.65,x);o.position.set(Math.cos(a)*f*2.2,Math.sin(a)*f*2.2,0)}));},undefined,()=>{if(!disposed&&model===owned&&stage===ownedStage)onFailure()});}).catch(()=>{if(!disposed&&model===owned&&stage===ownedStage)onFailure()});}
+  building=false;
  };
  const resize=()=>{resizePending=true;resume.current()};const observer=new ResizeObserver(resize);observer.observe(element);
  const lost=(e:Event)=>{e.preventDefault();onFailure()};canvas.addEventListener('webglcontextlost',lost);
@@ -57,7 +57,7 @@ export default function ProductionRenderer({world,active,onReady,onFailure,canva
   // spending GPU frames on an intro that is no longer being watched.
   const state=cinemaState;if(receipt.frames>0&&state.content&&stage===requested.current&&!resizePending&&Math.abs(p-state.progress)<.00015&&Math.abs(spread-state.spread)<.001&&Math.abs(pointer.x-state.pointer[0])<.002&&Math.abs(pointer.y-state.pointer[1])<.002&&lastSection===state.section&&lastSelection===state.selection){receipt.idleReading=true;return;}receipt.idleReading=false;
   const portrait=innerWidth<=850;if(portrait!==compact){compact=portrait;requested.current=stage||requested.current;stage=undefined;dpr=Math.min(devicePixelRatio,review?1:software?(compact?.7:.6):compact?1.1:1.4);resizePending=true;}
-  if(stage!==requested.current){oldEye.copy(camera.position);camera.getWorldDirection(oldFocus).multiplyScalar(8).add(camera.position);void changeStage().catch(()=>{if(!disposed)onFailure()});}if(building||!model)return;
+  if(stage!==requested.current&&!building){oldEye.copy(camera.position);camera.getWorldDirection(oldFocus).multiplyScalar(8).add(camera.position);void changeStage().catch(()=>{if(!disposed)onFailure()});}if(building||!model)return;
   if(resizePending){resizePending=false;const {width,height}=element.getBoundingClientRect();renderer.setPixelRatio(dpr);renderer.setSize(width,height,false);camera.aspect=width/Math.max(1,height);camera.setViewOffset(width,height,compact?0:-width*.22,compact?-height*.18:0,width,height);glassTarget.setSize(Math.max(1,Math.round(width*dpr*.5)),Math.max(1,Math.round(height*dpr*.5)));camera.updateProjectionMatrix();if(palette)(palette.glass as T.ShaderMaterial).uniforms.uResolution.value.set(canvas.width,canvas.height);}
   p+=(cinemaState.progress-p)*(1-Math.exp(-dt*9));spread+=(cinemaState.spread-spread)*(1-Math.exp(-dt*6));if(!cinemaState.paused)time+=dt;pointer.lerp(new T.Vector2(...cinemaState.pointer),1-Math.exp(-dt*5));uniforms.uTime.value=time;uniforms.uProgress.value=p;uniforms.uPointer.value.copy(pointer);uniforms.uImpulse.value=Math.min(.5,Math.hypot(pointer.x-lastPointer,pointer.y-lastPointerY)*15);lastPointer=pointer.x;lastPointerY=pointer.y;
   eyeCurve.getPoint(Math.max(0,Math.min(1,p)),eye);lookCurve.getPoint(Math.max(0,Math.min(1,p)),focus);if(compact){eye.x*=.72;eye.y+=1;eye.z+=4;camera.fov=55;}else{camera.fov=43;}

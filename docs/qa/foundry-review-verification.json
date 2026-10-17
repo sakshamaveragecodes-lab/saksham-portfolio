@@ -1,0 +1,287 @@
+{
+  "status": "Unpublished review candidate; artistic acceptance pending; not a production-readiness claim",
+  "sourceCommit": "e78ca7802628be0141f132ef610736140ad55a1a",
+  "branch": "feat/immersive-engineering-worlds",
+  "productionUnchanged": "652fb03a3fe2601f445e1585037ce274a4a5a217",
+  "publication": "No push, merge, deployment or public preview created for this candidate",
+  "checks": {
+    "lint": "passed in final Next production build",
+    "strictTypeScript": "passed in final Next production build",
+    "staticExport": "passed",
+    "unitAndProvenanceTests": 17,
+    "fullBrowserRegressionBeforeIsolatedNewSceneRefinements": {
+      "startTime": "2026-10-17T06:23:51.281Z",
+      "duration": 307595.77300000004,
+      "expected": 40,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "finalFocusedNewSceneBrowserTests": {
+      "startTime": "2026-10-17T06:57:32.563Z",
+      "duration": 28083.574999999997,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "preservedSourceBaseline": "6af3d5e0b6c00436bfe32a33d5a5162b4f53c7e0",
+  "protectedOriginalPathsUnchanged": [
+    "src/lib",
+    "src/components/cinema",
+    "src/app/page.tsx",
+    "src/app/layout.tsx",
+    "src/app/projects",
+    "src/app/about",
+    "src/app/skills",
+    "src/app/experience",
+    "src/app/certifications",
+    "src/app/resume",
+    "src/app/contact",
+    "src/components/navigation.tsx",
+    "src/app/globals.css",
+    "src/components/app-experience.tsx",
+    "src/components/project-preview.tsx",
+    "src/components/demo.tsx",
+    "public/documents",
+    ".github",
+    "package.json",
+    "package-lock.json"
+  ],
+  "assets": [
+    {
+      "file": "public/studies/evidence-foundry/chamber-compact.glb",
+      "bytes": 177168,
+      "sha256": "4bf0ce8d178962974b348e4b56989f00e871567eee34360f8fd6498522551ecb"
+    },
+    {
+      "file": "public/studies/evidence-foundry/chamber.glb",
+      "bytes": 935968,
+      "sha256": "2ef236121831932c83576cceb809b14f75df5e18722a85b62e55a4e6bd783979"
+    }
+  ],
+  "recordingScope": "Three actual Chromium video-only 40-second native-scroll sequences; trimmed review films41.96s. No concurrent screenshot commands during playback. Frame sequences inspected; encoded FPS is not renderer FPS.",
+  "motion": [
+    {
+      "label": "desktop",
+      "viewport": [
+        1280,
+        900
+      ],
+      "mode": "adaptive:refracted-studio-environment",
+      "errors": [],
+      "failedRequests": [],
+      "overflow": false,
+      "chapterSamples": [
+        {
+          "progress": 0.07068705043655026,
+          "chapter": "01 / UNBOUNDED",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.25231524220532625,
+          "chapter": "02 / SEPARATE",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.45352178445986346,
+          "chapter": "03 / KEEP THE SOURCE",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.6492523256124784,
+          "chapter": "04 / RETRIEVE",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.8568901235348128,
+          "chapter": "05 / GROUND",
+          "headerTop": 0
+        }
+      ]
+    },
+    {
+      "label": "mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "mode": "adaptive:refracted-studio-environment",
+      "errors": [],
+      "failedRequests": [],
+      "overflow": false,
+      "chapterSamples": [
+        {
+          "progress": 0.04131520922098381,
+          "chapter": "01 / UNBOUNDED",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.24226992478637244,
+          "chapter": "02 / SEPARATE",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.44237158521122766,
+          "chapter": "03 / KEEP THE SOURCE",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.6423358977337691,
+          "chapter": "04 / RETRIEVE",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.8418600823293152,
+          "chapter": "05 / GROUND",
+          "headerTop": 0
+        }
+      ]
+    },
+    {
+      "label": "desktop-optics",
+      "viewport": [
+        960,
+        720
+      ],
+      "mode": "desktop:screen-space-refraction+planar",
+      "errors": [],
+      "failedRequests": [],
+      "overflow": false,
+      "chapterSamples": [
+        {
+          "progress": 0.05963910147799508,
+          "chapter": "01 / UNBOUNDED",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.26525447532858376,
+          "chapter": "02 / SEPARATE",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.4553047614773611,
+          "chapter": "03 / KEEP THE SOURCE",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.653228834875645,
+          "chapter": "04 / RETRIEVE",
+          "headerTop": 0
+        },
+        {
+          "progress": 0.8558255102430424,
+          "chapter": "05 / GROUND",
+          "headerTop": 0
+        }
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "file": "desktop-review.mp4",
+      "bytes": 5985071,
+      "seconds": 41.96,
+      "sha256": "58390bc4414430ddf672bf6c527c1661b4bb9f7fe11b3664de74a992a4378948",
+      "rawSource": "desktop-40-second-sequence.webm",
+      "trimSeconds": 5.29,
+      "method": "Trimmed actual Chromium recording; no motion interpolation, time stretching or invented frames; encoded frame rate is not renderer FPS."
+    },
+    {
+      "file": "mobile-review.mp4",
+      "bytes": 3576350,
+      "seconds": 42.0,
+      "sha256": "5f50da3848a8ab63079d7e1835d18d9ed1c4315228c32052afb84a3a44e6d4c6",
+      "rawSource": "mobile-40-second-sequence.webm",
+      "trimSeconds": 2.433,
+      "method": "Trimmed actual Chromium recording; no motion interpolation, time stretching or invented frames; encoded frame rate is not renderer FPS."
+    },
+    {
+      "file": "desktop-optics-review.mp4",
+      "bytes": 3632135,
+      "seconds": 41.96,
+      "sha256": "21c83a2a7095e14a71cb2085d6d970d1d81e85ac271c68e945797be1db603065",
+      "rawSource": "desktop-optics-40-second-sequence.webm",
+      "trimSeconds": 4.162,
+      "method": "Trimmed actual Chromium recording; no motion interpolation, time stretching or invented frames; encoded frame rate is not renderer FPS."
+    }
+  ],
+  "performanceScope": "Stationary software Chromium after warmup, no recording or screenshots; not physical GPU timing",
+  "performance": [
+    {
+      "width": 1280,
+      "phase": 0.05,
+      "fps": 9.407337723408286,
+      "dpr": 0.45,
+      "triangles": 10115,
+      "drawCalls": 20,
+      "geometries": 20,
+      "textures": 4,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    {
+      "width": 1280,
+      "phase": 0.45,
+      "fps": 10.843201597945498,
+      "dpr": 0.45,
+      "triangles": 10524,
+      "drawCalls": 19,
+      "geometries": 21,
+      "textures": 4,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    {
+      "width": 1280,
+      "phase": 0.85,
+      "fps": 8.270590919447498,
+      "dpr": 0.45,
+      "triangles": 14518,
+      "drawCalls": 14,
+      "geometries": 23,
+      "textures": 5,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    {
+      "width": 390,
+      "phase": 0.05,
+      "fps": 27.67948864280191,
+      "dpr": 0.6141249999999999,
+      "triangles": 8731,
+      "drawCalls": 20,
+      "geometries": 23,
+      "textures": 5,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    {
+      "width": 390,
+      "phase": 0.45,
+      "fps": 28.38328792004865,
+      "dpr": 0.6141249999999999,
+      "triangles": 9140,
+      "drawCalls": 19,
+      "geometries": 23,
+      "textures": 5,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    },
+    {
+      "width": 390,
+      "phase": 0.85,
+      "fps": 26.53882373086753,
+      "dpr": 0.6141249999999999,
+      "triangles": 14518,
+      "drawCalls": 14,
+      "geometries": 23,
+      "textures": 5,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  ],
+  "visualVerdict": "Substantial new original modeled environment and continuous geometry/camera production. Still stylized: kinematic silver membranes, bounded surface waves and thin-volume screen-space optics are not natural-water CFD or multi-bounce refraction. Do not claim MORPHO parity or owner acceptance.",
+  "limitations": [
+    "Physical Windows Edge/Android Chrome/GPU, VRAM and field INP unmeasured",
+    "Cloud software renderer remains below desktop smooth-motion target; footage exposes its real cadence",
+    "Private cloud-to-desktop forwarding remains unavailable; existing Windows loopback/manual bundle workflow is the review alternative",
+    "New visual system must not be extended or deployed until owner inspection and approval"
+  ],
+  "cost": "Existing static GitHub Pages remains unchanged; no dependency, paid service, backend, inference or hosting added; \u20b90"
+}

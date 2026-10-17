@@ -1,0 +1,29 @@
+[
+  {
+    "file": "desktop-review.mp4",
+    "bytes": 5985071,
+    "seconds": 41.96,
+    "sha256": "58390bc4414430ddf672bf6c527c1661b4bb9f7fe11b3664de74a992a4378948",
+    "rawSource": "desktop-40-second-sequence.webm",
+    "trimSeconds": 5.29,
+    "method": "Trimmed actual Chromium recording; no motion interpolation, time stretching or invented frames; encoded frame rate is not renderer FPS."
+  },
+  {
+    "file": "mobile-review.mp4",
+    "bytes": 3576350,
+    "seconds": 42.0,
+    "sha256": "5f50da3848a8ab63079d7e1835d18d9ed1c4315228c32052afb84a3a44e6d4c6",
+    "rawSource": "mobile-40-second-sequence.webm",
+    "trimSeconds": 2.433,
+    "method": "Trimmed actual Chromium recording; no motion interpolation, time stretching or invented frames; encoded frame rate is not renderer FPS."
+  },
+  {
+    "file": "desktop-optics-review.mp4",
+    "bytes": 3632135,
+    "seconds": 41.96,
+    "sha256": "21c83a2a7095e14a71cb2085d6d970d1d81e85ac271c68e945797be1db603065",
+    "rawSource": "desktop-optics-40-second-sequence.webm",
+    "trimSeconds": 4.162,
+    "method": "Trimmed actual Chromium recording; no motion interpolation, time stretching or invented frames; encoded frame rate is not renderer FPS."
+  }
+]

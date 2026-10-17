@@ -295,10 +295,12 @@ export function createStage(options: StageOptions) {
         eyeCurve.getPoint(Math.max(0, Math.min(1, p)), eye);
         lookCurve.getPoint(Math.max(0, Math.min(1, p)), focus);
         if (compact) {
+            const portrait=directions[stage!].portrait;
+            if(portrait){focus.y=portrait.focusY;eye.lerp(focus,portrait.dolly)}
             eye.x *= .72;
-            eye.y += 1;
-            eye.z += 4;
-            camera.fov = 55;
+            eye.y += portrait?.rise ?? 1;
+            eye.z += portrait?.back ?? 4;
+            camera.fov = portrait?.fov ?? 55;
         }
         else {
             camera.fov = 43;

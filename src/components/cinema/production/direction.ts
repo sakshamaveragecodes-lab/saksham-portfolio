@@ -1,8 +1,9 @@
 import type {WorldKey} from '../worlds';
 import type {V3} from './model';
 export type StageKey=WorldKey|'home'|'sourcelens';
-type Direction={title:string;geometry:string;camera:V3[];focus:V3[];color:string};
-const d=(title:string,geometry:string,color:string,camera:V3[],focus:V3[]):Direction=>({title,geometry,color,camera,focus});
+type PortraitFraming={focusY:number;dolly:number;rise:number;back:number;fov:number};
+type Direction={portrait?:PortraitFraming;title:string;geometry:string;camera:V3[];focus:V3[];color:string};
+const d=(title:string,geometry:string,color:string,camera:V3[],focus:V3[],portrait?:PortraitFraming):Direction=>({title,geometry,color,camera,focus,portrait});
 /** Camera paths are continuous splines through architectural space, not orbit animations. */
 export const directions:Record<StageKey,Direction>={
  home:d('The intelligence loom','branching liquid ribbons → eight engineered instruments','#c1dce2',[[12,6,17],[5,3,7],[1,2,-2],[-5,5,-9],[10,7,-6]],[[-1,0,-2],[0,0,-5],[0,0,-12],[0,1,-18],[0,0,-18]]),
@@ -13,7 +14,7 @@ export const directions:Record<StageKey,Direction>={
  pymentor:d('The orchestration passage','three articulated connector locks, parser and boundary branch','#c6bfdf',[[12,5,16],[5,2,8],[0,1,0],[-2,2,-8],[11,8,11]],[[0,0,-2],[0,0,-6],[0,0,-12],[0,0,-18],[0,0,-9]]),
  airbnb:d('The residual city','two data terraces and a lifted regression canopy','#b8d8db',[[15,10,17],[8,6,9],[2,3,2],[-8,5,-2],[8,10,5]],[[0,-1,-4],[0,0,-5],[0,0,-7],[0,0,-8],[0,-1,-6]]),
  'logistic-diabetes':d('The decision membrane','sigmoid sectional sculpture → separated decision chambers','#b4ccdf',[[12,5,16],[6,2,9],[0,1,4],[-6,4,0],[8,5,7]],[[0,0,-2],[0,0,-3],[0,0,-4],[0,0,-4],[0,0,-4]]),
- 'random-forest-diabetes':d('The branching observatory','rooted decision architectures → separated ensemble → convergence','#b9d0b8',[[13,4,17],[7,2,10],[0,3,4],[-6,7,-1],[9,10,9]],[[0,1,-3],[0,2,-4],[0,3,-5],[0,3,-5],[0,2,-5]]),
+ 'random-forest-diabetes':d('The branching observatory','rooted decision architectures → separated ensemble → convergence','#b9d0b8',[[13,4,17],[7,2,10],[0,3,4],[-6,7,-1],[9,10,9]],[[0,1,-3],[0,2,-4],[0,3,-5],[0,3,-5],[0,2,-5]],{focusY:.5,dolly:.2,rise:.5,back:1,fov:52}),
  projects:d('The engineering archipelago','eight dissimilar pavilions connected by metallic channels','#c0d9df',[[16,10,20],[8,5,11],[0,3,3],[-8,6,-4],[10,10,6]],[[0,0,-4],[0,0,-5],[0,0,-7],[0,0,-7],[0,0,-6]]),
  about:d('The formation quarry','excavated curved strata unfold into a working space','#d9d0ba',[[13,6,16],[7,3,9],[0,1,3],[-7,3,-2],[9,6,6]],[[0,0,-3],[0,0,-4],[0,0,-5],[0,0,-5],[0,0,-5]]),
  skills:d('The capability exchange','four interlocking engineered bridges with an exposed core','#c0d9df',[[13,7,17],[7,3,9],[0,2,3],[-6,4,-1],[9,7,7]],[[0,0,-3],[0,0,-4],[0,0,-5],[0,0,-5],[0,0,-5]]),

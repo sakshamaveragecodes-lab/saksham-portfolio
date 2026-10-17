@@ -64,3 +64,19 @@ npm.cmd run dev -- --hostname 127.0.0.1 --port 3300
 This fast-forwards **only the local feature branch**, using the downloaded bundle. It does not merge into main, push to GitHub, or publish anything. If the command cannot fast-forward, stop and report the Git output in this original conversation. This enhancement adds no dependencies; npm ci is needed for a fresh clone, or when a later checkpoint changes the lockfile.
 
 Review the full four-chapter scroll and reverse scroll on Home and SourceLens. Try the project links in the Systems chapter, Pause atmosphere, Reduce effects, Skip introduction and the preserved SourceLens preview, Full App workspace, demonstration and architecture. The local server updates after local source transfers; there is still no automatic cloud-to-Windows source synchronization.
+
+## Evidence Foundry quality-correction candidate (unpublished)
+
+Use `/cinematic-study/` on the same local development server. The optional **Play40-second sequence** button reviews all five shots; normal scroll, the range and chapter controls also work. Stop, wheel/touch or navigation keys interrupt playback. **Pause material motion**, **Reduce effects** and **Skip to study notes** remain available. Read `EVIDENCE_FOUNDRY.md` for the art direction and honest material/simulation boundaries. Existing routes remain unchanged.
+
+Download `saksham-evidence-foundry.bundle` from the handoff. Update the existing Windows checkout (first inspect `git status`; preserve any local work):
+
+```powershell
+git fetch "C:\Users\YOUR_NAME\Downloads\saksham-evidence-foundry.bundle" feat/immersive-engineering-worlds
+git switch feat/immersive-engineering-worlds
+git merge --ff-only FETCH_HEAD
+npm.cmd ci
+npm.cmd run dev -- --hostname 127.0.0.1 --port 3300
+```
+
+Open `http://127.0.0.1:3300/cinematic-study/` **on that Windows computer**. If the fast-forward fails, preserve both histories; do not reset/discard local changes. Blender is unnecessary to run the committed asset. The bundle is a manual snapshot, not a cloud tunnel or automatic sync. The current public site is unchanged; this candidate is not approved for release.

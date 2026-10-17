@@ -68,7 +68,7 @@ export function EngineeringUniverse() {
                 const c = chapters[i];
                 if(progress!==0 || c.style.getPropertyValue('--chapter-opacity'))c.style.setProperty('--chapter-opacity', String(opacity));
                 if(progress!==0)c.style.translate=`${-d*24}px ${-d*13}px`;else c.style.removeProperty('translate');
-                if(progress!==0 || c.dataset.current!==undefined)c.dataset.current = String(Math.round(progress * 3) === i);
+                c.dataset.current = String(Math.round(progress * 3) === i);
                 c.inert = Math.round(progress * 3) !== i || opacity < .05;
             }
         };

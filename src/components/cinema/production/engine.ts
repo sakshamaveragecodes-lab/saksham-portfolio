@@ -285,7 +285,7 @@ export function createStage(options: StageOptions) {
         spread += (cinemaState.spread - spread) * (1 - Math.exp(-dt * 6));
         if (!cinemaState.paused)
             time += dt;
-        pointer.lerp(new T.Vector2(...cinemaState.pointer), 1 - Math.exp(-dt * 5));
+        pointer.lerp(rayPointer.set(...cinemaState.pointer), 1 - Math.exp(-dt * 5));
         uniforms.uTime.value = time;
         uniforms.uProgress.value = p;
         uniforms.uPointer.value.copy(pointer);
@@ -294,6 +294,7 @@ export function createStage(options: StageOptions) {
         lastPointerY = pointer.y;
         eyeCurve.getPoint(Math.max(0, Math.min(1, p)), eye);
         lookCurve.getPoint(Math.max(0, Math.min(1, p)), focus);
+        const previousFov = camera.fov;
         if (compact) {
             const portrait=directions[stage!].portrait;
             if(portrait){focus.y=portrait.focusY;eye.lerp(focus,portrait.dolly)}
@@ -315,7 +316,8 @@ export function createStage(options: StageOptions) {
         }
         camera.position.copy(eye);
         camera.lookAt(focus);
-        camera.updateProjectionMatrix();
+        if (camera.fov !== previousFov)
+            camera.updateProjectionMatrix();
         camera.updateMatrixWorld();
         model!.update(p, time, spread, cinemaState.selection);
         if (cinemaState.content) {

@@ -5,8 +5,8 @@
   "productionUnchanged": "652fb03a3fe2601f445e1585037ce274a4a5a217",
   "publication": "No push, merge, deployment or public preview created for this candidate",
   "checks": {
-    "lint": "passed in final Next production build",
-    "strictTypeScript": "passed in final Next production build",
+    "lint": "passed explicit npm run lint",
+    "strictTypeScript": "passed explicit npm run typecheck including browser test sources after a DOM getExtension overload type annotation",
     "staticExport": "passed",
     "unitAndProvenanceTests": 17,
     "fullBrowserRegressionBeforeIsolatedNewSceneRefinements": {
@@ -21,6 +21,14 @@
       "startTime": "2026-10-17T06:57:32.563Z",
       "duration": 28083.574999999997,
       "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "capabilityFallbackAfterTestTypeFix": {
+      "startTime": "2026-10-17T07:08:53.009Z",
+      "duration": 1630.914,
+      "expected": 1,
       "skipped": 0,
       "unexpected": 0,
       "flaky": 0
@@ -283,5 +291,6 @@
     "Private cloud-to-desktop forwarding remains unavailable; existing Windows loopback/manual bundle workflow is the review alternative",
     "New visual system must not be extended or deployed until owner inspection and approval"
   ],
-  "cost": "Existing static GitHub Pages remains unchanged; no dependency, paid service, backend, inference or hosting added; \u20b90"
+  "cost": "Existing static GitHub Pages remains unchanged; no dependency, paid service, backend, inference or hosting added; \u20b90",
+  "verifiedAtUTC": "2026-10-17T07:10:49.723157+00:00"
 }

@@ -4,7 +4,7 @@ export type Vec3 = [
     number,
     number
 ];
-export const cinemaState = { progress: 0, source: false, compact: false, active: false, paused: false, pointer: [0, 0] as [
+export const cinemaState = { present: undefined as undefined | ((progress:number)=>void), progress: 0, source: false, compact: false, active: false, paused: false, pointer: [0, 0] as [
         number,
         number
     ], content: false, section: 0, sectionProgress: 0, sectionKind: 'overview', quality: 1, selection: -1, spread: 0 };

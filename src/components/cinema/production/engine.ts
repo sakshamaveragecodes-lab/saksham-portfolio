@@ -1,0 +1,395 @@
+import * as T from 'three';
+import { Reflector } from 'three/examples/jsm/objects/Reflector.js';
+import { asset } from '@/lib/site';
+import { cinemaState } from '../timeline';
+import { studioMetal, studioGlass } from '../../foundry/studio-material';
+import { RippleField, type FlowUniforms } from '../../foundry/fluid';
+import { ease } from '../../foundry/choreography';
+import { directions, lightRigs, type StageKey } from './direction';
+import { environmentAsync, type Palette } from './environments';
+import type { Model } from './model';
+import { cpuMorphs } from './cpu-morph';
+export type StageReceipt = {
+    execution: 'worker' | 'main';
+    world: StageKey;
+    renderer: string;
+    frames: number;
+    frameMs: number[];
+    calls: number;
+    triangles: number;
+    geometries: number;
+    textures: number;
+    quality: number;
+    progress: number;
+    mode: string;
+    materialTime: number;
+    opticalPasses: number;
+    simulationSteps: number;
+    releases: number;
+    idleReading: boolean;
+};
+function disposeTree(root: T.Object3D, materials = false) { const geometries = new Set<T.BufferGeometry>(), mats = new Set<T.Material>(); root.traverse(o => { if (o instanceof T.Mesh) {
+    if (o instanceof T.InstancedMesh)
+        o.dispose();
+    geometries.add(o.geometry);
+    if (materials)
+        (Array.isArray(o.material) ? o.material : [o.material]).forEach(m => mats.add(m));
+} }); geometries.forEach(g => g.dispose()); mats.forEach(m => m.dispose()); root.removeFromParent(); }
+export type StageUpdate = {
+    world: StageKey;
+    active: boolean;
+    width: number;
+    height: number;
+    pixelRatio: number;
+};
+export type StageOptions = StageUpdate & {
+    canvas: HTMLCanvasElement | OffscreenCanvas;
+    review: boolean;
+    environmentMap: T.CubeTexture;
+    grain: T.Texture;
+    onReady: () => void;
+    onFailure: () => void;
+    onWorld: (world: StageKey, title: string) => void;
+    publish: (receipt: StageReceipt) => void;
+};
+export function createStage(options: StageOptions) {
+    let { width, height, pixelRatio } = options;
+    const { environmentMap, grain, onReady, onFailure } = options;
+    const requested = { current: options.world }, visible = { current: options.active }, resume = { current: () => { } };
+    let renderer: T.WebGLRenderer;
+    try {
+        renderer = new T.WebGLRenderer({ canvas: options.canvas, alpha: false, antialias: false, powerPreference: 'high-performance' });
+    }
+    catch {
+        environmentMap.dispose();
+        grain.dispose();
+        onFailure();
+        return;
+    }
+    const gl = renderer.getContext(), debug = gl.getExtension('WEBGL_debug_renderer_info'), name = debug ? String(gl.getParameter(debug.UNMASKED_RENDERER_WEBGL)) : 'WebGL2', software = /swiftshader|llvmpipe|software|warp|microsoft basic/i.test(name);
+    const review = options.review;
+    const float = !!gl.getExtension('EXT_color_buffer_float');
+    if (!float) {
+        renderer.dispose();
+        renderer.forceContextLoss();
+        environmentMap.dispose();
+        grain.dispose();
+        onFailure();
+        return;
+    }
+    renderer.debug.onShaderError = (context, program) => { console.error('Engineering stage shader failed: ' + context.getProgramInfoLog(program)); onFailure(); };
+    renderer.outputColorSpace = T.SRGBColorSpace;
+    renderer.toneMapping = T.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.25;
+    renderer.shadowMap.enabled = (!software || review) && width > 850;
+    renderer.shadowMap.type = T.PCFSoftShadowMap;
+    const canvas = renderer.domElement;
+    const scene = new T.Scene();
+    scene.background = new T.Color('#080d13');
+    scene.fog = new T.FogExp2('#0c1823', .024);
+    const camera = new T.PerspectiveCamera(44, 1, .15, 110);
+    const uniforms: FlowUniforms = { uTime: { value: 0 }, uProgress: { value: 0 }, uPointer: { value: new T.Vector2() }, uImpulse: { value: 0 } };
+    scene.add(new T.HemisphereLight('#d6efff', '#17202a', 2));
+    const key = new T.DirectionalLight('#dfedff', 3.7);
+    key.position.set(-4, 10, 5);
+    key.castShadow = renderer.shadowMap.enabled;
+    key.shadow.mapSize.set(1024, 1024);
+    Object.assign(key.shadow.camera, { left: -14, right: 14, top: 12, bottom: -12, far: 55 });
+    key.shadow.bias = -.0004;
+    key.target.position.set(0, 0, -8);
+    scene.add(key, key.target);
+    const rim = new T.DirectionalLight('#a2bdcc', 1.4);
+    rim.position.set(6, 2, -18);
+    scene.add(rim);
+    const floor = new T.Mesh(new T.PlaneGeometry(160, 160), new T.MeshLambertMaterial({ color: '#111c26' }));
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.y = -2.56;
+    floor.receiveShadow = true;
+    scene.add(floor);
+    let reflector: Reflector | undefined;
+    const optics = (!software || review) && width > 850;
+    if (optics) {
+        reflector = new Reflector(new T.PlaneGeometry(29, 50), { color: 0x293f4b, textureWidth: 512, textureHeight: 512, multisample: 0, clipBias: .015 });
+        reflector.rotation.x = -Math.PI / 2;
+        reflector.position.set(0, -2.5, -8);
+        scene.add(reflector);
+    }
+    const paperCanvas = typeof OffscreenCanvas !== 'undefined' ? new OffscreenCanvas(256, 384) : document.createElement('canvas');
+    paperCanvas.width = 256;
+    paperCanvas.height = 384;
+    const ink = paperCanvas.getContext('2d') as CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D;
+    const paperTexture = new T.CanvasTexture(paperCanvas);
+    paperTexture.colorSpace = T.SRGBColorSpace;
+    const field = new RippleField(width > 850 && !software ? 96 : 48);
+    field.initialize(renderer);
+    const glassTarget = new T.WebGLRenderTarget(1, 1, { type: T.HalfFloatType });
+    let model: Model | undefined, palette: Palette | undefined, stage: StageKey | undefined, eyeCurve: T.CatmullRomCurve3, lookCurve: T.CatmullRomCurve3, compact = width <= 850, resizePending = true, disposed = false, raf = 0, last = 0, p = 0, time = 0, spread = 0, arrival = 1, lastSimulation = 0;
+    let dpr = Math.min(pixelRatio, review ? 1 : software ? (compact ? .7 : .6) : compact ? 1.1 : 1.4), cost = 0, samples = 0, lastAdapt = 0;
+    const receipt: StageReceipt = { execution: typeof document === 'undefined' ? 'worker' : 'main', world: requested.current, renderer: name, frames: 0, frameMs: [], calls: 0, triangles: 0, geometries: 0, textures: 0, quality: dpr, progress: 0, mode: optics ? 'studio + screen-space glass + planar reflection' : 'adaptive studio refraction', materialTime: 0, opticalPasses: 0, simulationSteps: 0, releases: 0, idleReading: false };
+    options.publish(receipt);
+    const glassObjects: T.Mesh[] = [];
+    const withoutGlass = (draw: () => void) => { const saved = glassObjects.map(o => o.visible); glassObjects.forEach(o => { o.visible = false; }); try {
+        draw();
+    }
+    finally {
+        glassObjects.forEach((o, i) => { o.visible = saved[i]; });
+    } };
+    if (reflector) {
+        const original = reflector.onBeforeRender;
+        reflector.onBeforeRender = function (...args) { withoutGlass(() => original.apply(this, args)); };
+    }
+    let generation = 0, building = false;
+    const changeStage = async () => {
+        building = true;
+        const token = ++generation;
+        const previous = stage;
+        stage = requested.current;
+        receipt.world = stage;
+        receipt.frameMs.length = 0;
+        lastPresented = -1;
+        const ownedStage = stage;
+        const def = directions[stage], rig = lightRigs[stage];
+        key.position.set(...rig.key);
+        key.color.set(rig.warmth);
+        rim.position.set(...rig.rim);
+        renderer.toneMappingExposure = rig.exposure;
+        ink.fillStyle = '#c4d2d3';
+        ink.fillRect(0, 0, 256, 384);
+        ink.fillStyle = '#304b56';
+        ink.font = '11px monospace';
+        ink.fillText('SAKSHAM / CONCEPTUAL LEAF', 18, 27);
+        ink.fillRect(18, 43, 220, 1);
+        ink.font = '22px Georgia';
+        const words = def.title.replace(/^The /, '').split(' ');
+        words.forEach((word, i) => ink.fillText(word, 18, 88 + i * 25));
+        ink.fillStyle = '#6b8a90';
+        for (let i = 0; i < 12; i++)
+            ink.fillRect(18, 170 + i * 10, 120 + (i * 37) % 100, 2);
+        ink.font = '9px monospace';
+        ink.fillText('ARTWORK / NOT DOCUMENT DATA', 18, 352);
+        paperTexture.needsUpdate = true;
+        const silver = studioMetal(uniforms, environmentMap, grain, def.color, rig.roughness, false, false, rig.studioYaw).material, warm = studioMetal(uniforms, environmentMap, grain, '#b8a990', Math.min(.4, rig.roughness + .08), false, false, rig.studioYaw).material, water = studioMetal(uniforms, environmentMap, grain, '#6d93a4', .15, true, false, rig.studioYaw), glass = studioGlass(environmentMap, rig.studioYaw);
+        glass.uniforms.uBackground.value = glassTarget.texture;
+        glass.uniforms.uScreen.value = optics ? 1 : 0;
+        glass.uniforms.uResolution.value.set(canvas.width, canvas.height);
+        palette = { silver, warm, water: water.material, glass, dark: new T.MeshLambertMaterial({ color: '#263540' }), paper: new T.MeshLambertMaterial({ color: '#d1e0df', map: paperTexture }), light: new T.MeshBasicMaterial({ color: '#a9d9e7' }) };
+        const ownedPalette = palette;
+        const built = await environmentAsync(ownedStage, ownedPalette, compact || (!review && (software || cinemaState.compact)), () => disposed || token !== generation);
+        if (!built) {
+            Object.values(ownedPalette).forEach(m => m.dispose());
+            return;
+        }
+        if (disposed || token !== generation) {
+            disposeTree(built.root, true);
+            Object.values(ownedPalette).forEach(m => m.dispose());
+            return;
+        }
+        if (model) {
+            disposeTree(model.root, true);
+            receipt.releases++;
+        }
+        glassObjects.length = 0;
+        model = built;
+        palette = ownedPalette;
+        if (software && !review)
+            cpuMorphs(model);
+        scene.add(model.root);
+        options.onWorld(ownedStage, def.title);
+        model.root.traverse(o => { if (o instanceof T.Mesh && o.material === glass)
+            glassObjects.push(o); });
+        // Dispose also unused palette entries (some environments have no glass/water).
+        model.root.addEventListener('removed', () => Object.values(ownedPalette).forEach(m => m.dispose()));
+        eyeCurve = new T.CatmullRomCurve3(def.camera.map(v => new T.Vector3(...v)), false, 'centripetal');
+        lookCurve = new T.CatmullRomCurve3(def.focus.map(v => new T.Vector3(...v)), false, 'centripetal');
+        if (previous) {
+            arrival = 0;
+            p = cinemaState.progress;
+        }
+        else
+            p = cinemaState.progress;
+        if (stage === 'sourcelens') {
+            const owned = model;
+            void import('three/examples/jsm/loaders/GLTFLoader.js').then(({ GLTFLoader }) => { if (disposed || model !== owned || stage !== ownedStage)
+                return; new GLTFLoader().load(asset('/studies/evidence-foundry/' + (compact || software ? 'chamber-compact.glb' : 'chamber.glb')), g => { if (disposed || model !== owned || stage !== ownedStage) {
+                disposeTree(g.scene, true);
+                return;
+            } const iris: T.Object3D[] = []; g.scene.traverse(o => { if (o instanceof T.Mesh) {
+                o.castShadow = true;
+                o.receiveShadow = true;
+                const old = o.material as T.MeshStandardMaterial;
+                o.material = old.metalness > .7 ? silver : ownedPalette.dark;
+                old.dispose();
+                if (o.name.startsWith('iris_leaf_'))
+                    iris.push(o);
+            } }); owned.root.add(g.scene); owned.motions.push(x => iris.forEach((o, i) => { const index = Number(o.name.split('_').at(-1)) || i, a = index * Math.PI / 3, f = ease(.27, .65, x); o.position.set(Math.cos(a) * f * 2.2, Math.sin(a) * f * 2.2, 0); })); }, undefined, () => { if (!disposed && model === owned && stage === ownedStage)
+                onFailure(); }); }).catch(() => { if (!disposed && model === owned && stage === ownedStage)
+                onFailure(); });
+        }
+        building = false;
+    };
+    const resize = () => { resizePending = true; resume.current(); };
+    const lost = (e: Event) => { e.preventDefault(); onFailure(); };
+    canvas.addEventListener('webglcontextlost', lost);
+    const pointer = new T.Vector2(), eye = new T.Vector3(), focus = new T.Vector3(), oldEye = new T.Vector3(), oldFocus = new T.Vector3(), ray = new T.Raycaster(), rayPointer = new T.Vector2(), plane = new T.Plane(new T.Vector3(0, 1, 0), 2.08), intersection = new T.Vector3(), uv = new T.Vector2(-2, -2);
+    let lastPointer = 0, lastPointerY = 0, lastPresented = -1, lastSection = -1, lastSelection = -1;
+    const frame = (now: number) => {
+        raf = 0;
+        if (disposed || !visible.current)
+            return;
+        raf = requestAnimationFrame(frame);
+        if (!cinemaState.active && receipt.frames > 0) {
+            last = now;
+            return;
+        }
+        const interval = last ? now - last : 16.7, dt = Math.min(.1, interval / 1000);
+        last = now;
+        // The reading background is demand-driven: preserve scroll/pointer response without
+        // spending GPU frames on an intro that is no longer being watched.
+        const state = cinemaState;
+        if (receipt.frames > 0 && state.content && stage === requested.current && !resizePending && Math.abs(p - state.progress) < .00015 && Math.abs(spread - state.spread) < .001 && Math.abs(pointer.x - state.pointer[0]) < .002 && Math.abs(pointer.y - state.pointer[1]) < .002 && lastSection === state.section && lastSelection === state.selection) {
+            if (!receipt.idleReading) {
+                receipt.idleReading = true;
+                options.publish(receipt);
+            }
+            return;
+        }
+        receipt.idleReading = false;
+        const portrait = width <= 850;
+        if (portrait !== compact) {
+            compact = portrait;
+            requested.current = stage || requested.current;
+            stage = undefined;
+            dpr = Math.min(pixelRatio, review ? 1 : software ? (compact ? .7 : .6) : compact ? 1.1 : 1.4);
+            resizePending = true;
+        }
+        if (stage !== requested.current && !building) {
+            oldEye.copy(camera.position);
+            camera.getWorldDirection(oldFocus).multiplyScalar(8).add(camera.position);
+            void changeStage().catch(() => { if (!disposed)
+                onFailure(); });
+        }
+        if (building || !model)
+            return;
+        if (resizePending) {
+            resizePending = false;
+            renderer.setPixelRatio(dpr);
+            renderer.setSize(width, height, false);
+            camera.aspect = width / Math.max(1, height);
+            camera.setViewOffset(width, height, compact ? 0 : -width * .22, compact ? -height * .18 : 0, width, height);
+            glassTarget.setSize(Math.max(1, Math.round(width * dpr * .5)), Math.max(1, Math.round(height * dpr * .5)));
+            camera.updateProjectionMatrix();
+            if (palette)
+                (palette.glass as T.ShaderMaterial).uniforms.uResolution.value.set(canvas.width, canvas.height);
+        }
+        p += (cinemaState.progress - p) * (1 - Math.exp(-dt * 9));
+        spread += (cinemaState.spread - spread) * (1 - Math.exp(-dt * 6));
+        if (!cinemaState.paused)
+            time += dt;
+        pointer.lerp(rayPointer.set(...cinemaState.pointer), 1 - Math.exp(-dt * 5));
+        uniforms.uTime.value = time;
+        uniforms.uProgress.value = p;
+        uniforms.uPointer.value.copy(pointer);
+        uniforms.uImpulse.value = Math.min(.5, Math.hypot(pointer.x - lastPointer, pointer.y - lastPointerY) * 15);
+        lastPointer = pointer.x;
+        lastPointerY = pointer.y;
+        eyeCurve.getPoint(Math.max(0, Math.min(1, p)), eye);
+        lookCurve.getPoint(Math.max(0, Math.min(1, p)), focus);
+        const previousFov = camera.fov;
+        if (compact) {
+            const portrait=directions[stage!].portrait;
+            if(portrait){focus.y=portrait.focusY;eye.lerp(focus,portrait.dolly)}
+            eye.x *= .72;
+            eye.y += portrait?.rise ?? 1;
+            eye.z += portrait?.back ?? 4;
+            camera.fov = portrait?.fov ?? 55;
+        }
+        else {
+            camera.fov = 43;
+        }
+        eye.x += pointer.x * .25;
+        eye.y -= pointer.y * .15;
+        if (arrival < 1) {
+            arrival = Math.min(1, arrival + dt * .85);
+            const blend = ease(0, 1, arrival);
+            eye.lerpVectors(oldEye, eye, blend);
+            focus.lerpVectors(oldFocus, focus, blend);
+        }
+        camera.position.copy(eye);
+        camera.lookAt(focus);
+        if (camera.fov !== previousFov)
+            camera.updateProjectionMatrix();
+        camera.updateMatrixWorld();
+        model!.update(p, time, spread, cinemaState.selection);
+        if (cinemaState.content) {
+            model!.root.rotation.y = Math.sin(cinemaState.sectionProgress * Math.PI) * .025 * (cinemaState.section % 2 ? 1 : -1);
+        }
+        else
+            model!.root.rotation.y = 0;
+        if (['home', 'sourcelens', 'projects', 'contact'].includes(stage!) && !cinemaState.content && !cinemaState.paused && now - lastSimulation > (software ? 80 : 40)) {
+            const bounds = model!.root.userData.liquid as {
+                width: number;
+                depth: number;
+                z: number;
+                y: number;
+            };
+            plane.constant = -bounds.y;
+            // Pointer state uses screen-down Y; Three ray coordinates use screen-up Y.
+            ray.setFromCamera(rayPointer.set(pointer.x,-pointer.y), camera);
+            if (ray.ray.intersectPlane(plane, intersection))
+                uv.set(intersection.x / bounds.width + .5, -(intersection.z - bounds.z) / bounds.depth + .5);
+            else uv.set(-2,-2);
+            if(uv.x<0||uv.x>1||uv.y<0||uv.y>1)uv.set(-2,-2);
+            const water = palette!.water as T.ShaderMaterial;
+            water.uniforms.uRipple.value = field.tick(renderer, uv, uniforms.uImpulse.value * .4);
+            lastSimulation = now;
+            receipt.simulationSteps++;
+        }
+        if (optics && glassObjects.some(o => o.visible)) {
+            receipt.opticalPasses++;
+            withoutGlass(() => { renderer.setRenderTarget(glassTarget); renderer.render(scene, camera); renderer.setRenderTarget(null); });
+        }
+        renderer.render(scene, camera);
+        if (!cinemaState.content && (Math.abs(p - lastPresented) > .0002 || receipt.frames < 3)) {
+            cinemaState.present?.(p);
+            lastPresented = p;
+        }
+        receipt.frames++;
+        receipt.frameMs.push(interval);
+        if (receipt.frameMs.length > 180)
+            receipt.frameMs.shift();
+        receipt.calls = renderer.info.render.calls;
+        receipt.triangles = renderer.info.render.triangles;
+        receipt.geometries = renderer.info.memory.geometries;
+        receipt.textures = renderer.info.memory.textures;
+        receipt.progress = p;
+        receipt.materialTime = time;
+        lastSection = cinemaState.section;
+        lastSelection = cinemaState.selection;
+        receipt.quality = dpr;
+        cost += interval;
+        samples++;
+        if (now - lastAdapt > 2500) {
+            const minimum = software ? (compact ? .55 : .55) : compact ? .7 : .8;
+            if (!review && cost / Math.max(1, samples) > (software ? 40 : 22) && dpr > minimum) {
+                dpr = Math.max(minimum, dpr * .85);
+                resizePending = true;
+            }
+            cost = 0;
+            samples = 0;
+            lastAdapt = now;
+        }
+        options.publish(receipt);
+        if (receipt.frames === 1)
+            onReady();
+    };
+    resume.current = () => { if (!raf && !disposed && visible.current) {
+        last = 0;
+        raf = requestAnimationFrame(frame);
+    } };
+    resume.current();
+    return { update(next: StageUpdate) { const sizeChanged = width !== next.width || height !== next.height || pixelRatio !== next.pixelRatio; width = next.width; height = next.height; pixelRatio = next.pixelRatio; requested.current = next.world; visible.current = next.active; if (sizeChanged)
+            resize(); if (next.active)
+            resume.current(); }, dispose() { disposed = true; resume.current = () => { }; cancelAnimationFrame(raf); canvas.removeEventListener('webglcontextlost', lost); if (model)
+            disposeTree(model.root, true); Object.values(palette || {}).forEach(m => m.dispose()); disposeTree(floor, true); reflector?.getRenderTarget().dispose(); if (reflector)
+            disposeTree(reflector, true); field.dispose(); glassTarget.dispose(); grain.dispose(); paperTexture.dispose(); environmentMap.dispose(); key.shadow.dispose(); renderer.dispose(); renderer.forceContextLoss(); } };
+}

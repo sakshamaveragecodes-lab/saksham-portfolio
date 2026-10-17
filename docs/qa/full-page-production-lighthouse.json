@@ -1,0 +1,175 @@
+{
+  "scope": "One mobile Lighthouse simulation per representative page; lab samples, not field INP or performance guarantees",
+  "tool": "Lighthouse",
+  "fieldINP": "Not measured",
+  "pages": [
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+      "executed": "2026-10-16T20:57:09.706Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1721.894,
+          "display": "1.7 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 247,
+          "display": "250 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/sourcelens/",
+      "executed": "2026-10-16T20:57:17.645Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1699.926,
+          "display": "1.7 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 263.5,
+          "display": "260 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/careerlens/",
+      "executed": "2026-10-16T20:57:25.786Z",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1703.1665,
+          "display": "1.7 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 189.5,
+          "display": "190 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/form/",
+      "executed": "2026-10-16T20:57:33.791Z",
+      "scores": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1722.9434,
+          "display": "1.7 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 269,
+          "display": "270 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/",
+      "executed": "2026-10-16T20:57:41.924Z",
+      "scores": {
+        "performance": 95,
+        "accessibility": 98,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1716.0475999999999,
+          "display": "1.7 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 243,
+          "display": "240 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/resume/",
+      "executed": "2026-10-16T20:57:49.723Z",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 63
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1582.9921,
+          "display": "1.6 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 203,
+          "display": "200 ms"
+        }
+      }
+    },
+    {
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/projects/careerlens/experience/",
+      "executed": "2026-10-16T20:57:57.193Z",
+      "scores": {
+        "performance": 99,
+        "accessibility": 98,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "value": 1589.4557,
+          "display": "1.6 s"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0"
+        },
+        "total-blocking-time": {
+          "value": 66.5,
+          "display": "70 ms"
+        }
+      }
+    }
+  ]
+}

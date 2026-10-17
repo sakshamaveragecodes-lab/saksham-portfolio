@@ -1,0 +1,123 @@
+{
+  "candidateCommit": "6af3d5e0b6c00436bfe32a33d5a5162b4f53c7e0",
+  "localFullRegressionCheckpoint": {
+    "commit": "e2104f78e6040ad3bae4b846e9dc358d632a8fd6",
+    "stats": {
+      "startTime": "2026-10-16T20:33:06.604Z",
+      "duration": 278315.379,
+      "expected": 37,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "finalIsolatedNarrowModalCheck": {
+    "startTime": "2026-10-16T20:39:18.076Z",
+    "duration": 4759.727,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "unitTests": 15,
+  "lint": "passed",
+  "strictTypeScript": "passed",
+  "staticExport": "passed,31 entries",
+  "productionAudit": "0 advisories; dependencies unchanged",
+  "visualReview": "34 full-page desktop/mobile down/up structural sequences,2 current interaction journeys,4 actual previous-production before films and2 final public desktop/mobile clips inspected. Structural films precede pacing-only optimization; current interaction/public films supplement them.",
+  "interactionErrors": [
+    {
+      "width": 1440,
+      "video": "/tmp/section-review/interaction-video/discovery-menu-resume-1440.webm",
+      "journey": "Lab search/category/tech/depth \u2192 CareerLens card opening \u2192 selected architecture flow \u2192 mobile modal/Resume \u2192 real page image and extracted text",
+      "errors": []
+    },
+    {
+      "width": 390,
+      "video": "/tmp/section-review/interaction-video/discovery-menu-resume-390.webm",
+      "journey": "Lab search/category/tech/depth \u2192 CareerLens card opening \u2192 selected architecture flow \u2192 mobile modal/Resume \u2192 real page image and extracted text",
+      "errors": []
+    }
+  ],
+  "resizeProof": {
+    "scope": "Actual recorded right-side canvas pixels (400\u00d7250 region at950,300), first8seconds at recorded25fps. Pixel brightness is not GPU performance. Initial navigation excluded.",
+    "samples": [
+      {
+        "version": "before",
+        "nearlyBlackRegionFramesAfterFirstSecond": 2,
+        "timestamps": [
+          3.6,
+          3.64
+        ],
+        "minMeanRGB": 0.0
+      },
+      {
+        "version": "after",
+        "nearlyBlackRegionFramesAfterFirstSecond": 0,
+        "timestamps": [],
+        "minMeanRGB": 13.666666666666666
+      }
+    ]
+  },
+  "publicRelease": "Deployed and public HTTPS regression verified",
+  "cost": "Existing static GitHub Pages; no added service/dependency/backend/inference; \u20b90",
+  "limitations": [
+    "Cloud Chromium software rendering and touch/mobile emulation only; no physical Android Chrome, Windows Edge or physical GPU measurements",
+    "No VRAM or field INP measurement",
+    "Intentional Resume noindex retained",
+    "Unused legacy Vercel preview check remains outside Pages production"
+  ],
+  "productionCommit": "652fb03a3fe2601f445e1585037ce274a4a5a217",
+  "productionURL": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+  "publicBrowserTests": {
+    "startTime": "2026-10-16T20:52:01.702Z",
+    "duration": 305408.746,
+    "expected": 37,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "actions": {
+    "candidateVerify": [
+      38964011029,
+      38964005687
+    ],
+    "mainVerify": 38965034115,
+    "pages": 38965034133,
+    "conclusion": "success"
+  },
+  "publicVisualReview": [
+    {
+      "width": 1280,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "video": "/tmp/section-review/production/public-1280.webm"
+    },
+    {
+      "width": 320,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "video": "/tmp/section-review/production/public-320.webm"
+    }
+  ],
+  "publicSkillsHeader": {
+    "scrollY": 3465,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 88,
+      "top": 0,
+      "right": 1280,
+      "bottom": 88,
+      "left": 0
+    },
+    "position": "sticky",
+    "bodyPosition": "static",
+    "surfacePosition": "fixed",
+    "section": "knowledge-map"
+  },
+  "releasePR": "https://github.com/sakshamaveragecodes-lab/saksham-portfolio/pull/5"
+}

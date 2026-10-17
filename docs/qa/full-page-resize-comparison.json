@@ -1,0 +1,20 @@
+{
+  "scope": "Actual recorded right-side canvas pixels (400\u00d7250 region at950,300), first8seconds at recorded25fps. Pixel brightness is not GPU performance. Initial navigation excluded.",
+  "samples": [
+    {
+      "version": "before",
+      "nearlyBlackRegionFramesAfterFirstSecond": 2,
+      "timestamps": [
+        3.6,
+        3.64
+      ],
+      "minMeanRGB": 0.0
+    },
+    {
+      "version": "after",
+      "nearlyBlackRegionFramesAfterFirstSecond": 0,
+      "timestamps": [],
+      "minMeanRGB": 13.666666666666666
+    }
+  ]
+}

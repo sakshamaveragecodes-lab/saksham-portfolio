@@ -1,0 +1,2393 @@
+{
+  "sourceCommit": "3d6b356780d52007681340aa8f777233fabc5b16",
+  "originalCinematicCaptureCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82",
+  "finalPortraitAndSemanticCommit": "3d6b356780d52007681340aa8f777233fabc5b16",
+  "captureProvenance": "33 unchanged scene recordings atc3d; replacement portraitForest at final source. Only the optional forest portrait camera and sr-only lab heading changed after the original34 capture.",
+  "generatedAt": "2026-10-17T18:03:46.890289+00:00",
+  "publication": "unpublished; final owner approval required; no push/merge/deploy",
+  "productionAudit": {
+    "checkedAt": "2026-10-17T18:03:23.499489+00:00",
+    "productionUrl": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+    "remoteRefs": {
+      "refs/heads/feat/immersive-engineering-worlds": "6af3d5e0b6c00436bfe32a33d5a5162b4f53c7e0",
+      "refs/heads/main": "652fb03a3fe2601f445e1585037ce274a4a5a217"
+    },
+    "localRuntimeCommit": "3d6b356780d52007681340aa8f777233fabc5b16",
+    "pages": {
+      "buildType": "workflow",
+      "httpsEnforced": true,
+      "deploymentId": 7129219924,
+      "sha": "652fb03a3fe2601f445e1585037ce274a4a5a217",
+      "state": "success",
+      "url": "https://sakshamaveragecodes-lab.github.io/saksham-portfolio/",
+      "updatedAt": "2026-10-16T20:50:52Z"
+    },
+    "githubActions": [
+      {
+        "conclusion": "success",
+        "databaseId": 38965034133,
+        "headSha": "652fb03a3fe2601f445e1585037ce274a4a5a217",
+        "name": "Publish static portfolio",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 38965034115,
+        "headSha": "652fb03a3fe2601f445e1585037ce274a4a5a217",
+        "name": "Verify static portfolio",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 38964011029,
+        "headSha": "6af3d5e0b6c00436bfe32a33d5a5162b4f53c7e0",
+        "name": "Verify static portfolio",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 38964005687,
+        "headSha": "6af3d5e0b6c00436bfe32a33d5a5162b4f53c7e0",
+        "name": "Verify static portfolio",
+        "status": "completed"
+      }
+    ],
+    "publicHttpStatus": 200,
+    "unpublishedStudyPublicStatus": 404,
+    "mainTreePresence": {
+      "src/components/cinema/native-world.tsx": true,
+      "src/components/cinema/universe-scene.tsx": true,
+      "src/components/foundry/scene.tsx": false,
+      "src/components/cinema/production/renderer.tsx": false
+    },
+    "deployedCinema": "Earlier sixteen intro/reading worlds (R3F/lean home and SourceLens; native project/major-page worlds), conventional spatial controls/transitions, preserved technical walkthroughs, native mobile modal and resume improvements.",
+    "unpublishedCinema": "Original isolated Evidence Foundry and full sixteen-environment production renderer, modeled architectures, shared studio/refraction/liquid system, continuous authored camera paths, CPU morph fallback, instanced archives/markers, scene-specific light rigs and effective inspection controls.",
+    "publicationActionsThisTask": []
+  },
+  "verification": {
+    "productionBuild": "pass; static export32 pages",
+    "lint": "pass",
+    "strictTypeScript": "pass",
+    "unitAndProvenance": 23,
+    "browser": {
+      "startTime": "2026-10-17T17:45:19.824Z",
+      "duration": 492707.20800000004,
+      "expected": 48,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "productionDependencyVulnerabilities": 0,
+    "publicGithubSourceLinks": [
+      {
+        "project": "sourcelens",
+        "url": "https://github.com/sakshamaveragecodes-lab/sourcelens-rag-chatbot",
+        "status": 200
+      },
+      {
+        "project": "careerlens",
+        "url": "https://github.com/sakshamaveragecodes-lab/careerlens-ai-resume-analyzer",
+        "status": 200
+      },
+      {
+        "project": "form",
+        "url": "https://github.com/sakshamaveragecodes-lab/form-ai-fitness-assistant",
+        "status": 200
+      },
+      {
+        "project": "studybuddy",
+        "url": "https://github.com/sakshamaveragecodes-lab/ollama-streamlit-studybuddy",
+        "status": 200
+      },
+      {
+        "project": "pymentor",
+        "url": "https://github.com/sakshamaveragecodes-lab/langchain-ai-question-answering-chatbot",
+        "status": 200
+      },
+      {
+        "project": "airbnb",
+        "url": "https://github.com/sakshamaveragecodes-lab/airbnb-linear-regression-project",
+        "status": 200
+      },
+      {
+        "project": "logistic-diabetes",
+        "url": "https://github.com/sakshamaveragecodes-lab/logistic-regression-diabetes-prediction",
+        "status": 200
+      },
+      {
+        "project": "random-forest-diabetes",
+        "url": "https://github.com/sakshamaveragecodes-lab/random-forest-diabetes-prediction",
+        "status": 200
+      }
+    ],
+    "officialPdfSha256": "7b6219b010f443301b7a75756ebcf531b1f227300d897d9b4e1fb6e10f82a130",
+    "protectedSourcesUnchangedFrom": "12459e679cff9e7247adbdf783afe00db55c20e6"
+  },
+  "sceneCount": 16,
+  "projectCount": 8,
+  "softwareProfile": [
+    {
+      "width": 1280,
+      "route": "home",
+      "mainJsHeapBytes": 6886874,
+      "execution": "worker",
+      "frameP95Ms": 150,
+      "sampleSeconds": 3.0062000000178815,
+      "fps": 16.964939125705754,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 23138,
+      "geometries": 23,
+      "textures": 5,
+      "calls": 22,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "projects/sourcelens",
+      "mainJsHeapBytes": 9981094,
+      "execution": "worker",
+      "frameP95Ms": 100.09999999999945,
+      "sampleSeconds": 3.0030999999940393,
+      "fps": 20.31234391133198,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 12288,
+      "geometries": 24,
+      "textures": 5,
+      "calls": 19,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "projects/careerlens",
+      "mainJsHeapBytes": 12540057,
+      "execution": "worker",
+      "frameP95Ms": 316.60000000000036,
+      "sampleSeconds": 3.0054000000059604,
+      "fps": 6.321953816451161,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 18602,
+      "geometries": 18,
+      "textures": 5,
+      "calls": 18,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "projects/form",
+      "mainJsHeapBytes": 7146095,
+      "execution": "worker",
+      "frameP95Ms": 150,
+      "sampleSeconds": 3.002,
+      "fps": 15.989340439706861,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 8942,
+      "geometries": 35,
+      "textures": 4,
+      "calls": 33,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "projects/studybuddy",
+      "mainJsHeapBytes": 7748259,
+      "execution": "worker",
+      "frameP95Ms": 283.39999999999964,
+      "sampleSeconds": 3.0072000000178813,
+      "fps": 8.313381218359718,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 17398,
+      "geometries": 32,
+      "textures": 5,
+      "calls": 32,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "projects/pymentor",
+      "mainJsHeapBytes": 8380812,
+      "execution": "worker",
+      "frameP95Ms": 183.30000000000018,
+      "sampleSeconds": 3.0066999999880792,
+      "fps": 12.971031363340083,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 4190,
+      "geometries": 29,
+      "textures": 4,
+      "calls": 16,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "projects/airbnb",
+      "mainJsHeapBytes": 12574335,
+      "execution": "worker",
+      "frameP95Ms": 333.3000000000002,
+      "sampleSeconds": 3.012,
+      "fps": 7.968127490039841,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 28078,
+      "geometries": 34,
+      "textures": 4,
+      "calls": 24,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "projects/logistic-diabetes",
+      "mainJsHeapBytes": 9492055,
+      "execution": "worker",
+      "frameP95Ms": 399.90000000000055,
+      "sampleSeconds": 3.003199999988079,
+      "fps": 6.326584976050685,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 12110,
+      "geometries": 16,
+      "textures": 5,
+      "calls": 16,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "projects/random-forest-diabetes",
+      "mainJsHeapBytes": 9512767,
+      "execution": "worker",
+      "frameP95Ms": 183.39999999999964,
+      "sampleSeconds": 3.0031000000238417,
+      "fps": 13.319569777790429,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 17962,
+      "geometries": 19,
+      "textures": 4,
+      "calls": 16,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "projects",
+      "mainJsHeapBytes": 11279547,
+      "execution": "worker",
+      "frameP95Ms": 116.69999999999982,
+      "sampleSeconds": 3.002,
+      "fps": 19.320453031312457,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 12262,
+      "geometries": 15,
+      "textures": 5,
+      "calls": 10,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "about",
+      "mainJsHeapBytes": 13500389,
+      "execution": "worker",
+      "frameP95Ms": 216.69999999999982,
+      "sampleSeconds": 3.004800000011921,
+      "fps": 9.651224707096961,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 5450,
+      "geometries": 12,
+      "textures": 4,
+      "calls": 12,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "skills",
+      "mainJsHeapBytes": 11171413,
+      "execution": "worker",
+      "frameP95Ms": 450,
+      "sampleSeconds": 3.0085,
+      "fps": 6.647831145088915,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 8874,
+      "geometries": 9,
+      "textures": 4,
+      "calls": 9,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "experience",
+      "mainJsHeapBytes": 11337077,
+      "execution": "worker",
+      "frameP95Ms": 166.69999999999982,
+      "sampleSeconds": 3.004,
+      "fps": 12.649800266311585,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 4666,
+      "geometries": 28,
+      "textures": 4,
+      "calls": 16,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "certifications",
+      "mainJsHeapBytes": 11741168,
+      "execution": "worker",
+      "frameP95Ms": 300,
+      "sampleSeconds": 3.002100000023842,
+      "fps": 8.660604243627299,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 4486,
+      "geometries": 22,
+      "textures": 5,
+      "calls": 14,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "resume",
+      "mainJsHeapBytes": 14475618,
+      "execution": "worker",
+      "frameP95Ms": 583.3999999999996,
+      "sampleSeconds": 3.0029000000059605,
+      "fps": 4.995171334366854,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 3802,
+      "geometries": 10,
+      "textures": 5,
+      "calls": 10,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 1280,
+      "route": "contact",
+      "mainJsHeapBytes": 13323488,
+      "execution": "worker",
+      "frameP95Ms": 100,
+      "sampleSeconds": 3.0030999999940393,
+      "fps": 21.311311644676177,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 5690,
+      "geometries": 8,
+      "textures": 4,
+      "calls": 7,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "home",
+      "mainJsHeapBytes": 6200462,
+      "execution": "worker",
+      "frameP95Ms": 66.69999999999982,
+      "sampleSeconds": 3.0139000000059606,
+      "fps": 34.838581240184595,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.7,
+      "triangles": 23138,
+      "geometries": 23,
+      "textures": 5,
+      "calls": 22,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "projects/sourcelens",
+      "mainJsHeapBytes": 9287424,
+      "execution": "worker",
+      "frameP95Ms": 50.100000000000364,
+      "sampleSeconds": 3.0037000000178815,
+      "fps": 35.62273196369911,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.7,
+      "triangles": 12476,
+      "geometries": 24,
+      "textures": 5,
+      "calls": 20,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "projects/careerlens",
+      "mainJsHeapBytes": 12312127,
+      "execution": "worker",
+      "frameP95Ms": 83.19999999999982,
+      "sampleSeconds": 3.005399999976158,
+      "fps": 28.615159380010063,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 18602,
+      "geometries": 18,
+      "textures": 5,
+      "calls": 18,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "projects/form",
+      "mainJsHeapBytes": 7099416,
+      "execution": "worker",
+      "frameP95Ms": 66.60000000000036,
+      "sampleSeconds": 3.0047000000178814,
+      "fps": 37.274935933482034,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.7,
+      "triangles": 9222,
+      "geometries": 35,
+      "textures": 4,
+      "calls": 35,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "projects/studybuddy",
+      "mainJsHeapBytes": 7589371,
+      "execution": "worker",
+      "frameP95Ms": 149.90000000000055,
+      "sampleSeconds": 3.0077000000178815,
+      "fps": 19.948798084796785,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 17398,
+      "geometries": 32,
+      "textures": 5,
+      "calls": 32,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "projects/pymentor",
+      "mainJsHeapBytes": 8777247,
+      "execution": "worker",
+      "frameP95Ms": 50.100000000000364,
+      "sampleSeconds": 3.001800000011921,
+      "fps": 37.64408021838605,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.7,
+      "triangles": 4166,
+      "geometries": 29,
+      "textures": 4,
+      "calls": 14,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "projects/airbnb",
+      "mainJsHeapBytes": 8970821,
+      "execution": "worker",
+      "frameP95Ms": 83.39999999999964,
+      "sampleSeconds": 3.020100000023842,
+      "fps": 28.806993145694907,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.595,
+      "triangles": 27842,
+      "geometries": 34,
+      "textures": 4,
+      "calls": 23,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "projects/logistic-diabetes",
+      "mainJsHeapBytes": 9329664,
+      "execution": "worker",
+      "frameP95Ms": 83.30000000000018,
+      "sampleSeconds": 3.002,
+      "fps": 25.982678214523652,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 12110,
+      "geometries": 16,
+      "textures": 5,
+      "calls": 16,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "projects/random-forest-diabetes",
+      "mainJsHeapBytes": 6780873,
+      "execution": "worker",
+      "frameP95Ms": 100,
+      "sampleSeconds": 3.0085,
+      "fps": 26.258933023101214,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 15038,
+      "geometries": 19,
+      "textures": 4,
+      "calls": 15,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "3d6b356780d52007681340aa8f777233fabc5b16"
+    },
+    {
+      "width": 390,
+      "route": "projects",
+      "mainJsHeapBytes": 12012780,
+      "execution": "worker",
+      "frameP95Ms": 33.400000000000546,
+      "sampleSeconds": 3.004,
+      "fps": 45.60585885486019,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.7,
+      "triangles": 9350,
+      "geometries": 15,
+      "textures": 5,
+      "calls": 7,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "about",
+      "mainJsHeapBytes": 10675719,
+      "execution": "worker",
+      "frameP95Ms": 83.39999999999964,
+      "sampleSeconds": 3.0022999999821187,
+      "fps": 29.64393964644775,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.595,
+      "triangles": 5450,
+      "geometries": 12,
+      "textures": 4,
+      "calls": 12,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "skills",
+      "mainJsHeapBytes": 11167842,
+      "execution": "worker",
+      "frameP95Ms": 100,
+      "sampleSeconds": 3.0040999999940396,
+      "fps": 23.967244765534723,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 8874,
+      "geometries": 9,
+      "textures": 4,
+      "calls": 9,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "experience",
+      "mainJsHeapBytes": 11749647,
+      "execution": "worker",
+      "frameP95Ms": 66.5,
+      "sampleSeconds": 3.0057999999821186,
+      "fps": 38.259365227454964,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.7,
+      "triangles": 3014,
+      "geometries": 28,
+      "textures": 4,
+      "calls": 9,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "certifications",
+      "mainJsHeapBytes": 14180297,
+      "execution": "worker",
+      "frameP95Ms": 83.40000000000055,
+      "sampleSeconds": 3.0044000000059605,
+      "fps": 26.294767674025852,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.595,
+      "triangles": 5430,
+      "geometries": 22,
+      "textures": 5,
+      "calls": 18,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "resume",
+      "mainJsHeapBytes": 12684395,
+      "execution": "worker",
+      "frameP95Ms": 83.29999999999927,
+      "sampleSeconds": 3.002199999988079,
+      "fps": 29.644927053611816,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.55,
+      "triangles": 3802,
+      "geometries": 10,
+      "textures": 5,
+      "calls": 10,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "width": 390,
+      "route": "contact",
+      "mainJsHeapBytes": 13329006,
+      "execution": "worker",
+      "frameP95Ms": 49.900000000000546,
+      "sampleSeconds": 3.004199999988079,
+      "fps": 44.60422075778301,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "dpr": 0.7,
+      "triangles": 5690,
+      "geometries": 8,
+      "textures": 4,
+      "calls": 7,
+      "scope": "Isolated steady render-loop sample at phase0.65 after4.5s warmup; no video, screenshot, audit or concurrent browser tests; SwiftShader software only; heap is main-thread JS heap, worker heap and VRAM are not measured",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    }
+  ],
+  "lighthouse": [
+    {
+      "file": "lighthouse-desktop-careerlens.json",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82",
+      "url": "http://127.0.0.1:3400/projects/careerlens/",
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 630.319925,
+      "cls": 0,
+      "tbtMs": 0,
+      "scope": "Unpublished static export; simulated lab loading; software Chromium. Forest portrait and Lab heading rechecked after final refinement; remaining6 unchanged-route samples retained fromc3d. Physical GPU and field INP unmeasured."
+    },
+    {
+      "file": "lighthouse-desktop-home.json",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82",
+      "url": "http://127.0.0.1:3400/",
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 545.1935,
+      "cls": 0,
+      "tbtMs": 0,
+      "scope": "Unpublished static export; simulated lab loading; software Chromium. Forest portrait and Lab heading rechecked after final refinement; remaining6 unchanged-route samples retained fromc3d. Physical GPU and field INP unmeasured."
+    },
+    {
+      "file": "lighthouse-desktop-laboratory.json",
+      "sourceCommit": "3d6b356780d52007681340aa8f777233fabc5b16",
+      "url": "http://127.0.0.1:3400/projects/",
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 546.0551,
+      "cls": 0,
+      "tbtMs": 0,
+      "scope": "Unpublished static export; simulated lab loading; software Chromium. Forest portrait and Lab heading rechecked after final refinement; remaining6 unchanged-route samples retained fromc3d. Physical GPU and field INP unmeasured."
+    },
+    {
+      "file": "lighthouse-desktop-sourcelens.json",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82",
+      "url": "http://127.0.0.1:3400/projects/sourcelens/",
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 588.4945,
+      "cls": 0,
+      "tbtMs": 16,
+      "scope": "Unpublished static export; simulated lab loading; software Chromium. Forest portrait and Lab heading rechecked after final refinement; remaining6 unchanged-route samples retained fromc3d. Physical GPU and field INP unmeasured."
+    },
+    {
+      "file": "lighthouse-mobile-careerlens.json",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82",
+      "url": "http://127.0.0.1:3400/projects/careerlens/",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "scores": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2782.8889999999997,
+      "cls": 0,
+      "tbtMs": 161,
+      "scope": "Unpublished static export; simulated lab loading; software Chromium. Forest portrait and Lab heading rechecked after final refinement; remaining6 unchanged-route samples retained fromc3d. Physical GPU and field INP unmeasured."
+    },
+    {
+      "file": "lighthouse-mobile-forest.json",
+      "sourceCommit": "3d6b356780d52007681340aa8f777233fabc5b16",
+      "url": "http://127.0.0.1:3400/projects/random-forest-diabetes/",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2470.45555,
+      "cls": 0,
+      "tbtMs": 152,
+      "scope": "Unpublished static export; simulated lab loading; software Chromium. Forest portrait and Lab heading rechecked after final refinement; remaining6 unchanged-route samples retained fromc3d. Physical GPU and field INP unmeasured."
+    },
+    {
+      "file": "lighthouse-mobile-home.json",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82",
+      "url": "http://127.0.0.1:3400/",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2157.468,
+      "cls": 0,
+      "tbtMs": 176,
+      "scope": "Unpublished static export; simulated lab loading; software Chromium. Forest portrait and Lab heading rechecked after final refinement; remaining6 unchanged-route samples retained fromc3d. Physical GPU and field INP unmeasured."
+    },
+    {
+      "file": "lighthouse-mobile-laboratory.json",
+      "sourceCommit": "3d6b356780d52007681340aa8f777233fabc5b16",
+      "url": "http://127.0.0.1:3400/projects/",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "scores": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2212.25435,
+      "cls": 0,
+      "tbtMs": 251,
+      "scope": "Unpublished static export; simulated lab loading; software Chromium. Forest portrait and Lab heading rechecked after final refinement; remaining6 unchanged-route samples retained fromc3d. Physical GPU and field INP unmeasured."
+    },
+    {
+      "file": "lighthouse-mobile-sourcelens.json",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82",
+      "url": "http://127.0.0.1:3400/projects/sourcelens/",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "scores": {
+        "performance": 92,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 2460.2414,
+      "cls": 0,
+      "tbtMs": 272,
+      "scope": "Unpublished static export; simulated lab loading; software Chromium. Forest portrait and Lab heading rechecked after final refinement; remaining6 unchanged-route samples retained fromc3d. Physical GPU and field INP unmeasured."
+    }
+  ],
+  "developmentChecks": [
+    {
+      "runtimeSource": "3d6b356780d52007681340aa8f777233fabc5b16",
+      "width": 1280,
+      "route": "home",
+      "initial": {
+        "execution": "worker",
+        "canvas": 1,
+        "overflow": false
+      },
+      "final": {
+        "execution": "worker",
+        "canvas": 1
+      },
+      "errors": [],
+      "scope": "Actual Next development server/React StrictMode; reduce/re-enable creates a fresh transferred canvas; internal cloud loopback, not desktop forwarding"
+    },
+    {
+      "runtimeSource": "3d6b356780d52007681340aa8f777233fabc5b16",
+      "width": 1280,
+      "route": "projects/sourcelens/",
+      "initial": {
+        "execution": "worker",
+        "canvas": 1,
+        "overflow": false
+      },
+      "final": {
+        "execution": "worker",
+        "canvas": 1
+      },
+      "errors": [],
+      "scope": "Actual Next development server/React StrictMode; reduce/re-enable creates a fresh transferred canvas; internal cloud loopback, not desktop forwarding"
+    },
+    {
+      "runtimeSource": "3d6b356780d52007681340aa8f777233fabc5b16",
+      "width": 390,
+      "route": "home",
+      "initial": {
+        "execution": "worker",
+        "canvas": 1,
+        "overflow": false
+      },
+      "final": {
+        "execution": "worker",
+        "canvas": 1
+      },
+      "errors": [],
+      "scope": "Actual Next development server/React StrictMode; reduce/re-enable creates a fresh transferred canvas; internal cloud loopback, not desktop forwarding"
+    },
+    {
+      "runtimeSource": "3d6b356780d52007681340aa8f777233fabc5b16",
+      "width": 390,
+      "route": "projects/sourcelens/",
+      "initial": {
+        "execution": "worker",
+        "canvas": 1,
+        "overflow": false
+      },
+      "final": {
+        "execution": "worker",
+        "canvas": 1
+      },
+      "errors": [],
+      "scope": "Actual Next development server/React StrictMode; reduce/re-enable creates a fresh transferred canvas; internal cloud loopback, not desktop forwarding"
+    }
+  ],
+  "githubPagesPrefixChecks": [
+    {
+      "stage": {
+        "execution": "worker",
+        "failed": false
+      },
+      "fullGlbStatus": 200,
+      "lighting": [
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-0-6d66b5dbf247.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-1-19f4dfbce20f.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-2-42f5ad0e27fb.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-3-2ce12b856b44.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-4-0c1642911803.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-5-2762626a0a78.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/curl-field-f0c07031d199.png",
+          "status": 200
+        }
+      ],
+      "width": 1280,
+      "url": "http://127.0.0.1:3500/saksham-portfolio/projects/sourcelens/experience/",
+      "errors": [],
+      "failed": [],
+      "glbStatus": 200,
+      "pdfStatus": 200,
+      "overflow": false
+    },
+    {
+      "stage": {
+        "execution": "worker",
+        "failed": false
+      },
+      "fullGlbStatus": 200,
+      "lighting": [
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-0-6d66b5dbf247.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-1-19f4dfbce20f.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-2-42f5ad0e27fb.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-3-2ce12b856b44.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-4-0c1642911803.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/studio-5-2762626a0a78.png",
+          "status": 200
+        },
+        {
+          "url": "/studies/evidence-foundry/lighting/curl-field-f0c07031d199.png",
+          "status": 200
+        }
+      ],
+      "width": 390,
+      "url": "http://127.0.0.1:3500/saksham-portfolio/projects/sourcelens/experience/",
+      "errors": [],
+      "failed": [],
+      "glbStatus": 200,
+      "pdfStatus": 200,
+      "overflow": false
+    }
+  ],
+  "loadingTargetsMet": false,
+  "motionEvidence": [
+    {
+      "file": "1280-home.mp4",
+      "bytes": 8039073,
+      "sha256": "3f2ea32831637d9ae6be7d4a0b71eb3def57cd1910c3aa6c09f8f02b34c83078",
+      "durationSeconds": 41.12,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-sourcelens.mp4",
+      "bytes": 5805046,
+      "sha256": "98d87a512125ea2f9b790ae2c137588aa34cba4b247d2d416bb5d46513be9051",
+      "durationSeconds": 41.12,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-careerlens.mp4",
+      "bytes": 2682918,
+      "sha256": "b8813aa4072e3900756d59fef3209b64cc232a61e7c8de3fe2d5f136e6ae2ce5",
+      "durationSeconds": 17.12,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-form.mp4",
+      "bytes": 2765378,
+      "sha256": "f8367292e661955cfd5c4d599ea49b0eebd866aec5bdd906f5ac466379befaa8",
+      "durationSeconds": 17.12,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-studybuddy.mp4",
+      "bytes": 1930836,
+      "sha256": "62ed261423aedde1311d31eab45a9c66238844dd53b58917bc0fc04e51e059f1",
+      "durationSeconds": 17.08,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-pymentor.mp4",
+      "bytes": 1955182,
+      "sha256": "d3d50de35e9b18935aceff88c0dd4062ade88d2a8fa5b1cfb045c3ab8cff7eac",
+      "durationSeconds": 17.08,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-airbnb.mp4",
+      "bytes": 2261916,
+      "sha256": "3ff82875f032e4529b9dd9a8253cf550e4b789add19e5980a153ad2a240febb2",
+      "durationSeconds": 17.08,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-logistic.mp4",
+      "bytes": 2259765,
+      "sha256": "f49e62d5bfd97b44e9208c27aca75117d22a48e642800001ab149bf0c768117a",
+      "durationSeconds": 17.08,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-forest.mp4",
+      "bytes": 2247007,
+      "sha256": "34237ea859184d089eaf621f227d6fa8108388fb7e5cb8e5df24928cb6ab16d8",
+      "durationSeconds": 17.12,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-laboratory.mp4",
+      "bytes": 2160697,
+      "sha256": "a9564017ff59543ad2ac1532661845ec2a1e7658c468090a4b5765dcd78254da",
+      "durationSeconds": 11.08,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-about.mp4",
+      "bytes": 1689914,
+      "sha256": "7043c9b55e8b99c6a91985f4f9ccacbc6cffcea902a879f89902fceb85aac555",
+      "durationSeconds": 11.08,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-skills.mp4",
+      "bytes": 1569771,
+      "sha256": "3f6c63800892cefbfa3d116b9d89b342f4939854aa4fcd0283f40f7d9cbabb1a",
+      "durationSeconds": 11.12,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-experience.mp4",
+      "bytes": 1450622,
+      "sha256": "93d20151bffc0050018fb905d3a6f94a6548e6d33ed9501c5d14e894db86b3f6",
+      "durationSeconds": 11.12,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-certifications.mp4",
+      "bytes": 1372528,
+      "sha256": "064f12af84a320fa7b8a97b3d7a4bdb0824b31ca2e78f10af91774867189790a",
+      "durationSeconds": 11.08,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-resume.mp4",
+      "bytes": 1227121,
+      "sha256": "ce901f0de715e11b671c3303907eb4614dbb9849fc8628485bb307421f6f658c",
+      "durationSeconds": 11.08,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "1280-contact.mp4",
+      "bytes": 1838378,
+      "sha256": "c2a32ee424667913cac0417d657c60f70e9c2134386c0a1ac5c03a2756415eed",
+      "durationSeconds": 11.08,
+      "width": 1280,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-home.mp4",
+      "bytes": 4287498,
+      "sha256": "3e6acf404cbc313e5c8f49bb5dda5b52bb89cc36f82d5e5fa7bb2f454426fa01",
+      "durationSeconds": 41.12,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-sourcelens.mp4",
+      "bytes": 3280365,
+      "sha256": "6f4511ca37135eed8cc65a31287af34bb6d778f2890cfbb4d51ad8cd0a489693",
+      "durationSeconds": 41.12,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-careerlens.mp4",
+      "bytes": 1631457,
+      "sha256": "3ba18f488f36ed0417bbb1401249c58cc28d751a2efcf9cf2617297695df3dbc",
+      "durationSeconds": 17.12,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-form.mp4",
+      "bytes": 1481292,
+      "sha256": "aed640a85545d6342ef877fc9ace131791037573394ee3f8bb3535095825d173",
+      "durationSeconds": 17.08,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-studybuddy.mp4",
+      "bytes": 1067962,
+      "sha256": "a10b8d58de325e88fd8d5e0330c5649a3cb19ed7c7a8f1840b45e9a21bbdc03c",
+      "durationSeconds": 17.12,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-pymentor.mp4",
+      "bytes": 1059322,
+      "sha256": "f1b70126899a3f676156234781971e06a5538de30999149e8ca77756d3495b3a",
+      "durationSeconds": 17.12,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-airbnb.mp4",
+      "bytes": 1351013,
+      "sha256": "298a91600b08d6ea15ccb0b7e0c00b5c5d0ae81a0d0f1418f6c29395162f6d68",
+      "durationSeconds": 17.12,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-logistic.mp4",
+      "bytes": 1152426,
+      "sha256": "491117f9988cb74dd4bb46e485179cf637721a760b59043263dcabcc8ade44d8",
+      "durationSeconds": 17.12,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-forest.mp4",
+      "bytes": 1300563,
+      "sha256": "48af39bc3dfcca65c8ade91fdc5e1a5a79d999cc1d1592e79a531897a6f1700d",
+      "durationSeconds": 17.08,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "3d6b356780d52007681340aa8f777233fabc5b16"
+    },
+    {
+      "file": "390-laboratory.mp4",
+      "bytes": 927278,
+      "sha256": "be6ab4d7bbf1a514cecf919bbe7c8bc8ea5bc70e702f70af486633412ecd8077",
+      "durationSeconds": 11.12,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-about.mp4",
+      "bytes": 988423,
+      "sha256": "446745b6a67e728ddf0838b9178698d695ffec38929953248e2dcffa5f2d36ff",
+      "durationSeconds": 11.12,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-skills.mp4",
+      "bytes": 913310,
+      "sha256": "d6218f68b935c7f23cefd51734d124a0de7b5ba357bc7e1775b29841b8d1da4b",
+      "durationSeconds": 11.08,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-experience.mp4",
+      "bytes": 758514,
+      "sha256": "2f0721e4539890441e2978240ba8fc6b84cbbb32f0b69d52d7d06781d41d6899",
+      "durationSeconds": 11.08,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-certifications.mp4",
+      "bytes": 726213,
+      "sha256": "18f7895685c6119c20fdb442b7d3b24bd86bc960cfa3854ba8c9d0dbde975f51",
+      "durationSeconds": 11.08,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-resume.mp4",
+      "bytes": 664544,
+      "sha256": "17bfbd3962d782f382eb25f0759d7f77bf675560442e5551849792c65220420b",
+      "durationSeconds": 11.08,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "390-contact.mp4",
+      "bytes": 913728,
+      "sha256": "607ee25b95a6a4419019ac567f0b9e9552759d5228e3c7d58351baa998b46a11",
+      "durationSeconds": 11.08,
+      "width": 390,
+      "height": 844,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "960-home.mp4",
+      "bytes": 4561116,
+      "sha256": "1e73b1cf939169719f5db2943e498ac06abd32a9df65a89ba3c333fe3dd98491",
+      "durationSeconds": 41.08,
+      "width": 960,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    },
+    {
+      "file": "960-sourcelens.mp4",
+      "bytes": 3156798,
+      "sha256": "24d70f2a86fce3de60609c83da61c4e4fecc17c65ff41b5c7a4af4591d5037dc",
+      "durationSeconds": 41.08,
+      "width": 960,
+      "height": 900,
+      "scope": "Actual Chromium video-only scripted native scrolling, no screenshot during motion, no interpolated frames, no time stretching; encoded FPS is not render FPS",
+      "sourceCommit": "c3d6bd72451dfd97daf3928a911187fa2aad7f82"
+    }
+  ],
+  "temporalVisualReview": [
+    {
+      "sequence": "1280-home-sequence.jpg",
+      "sha256": "62649435eca4a2779e1a9fa84550f07ad1f9242b18c4f3b1cb86ba903098300b",
+      "review": "24 temporal frames extracted from the actual browser movie; no screenshot commands during recording",
+      "finding": "Closed silver loom opens as the camera enters; macro foreground beams and final dissimilar instruments visible. Text remains in the protected left composition.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-sourcelens-sequence.jpg",
+      "sha256": "df9fd59625c3dc4a1e7cb766ddb5c205f08ea9c37c3e37728da4ffde6161e523",
+      "review": "24 temporal frames extracted from the actual browser movie; no screenshot commands during recording",
+      "finding": "Chamber approach, opening aperture, flattened lanes and retained archive leaves are visible through the sequence. No missing scene; conceptual source-leaf faces remain attached.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-careerlens-sequence.jpg",
+      "sha256": "6acca2b82334bdec338812e199a8f79182a3a6755fcbad54b9471fd5011c25af",
+      "review": "24 temporal frames extracted from the actual browser movie; no screenshot commands during recording",
+      "finding": "Distinct helicoidal louvers open into scoring terraces. Close structural travel and a final wide return remain legible beside the title.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-form-sequence.jpg",
+      "sha256": "ffd9a29f64fcc8b5e5da1b87001a141ad46e5a595bcefce83b1c3346d84b53d0",
+      "review": "24 temporal frames extracted from the actual browser movie; no screenshot commands during recording",
+      "finding": "Recognizable articulated rig changes pose; approach and side travel reveal joint housings and floor geometry. Distinct structure from the membrane worlds.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-studybuddy-sequence.jpg",
+      "sha256": "5a9499b73e02b44edbec4a70794f60c5307c6dc259ef939f9abe91707b1a648a",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Reading room opens a modeled folio, turns sheets and travels to a processor/fins. Close page framing is intentional; title remains in the left protected area.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-pymentor-sequence.jpg",
+      "sha256": "708ed696fbf2c3e9cc10baea4a74bd71e582669afd6e48b2b85324fc48c74874",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Three four-leaf connector locks articulate as the camera passes through the corridor; final wide return keeps the separate exit leg visible.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-airbnb-sequence.jpg",
+      "sha256": "d830f1d863d393b850e742ad2c65484d307969300d10aeff16b7990bea59f245",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Two city terraces, lifting conceptual plane and residual rods are visible. The transparent canopy is subtle in the software tier; inspected one full-size frame to confirm the broad plane.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-logistic-sequence.jpg",
+      "sha256": "2441c7225439cd72ee0eabb4667d8772e09b0020d2412d0a53943758ac74ce08",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Distinct sectioned sigmoid, threshold plane and displaced wings remain visible through close and wide framing.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-forest-sequence.jpg",
+      "sha256": "3fd562c74711fdfcf4bfe60425ccaabc1dcccc4409dca8d32eacee87baddc102",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Root-height approach, branching structures and raised overview are visible; not a learned tree export or actual estimator output.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-laboratory-sequence.jpg",
+      "sha256": "378894c100b9ed60d49aebeb0751b2e22b11481cbe4a5405b24f9f2081bf448e",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Eight dissimilar pavilions and connecting channels remain visible during spatial travel. Search/grid remain separate below.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-about-sequence.jpg",
+      "sha256": "0852a8e89c5d00117f394c09ecaefd13e6ace686d6fe0c199c7d3e4b8d0b2b97",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Layered quarry separates and camera enters the strata. No missing stage or text overlap.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-skills-sequence.jpg",
+      "sha256": "f7913df1d04ea4ca2bb91be514157c99aa5d7a6a15370041acb3be3531aac4e6",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Interlocking bridges and central core are visible from approach, macro pass and wide return.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-experience-sequence.jpg",
+      "sha256": "89dd2403b97cdda31018ab5f2e90f9d1aff2145c5baf62f47702fec24ebf7a01",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Rising promenade, steps and milestones remain connected through camera turn and overview.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-certifications-sequence.jpg",
+      "sha256": "c060e94903b0ca273c9a62a07af00c4846adae0a10bd820476a58e10549f55b9",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Opening nested repositories and source-like records remain visible. Artwork does not depict issuer badges or actual credential scans.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-resume-sequence.jpg",
+      "sha256": "a8b03c04e4459b8a425f9f1ddac24110e03cd948688856cc7164dbd2af01c968",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Hinged folio press opens as camera passes its cover and returns to an overview. Official PDF remains outside the conceptual sculpture.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "1280-contact-sequence.jpg",
+      "sha256": "6a81b7b4e1af12826a81464cdc8855e05d2ad2717fbac5f4aa60a28b8e358904",
+      "review": "24 temporal frames from the actual browser recording",
+      "finding": "Converging ducts and liquid surface remain connected across the camera journey; no interface obstruction.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-home-sequence.jpg",
+      "sha256": "19b5c3206d142725cb4ead142e827006d4867316f4d3970c4bee4054e76ab69f",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Portrait framing keeps identity/action above the loom; later macro travel and instruments occupy the lower view without covering controls.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-sourcelens-sequence.jpg",
+      "sha256": "e5be8f68ce2fefab322f75d4a35538401a824f0cb144a7e4f8225360f3f9707e",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Chamber, aperture and archive are visible below the protected text; portrait adaptation preserves source leaves and all actions.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-careerlens-sequence.jpg",
+      "sha256": "1e7304d2d36f904a5aa9c20bccfacf244f0ad2cbf40af41f5af0b4bce1e24d91",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Louvers and scoring terraces remain prominent; chapter text, phase buttons and full-app action fit the portrait layout.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-form-sequence.jpg",
+      "sha256": "ebb9729fc6334f06f96381bafd5db32155b8e732bd03473a07fd6a597111ebed",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Rig pose and joint housings remain legible below the text during approach and side travel.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-studybuddy-sequence.jpg",
+      "sha256": "e951d4d411dd5368f1385cc0d169d2bebe0113fb23f8fdff6de0c184d445da84",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Folio opening, page turn and local processor remain visible; close paper passes do not obstruct interface controls.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-pymentor-sequence.jpg",
+      "sha256": "a484dba30fcf960ddcaace01c6b2a55e4ce87827b899472cc9819121f7e8c499",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Articulated connector locks and corridor travel remain visible; text and travel controls fit without clipping.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-airbnb-sequence.jpg",
+      "sha256": "9ae2dbf1c54f07f2a1c8813ce84e6335747bdaa6d89ecb7fd437280af23fb4e2",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Terraces and a lifted translucent conceptual plane remain visible. Software aliasing and the subtle canopy are visible; no blank or broken scene.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-logistic-sequence.jpg",
+      "sha256": "7555d809a324e46612eeb0342f8a0e051ff48574e015f6b9efa0bf0ca3e11c1d",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Sectioned sigmoid and threshold boundary remain visible through portrait camera travel; all controls remain within the viewport.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-laboratory-sequence.jpg",
+      "sha256": "18201d182dc26dc5ddecc185ca22e07c97efeadab91f9d99a13ea428ec56c62f",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "All eight labeled spatial links fit; pavilions and connecting channels remain behind the index. Conventional search/grid is preserved below.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-about-sequence.jpg",
+      "sha256": "5206bf6f6fb05e401a47dd4f4f60365f47930db51bef80f67af88aba7656ec82",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Strata opening remains visible below the biography chapters without clipping text or controls.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-skills-sequence.jpg",
+      "sha256": "c8ad8943659ec832e650891ad8c07c0f214853deca38ce2e41bd5f7b1073f05f",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Bridge structures remain prominent through macro travel and the wide return; text and interactions remain readable.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-experience-sequence.jpg",
+      "sha256": "a83cf46a63734b435a757d617054818ab45d13228bce0cb630917366e3815570",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Promenade, milestone planes and overhead return remain visible below the verified education/program chapters.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-certifications-sequence.jpg",
+      "sha256": "09485d61267e124cf79c1d725433f7ba567a17b7aeba7382b35977bc3eef0892",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Opening source repositories and paper-like records stay beneath the protected heading; no credential seal or issuer artwork is invented.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-resume-sequence.jpg",
+      "sha256": "9f5f1043822d0478b83579e7e8fc05d3d54aa5b35111f5aefccfdedec3bbf367",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Hinged folio opens and remains separate from the real PDF viewer; controls and original document actions fit.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-contact-sequence.jpg",
+      "sha256": "57dcbfbcd0d90ff769871ee9e9494eff2ef710634e22ef03e5825bf636f44ca4",
+      "review": "24 temporal frames from the actual portrait browser recording",
+      "finding": "Converging ducts and waves remain visible below readable contact chapters and actions.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "960-home-sequence.jpg",
+      "sha256": "805bcd7c90c1c5a23e40b80d35089ad1d4ead057730aebb3970a64c4d85d4617",
+      "review": "24 temporal frames from the actual forced-optics browser recording",
+      "finding": "Metal highlights, camera travel and source-specific structural transforms remain visible with the full optical path. Software footage is stepped; this is not physical GPU smoothness evidence.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "960-sourcelens-sequence.jpg",
+      "sha256": "b1bae8ee8593a297fe3d9fdc5f150d5ba47736cf8627eba0a449908858964d93",
+      "review": "24 temporal frames from the actual forced-optics browser recording",
+      "finding": "Metal highlights, camera travel and source-specific structural transforms remain visible with the full optical path. Software footage is stepped; this is not physical GPU smoothness evidence.",
+      "blockingVisualDefect": false
+    },
+    {
+      "sequence": "390-forest-sequence.jpg",
+      "sha256": "f4a1307fc73e4161544b6bb7eab187f9d6312c4bbe7f02e5a5c6480ff3d43706",
+      "review": "24 temporal frames from replacement actual portrait browser recording",
+      "finding": "Dedicated lower focus and closer portrait camera bring the branching architecture into view; macro branch passage and return remain below protected text. Software sample26.26fps/DPR.55 versus prior36.62fps/DPR.7; this cost is retained explicitly.",
+      "blockingVisualDefect": false
+    }
+  ],
+  "currentProductionBrowserRecordings": [
+    {
+      "width": 1280,
+      "height": 900,
+      "name": "home",
+      "file": "production-before-1280-home.mp4",
+      "trimStartSeconds": 3.662,
+      "duration": 40,
+      "httpStatus": 200,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "productionCommit": "652fb03a3fe2601f445e1585037ce274a4a5a217",
+      "scope": "Actual current public GitHub Pages browser recording through the configured supported proxy, no screenshots during native scroll, no interpolation or time stretching",
+      "sha256": "dd661b75bac9b06c6a2167de4d444ac578fb6c84971e7f574033c0ccc5049d81",
+      "bytes": 5356134
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "name": "sourcelens",
+      "file": "production-before-1280-sourcelens.mp4",
+      "trimStartSeconds": 3.553,
+      "duration": 40,
+      "httpStatus": 200,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "productionCommit": "652fb03a3fe2601f445e1585037ce274a4a5a217",
+      "scope": "Actual current public GitHub Pages browser recording through the configured supported proxy, no screenshots during native scroll, no interpolation or time stretching",
+      "sha256": "11386894822f420ac6158901386d1f5cfa5c1512604ed2b863b2caaa071d03ba",
+      "bytes": 5226117
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "home",
+      "file": "production-before-390-home.mp4",
+      "trimStartSeconds": 3.634,
+      "duration": 40,
+      "httpStatus": 200,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "productionCommit": "652fb03a3fe2601f445e1585037ce274a4a5a217",
+      "scope": "Actual current public GitHub Pages browser recording through the configured supported proxy, no screenshots during native scroll, no interpolation or time stretching",
+      "sha256": "f6e7f2c34861adea25213ecbda10809d1e7e8890701317fdf3be4d203844541e",
+      "bytes": 2862316
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "sourcelens",
+      "file": "production-before-390-sourcelens.mp4",
+      "trimStartSeconds": 3.265,
+      "duration": 40,
+      "httpStatus": 200,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "productionCommit": "652fb03a3fe2601f445e1585037ce274a4a5a217",
+      "scope": "Actual current public GitHub Pages browser recording through the configured supported proxy, no screenshots during native scroll, no interpolation or time stretching",
+      "sha256": "bcb7c4235807111b16825daf8f2be0adf007d50ed72c49bd152a829d9abd4b83",
+      "bytes": 2689917
+    }
+  ],
+  "functionalJourneys": [
+    {
+      "sourceHref": "https://github.com/sakshamaveragecodes-lab/sourcelens-rag-chatbot",
+      "width": 1280,
+      "height": 900,
+      "file": "journey-1280.mp4",
+      "durationSeconds": 53.734,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "scope": "Continuous actual browser journey: home \u2192 project laboratory/search \u2192 SourceLens \u2192 original cloud preview \u2192 recorded-answer demo \u2192 architecture/3D walkthrough/source link inspection \u2192 full workspace tabs \u2192 resume document \u2192 contact copy; native interactions, no screenshots during recording",
+      "sourceCommit": "3d6b356780d52007681340aa8f777233fabc5b16",
+      "sha256": "60b1c3a07f12d477819e0c4b378348dc78051f3eea26c302ee4fd931395ca26f",
+      "bytes": 6483818
+    },
+    {
+      "sourceHref": "https://github.com/sakshamaveragecodes-lab/sourcelens-rag-chatbot",
+      "width": 390,
+      "height": 844,
+      "file": "journey-390.mp4",
+      "durationSeconds": 49.96,
+      "errors": [],
+      "failed": [],
+      "overflow": false,
+      "scope": "Continuous actual browser journey: home \u2192 project laboratory/search \u2192 SourceLens \u2192 original cloud preview \u2192 recorded-answer demo \u2192 architecture/3D walkthrough/source link inspection \u2192 full workspace tabs \u2192 resume document \u2192 contact copy; native interactions, no screenshots during recording",
+      "sourceCommit": "3d6b356780d52007681340aa8f777233fabc5b16",
+      "sha256": "cf8a84857c0c973676af75a21dab903afaadfd028180ceda7bfb6c9fd186500c",
+      "bytes": 3895037
+    }
+  ],
+  "motionChecks": [
+    {
+      "label": "home",
+      "width": 1280,
+      "height": 900,
+      "duration": 40,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "home",
+        "execution": "worker",
+        "progress": 0.9848483753121341,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 23,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "sourcelens",
+      "width": 1280,
+      "height": 900,
+      "duration": 40,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "sourcelens",
+        "execution": "worker",
+        "progress": 0.9851626247448415,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 24,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "careerlens",
+      "width": 1280,
+      "height": 900,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "careerlens",
+        "execution": "worker",
+        "progress": 0.9851851295967586,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 18,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "form",
+      "width": 1280,
+      "height": 900,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "form",
+        "execution": "worker",
+        "progress": 0.985168084414987,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 35,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "studybuddy",
+      "width": 1280,
+      "height": 900,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "studybuddy",
+        "execution": "worker",
+        "progress": 0.9851847574925136,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 32,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "pymentor",
+      "width": 1280,
+      "height": 900,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "pymentor",
+        "execution": "worker",
+        "progress": 0.9851833218493832,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 29,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "airbnb",
+      "width": 1280,
+      "height": 900,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "airbnb",
+        "execution": "worker",
+        "progress": 0.9851839051758471,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 34,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "logistic",
+      "width": 1280,
+      "height": 900,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "logistic-diabetes",
+        "execution": "worker",
+        "progress": 0.9851850575212098,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 16,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "forest",
+      "width": 1280,
+      "height": 900,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "random-forest-diabetes",
+        "execution": "worker",
+        "progress": 0.9851811496741043,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 19,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "laboratory",
+      "width": 1280,
+      "height": 900,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "projects",
+        "execution": "worker",
+        "progress": 0.9851849461868508,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 15,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "about",
+      "width": 1280,
+      "height": 900,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "about",
+        "execution": "worker",
+        "progress": 0.9851851025438277,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 12,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "skills",
+      "width": 1280,
+      "height": 900,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "skills",
+        "execution": "worker",
+        "progress": 0.9851851670447099,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 9,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "experience",
+      "width": 1280,
+      "height": 900,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "experience",
+        "execution": "worker",
+        "progress": 0.9851850818732151,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 28,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "certifications",
+      "width": 1280,
+      "height": 900,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "certifications",
+        "execution": "worker",
+        "progress": 0.9851851769875251,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 22,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "resume",
+      "width": 1280,
+      "height": 900,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "resume",
+        "execution": "worker",
+        "progress": 0.9851851119533117,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 10,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "contact",
+      "width": 1280,
+      "height": 900,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "contact",
+        "execution": "worker",
+        "progress": 0.9851832922412972,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 8,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "home",
+      "width": 390,
+      "height": 844,
+      "duration": 40,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "home",
+        "execution": "worker",
+        "progress": 0.984783581526432,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 23,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "sourcelens",
+      "width": 390,
+      "height": 844,
+      "duration": 40,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "sourcelens",
+        "execution": "worker",
+        "progress": 0.9849640309611695,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 24,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "careerlens",
+      "width": 390,
+      "height": 844,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "careerlens",
+        "execution": "worker",
+        "progress": 0.9845453048884306,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 18,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "form",
+      "width": 390,
+      "height": 844,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "form",
+        "execution": "worker",
+        "progress": 0.9845455196952972,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 35,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "studybuddy",
+      "width": 390,
+      "height": 844,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "studybuddy",
+        "execution": "worker",
+        "progress": 0.9845456239353261,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 32,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "pymentor",
+      "width": 390,
+      "height": 844,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "pymentor",
+        "execution": "worker",
+        "progress": 0.9845457345086345,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 29,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "airbnb",
+      "width": 390,
+      "height": 844,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "airbnb",
+        "execution": "worker",
+        "progress": 0.9845452174324473,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 34,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "logistic",
+      "width": 390,
+      "height": 844,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "logistic-diabetes",
+        "execution": "worker",
+        "progress": 0.9845456882179315,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 16,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "forest",
+      "width": 390,
+      "height": 844,
+      "duration": 16,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "random-forest-diabetes",
+        "execution": "worker",
+        "progress": 0.9845455446021005,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 19,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "laboratory",
+      "width": 390,
+      "height": 844,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "projects",
+        "execution": "worker",
+        "progress": 0.9845452854693167,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 15,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "about",
+      "width": 390,
+      "height": 844,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "about",
+        "execution": "worker",
+        "progress": 0.9845451469450509,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 12,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "skills",
+      "width": 390,
+      "height": 844,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "skills",
+        "execution": "worker",
+        "progress": 0.9845452680949459,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 9,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "experience",
+      "width": 390,
+      "height": 844,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "experience",
+        "execution": "worker",
+        "progress": 0.9845454646822906,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 28,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "certifications",
+      "width": 390,
+      "height": 844,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "certifications",
+        "execution": "worker",
+        "progress": 0.9845449336495183,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 22,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "resume",
+      "width": 390,
+      "height": 844,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "resume",
+        "execution": "worker",
+        "progress": 0.9845454434130921,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 10,
+        "textures": 5,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "contact",
+      "width": 390,
+      "height": 844,
+      "duration": 10,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "contact",
+        "execution": "worker",
+        "progress": 0.9845453462467685,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 8,
+        "textures": 4,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "home",
+      "width": 960,
+      "height": 900,
+      "duration": 40,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "home",
+        "execution": "worker",
+        "progress": 0.9848418913231878,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 24,
+        "textures": 15,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "sourcelens",
+      "width": 960,
+      "height": 900,
+      "duration": 40,
+      "errors": [],
+      "failed": [],
+      "stats": {
+        "world": "sourcelens",
+        "execution": "worker",
+        "progress": 0.9851844694769984,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "geometries": 25,
+        "textures": 14,
+        "headerY": 0,
+        "overflow": false,
+        "canvasCount": 1
+      }
+    }
+  ],
+  "limits": [
+    "Physical GPU,Windows Edge,Android Chrome,worker heap,VRAM and field INP unmeasured",
+    "Software-rendered movies may be stepped; encoded FPS is not render FPS",
+    "Thin-volume/environment refraction and bounded surface-wave artwork, not ray-traced caustics or volumetric CFD",
+    "MORPHO parity/artistic acceptance not established by tests",
+    "Pre-optimization runs42/44 and43/44 timed out under concurrent software GPU contention; unchanged test budgets; serial44 passed; later zero-phase optimization caused4 genuine failures (41/45); restored chapter state and reran final suite; negative traces retained",
+    "Pre-worker mobile loading regressions and rejected preload/parallel compilation experiments retained in review logs; scores are lab samples, not guarantees"
+  ],
+  "infrastructureCost": "INR0; existing static GitHub Pages; no new dependencies,backend,paid API or services"
+}

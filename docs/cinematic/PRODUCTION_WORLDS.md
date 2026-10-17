@@ -42,3 +42,9 @@ Missing WebGL2/float render-target support, shader/asset initialization failure 
 The earlier isolated `/cinematic-study/` and its three forty-second recordings remain unchanged. Full-site evidence is recorded separately under `/tmp/full-foundry-review`, with source commits, test boundaries, renderer identity and software-only performance reported in the QA manifest. Check the final QA receipt rather than interpreting the existence of this document as a passed release gate.
 
 MORPHO's previously captured desktop/mobile films remain reference-only materials. They are not bundled into application assets or the review package. Its photographic product/environment transitions and higher-order material/lighting craft still provide a more demanding artistic benchmark than these engineering environments. The candidate is original and inspectable; owner acceptance is separate from automated verification.
+
+## Reproducible browser checks
+
+The browser suite uses one worker because cloud/CI scenes share a software GPU. Two simultaneous GPU-heavy browsers caused the180-second aggregate history journey to time out even when that identical16-route test passed alone in120seconds. Timeouts, assertions and the zero-retry policy are unchanged. The suite still exercises every route, both device widths, keyboard/reduced motion, preserved tools, real resource disposal and rendering failures. GPU/frame-rate measurements and recordings run separately from the suite. This is resource scheduling, not a claim of hardware smoothness.
+
+Separation controls remain effective after the automatic scroll-driven opening: the folio exposes its local enclosure, About strata physically spread, Skills bridges expose their core, and Contact ducts separate. A geometry-state invariant tests all14 controls at the late chapter and reverses them to the identical pose.

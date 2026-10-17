@@ -1,0 +1,186 @@
+[
+  {
+    "file": "lighthouse-desktop-careerlens.json",
+    "url": "http://127.0.0.1:3400/projects/careerlens/",
+    "formFactor": "desktop",
+    "throttling": {
+      "rttMs": 40,
+      "throughputKbps": 10240,
+      "requestLatencyMs": 0,
+      "downloadThroughputKbps": 0,
+      "uploadThroughputKbps": 0,
+      "cpuSlowdownMultiplier": 1
+    },
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 633.5779249999998,
+    "cls": 0,
+    "tbtMs": 10,
+    "scope": "Final release static export77e51d2; simulated lab throttling; SwiftShader software Chromium; physical GPU and field INP unmeasured"
+  },
+  {
+    "file": "lighthouse-desktop-home.json",
+    "url": "http://127.0.0.1:3400/",
+    "formFactor": "desktop",
+    "throttling": {
+      "rttMs": 40,
+      "throughputKbps": 10240,
+      "requestLatencyMs": 0,
+      "downloadThroughputKbps": 0,
+      "uploadThroughputKbps": 0,
+      "cpuSlowdownMultiplier": 1
+    },
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 547.5989999999999,
+    "cls": 0,
+    "tbtMs": 19,
+    "scope": "Final release static export77e51d2; simulated lab throttling; SwiftShader software Chromium; physical GPU and field INP unmeasured"
+  },
+  {
+    "file": "lighthouse-desktop-laboratory.json",
+    "url": "http://127.0.0.1:3400/projects/",
+    "formFactor": "desktop",
+    "throttling": {
+      "rttMs": 40,
+      "throughputKbps": 10240,
+      "requestLatencyMs": 0,
+      "downloadThroughputKbps": 0,
+      "uploadThroughputKbps": 0,
+      "cpuSlowdownMultiplier": 1
+    },
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 543.53055,
+    "cls": 0,
+    "tbtMs": 0,
+    "scope": "Final release static export77e51d2; simulated lab throttling; SwiftShader software Chromium; physical GPU and field INP unmeasured"
+  },
+  {
+    "file": "lighthouse-desktop-sourcelens.json",
+    "url": "http://127.0.0.1:3400/projects/sourcelens/",
+    "formFactor": "desktop",
+    "throttling": {
+      "rttMs": 40,
+      "throughputKbps": 10240,
+      "requestLatencyMs": 0,
+      "downloadThroughputKbps": 0,
+      "uploadThroughputKbps": 0,
+      "cpuSlowdownMultiplier": 1
+    },
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 581.5314999999999,
+    "cls": 0,
+    "tbtMs": 0,
+    "scope": "Final release static export77e51d2; simulated lab throttling; SwiftShader software Chromium; physical GPU and field INP unmeasured"
+  },
+  {
+    "file": "lighthouse-mobile-careerlens.json",
+    "url": "http://127.0.0.1:3400/projects/careerlens/",
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "scores": {
+      "performance": 96,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 2742.9352,
+    "cls": 0,
+    "tbtMs": 59.5,
+    "scope": "Final release static export77e51d2; simulated lab throttling; SwiftShader software Chromium; physical GPU and field INP unmeasured"
+  },
+  {
+    "file": "lighthouse-mobile-home.json",
+    "url": "http://127.0.0.1:3400/",
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "scores": {
+      "performance": 93,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 2263.6813,
+    "cls": 0,
+    "tbtMs": 291.0000000000002,
+    "scope": "Final release static export77e51d2; simulated lab throttling; SwiftShader software Chromium; physical GPU and field INP unmeasured"
+  },
+  {
+    "file": "lighthouse-mobile-laboratory.json",
+    "url": "http://127.0.0.1:3400/projects/",
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "scores": {
+      "performance": 96,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 2247.0601500000002,
+    "cls": 0,
+    "tbtMs": 189.00000000000023,
+    "scope": "Final release static export77e51d2; simulated lab throttling; SwiftShader software Chromium; physical GPU and field INP unmeasured"
+  },
+  {
+    "file": "lighthouse-mobile-sourcelens.json",
+    "url": "http://127.0.0.1:3400/projects/sourcelens/",
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "scores": {
+      "performance": 96,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 2475.02965,
+    "cls": 0,
+    "tbtMs": 151,
+    "scope": "Final release static export77e51d2; simulated lab throttling; SwiftShader software Chromium; physical GPU and field INP unmeasured"
+  }
+]

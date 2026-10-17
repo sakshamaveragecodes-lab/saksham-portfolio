@@ -1,6 +1,6 @@
 # Evidence Foundry — full portfolio review candidate
 
-This is an unpublished extension of the accepted Foundry implementation direction. It is not a claim of MORPHO parity or artistic acceptance. Production is preserved until the owner gives final merge/deployment approval.
+The owner explicitly authorized the complete release on17October2026, superseding the earlier review checkpoint. This document describes the sixteen-environment implementation; release checks and deployment receipts are recorded separately in docs/qa/FINAL_RELEASE.md. It is not a claim of MORPHO parity or universal hardware smoothness.
 
 ## Rendered direction
 

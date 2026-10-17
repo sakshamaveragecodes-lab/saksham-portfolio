@@ -1,3 +1,5 @@
+> Historical review workflow: approval-gate and unpublished-status statements below describe the earlier review checkpoint. The owner subsequently authorized production deployment on17October2026. See docs/qa/FINAL_RELEASE.md for the current release evidence. The Windows commands remain valid for local inspection.
+
 # Private Windows review workflow
 
 This is the fallback for the unsupported cloud-to-desktop forwarding path. It uses the same repository and feature branch; no production merge, push or deployment is involved. It does not synchronize cloud edits automatically.

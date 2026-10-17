@@ -53,7 +53,7 @@ export function EngineeringUniverse() {
         if (!story)
             return;
         let content=contentSections().map(el=>({el,top:0,height:0})),dirty=true;
-        const rail = story.querySelector('.cinema-chapter-rail span');
+        const rail = story.querySelector<HTMLElement>('.cinema-chapter-rail [data-chapter-number]');
         const chapters = Array.from(story.querySelectorAll<HTMLElement>('[data-cinema-chapter]'));
         cinemaState.source = story.dataset.cinematicStory === 'source';
         cinemaState.selection = -1;
@@ -61,7 +61,7 @@ export function EngineeringUniverse() {
         let raf = 0;
         const present=(progress:number)=>{
             story.querySelectorAll<HTMLButtonElement>('.world-chapter-controls button').forEach((button,i)=>button.setAttribute('aria-pressed',String(Math.round(progress*3)===i)));
-            if (rail){const label=String(Math.round(progress*3)+1).padStart(2,'0');if(rail.textContent!==label)rail.textContent=label;}
+            if (rail){const label=String(Math.round(progress*3)+1).padStart(2,'0');if(rail.dataset.chapterNumber!==label)rail.dataset.chapterNumber=label;}
             for (let i = 0; i < chapters.length; i++) {
                 const d = progress * 3 - i;
                 const opacity = 1 - smooth((Math.abs(d) - .18) / .32);
@@ -74,6 +74,7 @@ export function EngineeringUniverse() {
         };
         cinemaState.present=present;
         const update = () => {
+            raf = 0;
             const rect = story.getBoundingClientRect(), height = innerHeight;
             const progress = Math.max(0, Math.min(1, -(rect.top - (innerWidth <= 850 ? 72 : 87)) / Math.max(1, rect.height - height)));
             if(dirty){content=contentSections().map(el=>{const r=el.getBoundingClientRect();return {el,top:r.top+scrollY,height:r.height}});dirty=false;}
@@ -101,7 +102,8 @@ export function EngineeringUniverse() {
                 {surface.current.style.opacity=visible?(reading?(innerWidth<=850?'.23':'.34'):String(Math.min(1,Math.max(0,(rect.bottom-height*.15)/(height*.6))))):'0';surface.current.dataset.mode=reading?'reading':'introduction';surface.current.dataset.section=cinemaState.sectionKind;}
 
         };
-        const schedule = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); };
+        // Coalesce events; cancelling a pending frame can starve updates during resize storms.
+        const schedule = () => { if (!raf) raf = requestAnimationFrame(update); };
         const pointer = (e: PointerEvent) => {
             if (e.pointerType !== 'mouse')
                 return;

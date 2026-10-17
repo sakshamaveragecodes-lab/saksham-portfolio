@@ -63,3 +63,6 @@ html[data-section-motion=true] .about-grid .identity-panel{transform:perspective
 .production-stage{position:absolute;inset:0;contain:strict}.production-stage canvas{display:block;width:100%;height:100%}
 html .cinema-topline{letter-spacing:.13em;color:#b4c8d1}
 @media(min-width:851px){html .cinema-chapter h1,html .cinema-chapter h2{font-weight:400;letter-spacing:-.055em}html:not([data-effects=reduced]):not([data-cinema-failed=true]) .cinema-sticky::before{background:linear-gradient(90deg,#080d13f0 0%,#080d13cf 25%,#080d1350 43%,transparent 66%)}}
+
+/* The animated counter owns an attribute, never React-owned text nodes. */
+.cinema-chapter-rail [data-chapter-number]::before{content:attr(data-chapter-number)}

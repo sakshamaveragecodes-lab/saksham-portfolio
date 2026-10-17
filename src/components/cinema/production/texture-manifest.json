@@ -1,0 +1,48 @@
+{
+  "size": 128,
+  "sourceSha256": "75d9dfa5b3e851f4c2378491014a2fbce8caecdb9378dd3b67b6dbde9529b3b0",
+  "faces": [
+    {
+      "url": "/studies/evidence-foundry/lighting/studio-0-6d66b5dbf247.png",
+      "sha256": "6d66b5dbf247de7225d16f47b377065411f0e9f5b2b9a553d24cf5d9e6f101d0",
+      "rgbaSha256": "478282cffb4ca29e1643b8edf2edc995c86df2ebc291f870225ea275cec16fa5",
+      "bytes": 5501
+    },
+    {
+      "url": "/studies/evidence-foundry/lighting/studio-1-19f4dfbce20f.png",
+      "sha256": "19f4dfbce20f10f1c6b8315643245ee5e0c658e23159bd51291bc7f2136dbead",
+      "rgbaSha256": "5657cf1663df4ee77020badb4e2ae1a77df97b5c0cb3a136f427dc8ea04c70ab",
+      "bytes": 13586
+    },
+    {
+      "url": "/studies/evidence-foundry/lighting/studio-2-42f5ad0e27fb.png",
+      "sha256": "42f5ad0e27fba3aed6a71fe317c1800f3684b8090156562ac711430d458c8436",
+      "rgbaSha256": "f17a5072abab5d9326c99e1cf158464f99d0d08a2421bafdcfb94167cc22b1b6",
+      "bytes": 14665
+    },
+    {
+      "url": "/studies/evidence-foundry/lighting/studio-3-2ce12b856b44.png",
+      "sha256": "2ce12b856b44b7b57650504fb9c975f9ec14db01a307f10eaf195d11ac9db46f",
+      "rgbaSha256": "18e488890cbdfe4e1d654fc405db53645e9d06918c8dc8d1d0fe4b113ce6c5f8",
+      "bytes": 375
+    },
+    {
+      "url": "/studies/evidence-foundry/lighting/studio-4-0c1642911803.png",
+      "sha256": "0c164291180333645fd41d92370292dbe37fb6bb4ad6f996e38b853122548e89",
+      "rgbaSha256": "20673dfc21508ebeb6530ef4408783db1e5c240052ad7bbeb3162efcf0372f73",
+      "bytes": 5374
+    },
+    {
+      "url": "/studies/evidence-foundry/lighting/studio-5-2762626a0a78.png",
+      "sha256": "2762626a0a788adf1e3a75ed7e70c5b027dc4aa3f3becf7dbed742b589b0d3e5",
+      "rgbaSha256": "854884f38c50f46c2bca1149a7501f5e62c52b0274c9f0fa99fca8fb4d11cf46",
+      "bytes": 14371
+    }
+  ],
+  "flow": {
+    "url": "/studies/evidence-foundry/lighting/curl-field-f0c07031d199.png",
+    "sha256": "f0c07031d199cd88dc6d3795ed12d75db0eb8c1f49de06f950fd6e8af0e16bca",
+    "rgbaSha256": "f74ee3d1452a2ececfa76f35b7e8366acce507f8b8f870bb6ef327694940c3ea",
+    "bytes": 50755
+  }
+}

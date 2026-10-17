@@ -60,6 +60,6 @@ html[data-section-motion=true] .about-grid .identity-panel{transform:perspective
 @media(max-width:700px){.case-columns{padding:20px 16px}.next-project{padding:32px 20px}}
 
 /* Evidence Foundry production system: a single world-space canvas behind every folio. */
-.production-stage{position:absolute;inset:0}.production-stage canvas{display:block;width:100%;height:100%}
-html[data-cinema-ready=true] .cinema-topline{letter-spacing:.13em;color:#b4c8d1}
-@media(min-width:851px){html[data-cinema-ready=true] .cinema-chapter h1,html[data-cinema-ready=true] .cinema-chapter h2{font-weight:400;letter-spacing:-.055em}html[data-cinema-ready=true] .cinema-sticky::before{background:linear-gradient(90deg,#080d13f0 0%,#080d13cf 25%,#080d1350 43%,transparent 66%)}}
+.production-stage{position:absolute;inset:0;contain:strict}.production-stage canvas{display:block;width:100%;height:100%}
+html .cinema-topline{letter-spacing:.13em;color:#b4c8d1}
+@media(min-width:851px){html .cinema-chapter h1,html .cinema-chapter h2{font-weight:400;letter-spacing:-.055em}html[data-cinema-ready=true] .cinema-sticky::before{background:linear-gradient(90deg,#080d13f0 0%,#080d13cf 25%,#080d1350 43%,transparent 66%)}}

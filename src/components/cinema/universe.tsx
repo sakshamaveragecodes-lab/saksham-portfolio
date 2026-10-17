@@ -1,6 +1,6 @@
 'use client';
 import dynamic from 'next/dynamic';
-import { Component, useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
+import { Component, useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import { useEffectsAllowed } from '@/lib/effects';
 import { cinemaState, smooth } from './timeline';
@@ -19,18 +19,23 @@ class Boundary extends Component<{
     componentDidCatch() { this.props.onFailure(); }
     render() { return this.state.failed ? null : this.props.children; }
 }
+const subscribeHydration = () => () => {};
+const clientSnapshot = () => true;
+const serverSnapshot = () => false;
 export function EngineeringUniverse() {
     const path = usePathname().replace(/\/$/, '') || '/';
     const world = worldForPath(path);
     const eligible = path === '/' || path === '/projects/sourcelens' || world !== null;
     const allowed = useEffectsAllowed();
+    const hydrated=useSyncExternalStore(subscribeHydration,clientSnapshot,serverSnapshot);
+    const canvas=useRef<HTMLCanvasElement>(null);
     const [failed, setFailed] = useState(false);
     const [ready, setReady] = useState(false);
     const [active, setActive] = useState(true);
 
     const surface = useRef<HTMLDivElement>(null);
     const failure = useCallback(() => { setFailed(true); setReady(false); }, []);
-    const created = useCallback(() => setReady(true), []);
+    const created = useCallback((value=true) => setReady(value), []);
     useEffect(() => {
         const root = document.documentElement;
         const running = eligible && allowed && ready && !failed;
@@ -56,14 +61,13 @@ export function EngineeringUniverse() {
         let raf = 0;
         const present=(progress:number)=>{
             story.querySelectorAll<HTMLButtonElement>('.world-chapter-controls button').forEach((button,i)=>button.setAttribute('aria-pressed',String(Math.round(progress*3)===i)));
-            if (rail)
-                rail.textContent = String(Math.round(progress * 3) + 1).padStart(2, '0');
+            if (rail){const label=String(Math.round(progress*3)+1).padStart(2,'0');if(rail.textContent!==label)rail.textContent=label;}
             for (let i = 0; i < chapters.length; i++) {
                 const d = progress * 3 - i;
                 const opacity = 1 - smooth((Math.abs(d) - .18) / .32);
                 const c = chapters[i];
                 c.style.setProperty('--chapter-opacity', String(opacity));
-                c.style.translate = `${-d * 24}px ${-d * 13}px`;
+                if(progress!==0)c.style.translate=`${-d*24}px ${-d*13}px`;else c.style.removeProperty('translate');
                 c.dataset.current = String(Math.round(progress * 3) === i);
                 c.inert = Math.round(progress * 3) !== i || opacity < .05;
             }
@@ -132,9 +136,9 @@ export function EngineeringUniverse() {
             cinemaState.active = false;cinemaState.content=false;
         };
     }, [eligible, allowed, ready, failed, path]);
-    if (!eligible || !allowed)
+    if (!eligible || (hydrated&&!allowed))
         return null;
     if (failed)
         return <div className="cinema-fallback-notice" role="status">Spatial rendering is unavailable. The complete readable introduction and project tools remain available.<button type="button" onClick={() => { setReady(false); setFailed(false); }}>Retry 3D rendering</button></div>;
-    return <div className="cinema-surface" ref={surface} data-cinema-renderer data-active={active} aria-hidden="true"><Boundary onFailure={failure}><ProductionRenderer world={world || (path === '/projects/sourcelens'?'sourcelens':'home')} active={active} onReady={created} onFailure={failure}/></Boundary></div>;
+    return <div className="cinema-surface" ref={surface} data-cinema-renderer data-active={active} aria-hidden="true"><div className="production-stage"><canvas ref={canvas} aria-hidden="true"/></div>{allowed&&<Boundary onFailure={failure}><ProductionRenderer canvasRef={canvas} world={world || (path === '/projects/sourcelens'?'sourcelens':'home')} active={active} onReady={created} onFailure={failure}/></Boundary>}</div>;
 }

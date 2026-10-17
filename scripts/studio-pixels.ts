@@ -1,0 +1,5 @@
+/** Build/test adapter for the existing original generators; no duplicated pixel algorithm. */
+import {studioEnvironment} from '../src/components/foundry/studio-material';
+import {flowTexture} from '../src/components/foundry/fluid';
+type PixelCanvas={width:number;height:number;pixels?:Uint8Array;getContext:()=>unknown};
+export function studioPixels(){const previous=Object.getOwnPropertyDescriptor(globalThis,'document');const fake={createElement:()=>{const canvas:PixelCanvas={width:0,height:0,getContext:()=>({createImageData:(w:number,h:number)=>({data:new Uint8ClampedArray(w*h*4)}),putImageData:(image:{data:Uint8ClampedArray})=>{canvas.pixels=new Uint8Array(image.data)}})};return canvas;}};Object.defineProperty(globalThis,'document',{configurable:true,value:fake});try{const environment=studioEnvironment(),flow=flowTexture(),faces=(environment.images as unknown as PixelCanvas[]).map(canvas=>canvas.pixels!);const data=new Uint8Array(flow.image.data as Uint8Array);environment.dispose();flow.dispose();return {size:128,faces,flow:data};}finally{if(previous)Object.defineProperty(globalThis,'document',previous);else Reflect.deleteProperty(globalThis,'document')}}

@@ -230,7 +230,7 @@ export function createStage(options: StageOptions) {
     const resize = () => { resizePending = true; resume.current(); };
     const lost = (e: Event) => { e.preventDefault(); onFailure(); };
     canvas.addEventListener('webglcontextlost', lost);
-    const pointer = new T.Vector2(), eye = new T.Vector3(), focus = new T.Vector3(), oldEye = new T.Vector3(), oldFocus = new T.Vector3(), ray = new T.Raycaster(), plane = new T.Plane(new T.Vector3(0, 1, 0), 2.08), intersection = new T.Vector3(), uv = new T.Vector2(-2, -2);
+    const pointer = new T.Vector2(), eye = new T.Vector3(), focus = new T.Vector3(), oldEye = new T.Vector3(), oldFocus = new T.Vector3(), ray = new T.Raycaster(), rayPointer = new T.Vector2(), plane = new T.Plane(new T.Vector3(0, 1, 0), 2.08), intersection = new T.Vector3(), uv = new T.Vector2(-2, -2);
     let lastPointer = 0, lastPointerY = 0, lastPresented = -1, lastSection = -1, lastSelection = -1;
     const frame = (now: number) => {
         raf = 0;
@@ -314,6 +314,7 @@ export function createStage(options: StageOptions) {
         camera.position.copy(eye);
         camera.lookAt(focus);
         camera.updateProjectionMatrix();
+        camera.updateMatrixWorld();
         model!.update(p, time, spread, cinemaState.selection);
         if (cinemaState.content) {
             model!.root.rotation.y = Math.sin(cinemaState.sectionProgress * Math.PI) * .025 * (cinemaState.section % 2 ? 1 : -1);
@@ -328,9 +329,12 @@ export function createStage(options: StageOptions) {
                 y: number;
             };
             plane.constant = -bounds.y;
-            ray.setFromCamera(pointer, camera);
+            // Pointer state uses screen-down Y; Three ray coordinates use screen-up Y.
+            ray.setFromCamera(rayPointer.set(pointer.x,-pointer.y), camera);
             if (ray.ray.intersectPlane(plane, intersection))
                 uv.set(intersection.x / bounds.width + .5, -(intersection.z - bounds.z) / bounds.depth + .5);
+            else uv.set(-2,-2);
+            if(uv.x<0||uv.x>1||uv.y<0||uv.y>1)uv.set(-2,-2);
             const water = palette!.water as T.ShaderMaterial;
             water.uniforms.uRipple.value = field.tick(renderer, uv, uniforms.uImpulse.value * .4);
             lastSimulation = now;

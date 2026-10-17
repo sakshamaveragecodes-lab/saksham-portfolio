@@ -53,7 +53,7 @@ export function EngineeringUniverse() {
         if (!story)
             return;
         let content=contentSections().map(el=>({el,top:0,height:0})),dirty=true;
-        const rail = story.querySelector('.cinema-chapter-rail span');
+        const rail = story.querySelector<HTMLElement>('.cinema-chapter-rail [data-chapter-number]');
         const chapters = Array.from(story.querySelectorAll<HTMLElement>('[data-cinema-chapter]'));
         cinemaState.source = story.dataset.cinematicStory === 'source';
         cinemaState.selection = -1;
@@ -61,7 +61,7 @@ export function EngineeringUniverse() {
         let raf = 0;
         const present=(progress:number)=>{
             story.querySelectorAll<HTMLButtonElement>('.world-chapter-controls button').forEach((button,i)=>button.setAttribute('aria-pressed',String(Math.round(progress*3)===i)));
-            if (rail){const label=String(Math.round(progress*3)+1).padStart(2,'0');if(rail.textContent!==label)rail.textContent=label;}
+            if (rail){const label=String(Math.round(progress*3)+1).padStart(2,'0');if(rail.dataset.chapterNumber!==label)rail.dataset.chapterNumber=label;}
             for (let i = 0; i < chapters.length; i++) {
                 const d = progress * 3 - i;
                 const opacity = 1 - smooth((Math.abs(d) - .18) / .32);

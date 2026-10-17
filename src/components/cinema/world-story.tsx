@@ -14,7 +14,7 @@ export function WorldStory({world}:{world:WorldKey}){
    {world==='projects'&&<SpatialIndex/>}
    <WorldControls key={world} world={world}/>
    <div className="cinema-foot"><span className="cinema-disclosure">ORIGINAL CONCEPTUAL SCULPTURE · NOT MODEL OUTPUT</span><div><CinemaControls/><a href="#page-content">Skip introduction ↓</a></div></div>
-   <div className="cinema-chapter-rail" aria-hidden="true"><span>01</span><i/><span>04</span></div>
+   <div className="cinema-chapter-rail" aria-hidden="true"><span data-chapter-number="01"/><i/><span>04</span></div>
   </div>
  </section>;
 }

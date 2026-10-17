@@ -23,6 +23,6 @@ export function CinematicStory({ kind = 'home' }: {
  <div className="cinema-topline"><span>SAKSHAM / ENGINEERING OBSERVATORY</span><span>AN EXPLORABLE WORLD — VOL. 01</span></div>
  <div className="cinema-chapters">{(isSource ? source : home).map((chapter, i) => <article className={`cinema-chapter chapter-${i}`} data-cinema-chapter={i} key={chapter.label}><div className="cinema-label">{chapter.label}</div>{!isSource && i === 0 ? <h1>{chapter.title}</h1> : <h2>{chapter.title}</h2>}<p>{chapter.copy}</p>{i === 0 && !isSource && <Link href="/projects" className="cinema-link">Explore the project lab <ArrowUpRight size={18}/></Link>}{i === 2 && !isSource && <CinematicProjectLinks />}{i === 3 && <a href={isSource ? '#preview' : '#selected-work'} className="cinema-link">{isSource ? 'Explore the actual application' : 'Explore the selected projects'} <ArrowDown size={18}/></a>}</article>)}</div>
  <div className="cinema-foot"><span className="cinema-disclosure">ORIGINAL CONCEPTUAL ENVIRONMENT · NOT MODEL OUTPUT</span><div><CinemaControls /><a href={isSource ? '#source-content' : '#selected-work'}>Skip introduction ↓</a></div></div>
- <div className="cinema-chapter-rail" aria-hidden="true"><span>01</span><i /><span>04</span></div>
+ <div className="cinema-chapter-rail" aria-hidden="true"><span data-chapter-number="01"/><i /><span>04</span></div>
  </div></section>;
 }
